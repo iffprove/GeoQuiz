@@ -33,5 +33,54 @@
     "fr": "Partie terminée !",
     "ja": "ゲームオーバー！",
     "pt": "Fim de jogo!"
+  },
+  "hint_label": {
+    "en": "Hint",
+    "es": "Pista",
+    "fr": "Indice",
+    "ja": "ヒント",
+    "pt": "Dica"
+  },
+  "fun_fact_label": {
+    "en": "Did you know?",
+    "es": "¿Sabías que?",
+    "fr": "Le saviez-vous ?",
+    "ja": "豆知識",
+    "pt": "Você sabia?"
+  },
+  "share_btn": {
+    "en": "Share result",
+    "es": "Compartir resultado",
+    "fr": "Partager",
+    "ja": "結果をシェア",
+    "pt": "Compartilhar"
+  },
+  "copied": {
+    "en": "Copied!",
+    "es": "¡Copiado!",
+    "fr": "Copié !",
+    "ja": "コピーしました！",
+    "pt": "Copiado!"
+  },
+  "next_puzzle": {
+    "en": "Next puzzle in",
+    "es": "Próximo puzzle en",
+    "fr": "Prochain puzzle dans",
+    "ja": "次のパズルまで",
+    "pt": "Próximo puzzle em"
+  },
+  "practice_btn": {
+    "en": "Practice",
+    "es": "Practicar",
+    "fr": "S'entraîner",
+    "ja": "練習する",
+    "pt": "Praticar"
+  },
+  "practice_tag": {
+    "en": "Practice — doesn't affect your streak",
+    "es": "Práctica — no afecta tu racha",
+    "fr": "Entraînement — sans impact sur la série",
+    "ja": "練習 — ストリークに影響しません",
+    "pt": "Prática — não afeta sua sequência"
   }
 }
