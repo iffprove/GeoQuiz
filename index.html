@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>GeoTrivia</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #0f172a;
+      --surface: #1e293b;
+      --surface2:#334155;
+      --text:    #f1f5f9;
+      --muted:   #94a3b8;
+      --correct: #4ade80;
+      --wrong:   #f87171;
+      --accent:  #38bdf8;
+      --border:  #334155;
+      --r:       12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      max-width: 480px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand { font-size: 1.2rem; font-weight: 800; letter-spacing: -.03em; }
+    .brand span { color: var(--accent); }
+
+    .hdr-right { display: flex; align-items: center; gap: 12px; }
+
+    .streak { font-size: .85rem; color: var(--muted); display: flex; align-items: center; gap: 4px; }
+    .streak strong { color: var(--text); }
+
+    select {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 4px 8px;
+      font-size: .85rem;
+      cursor: pointer;
+    }
+
+    main {
+      width: 100%;
+      max-width: 480px;
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .day-tag {
+      font-size: .7rem;
+      color: var(--muted);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 20px;
+    }
+
+    .q-label {
+      font-size: .7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 10px;
+    }
+
+    #question-text {
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .answer-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    #answer-input {
+      flex: 1;
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 11px 14px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color .15s;
+    }
+    #answer-input:focus   { border-color: var(--accent); }
+    #answer-input:disabled { opacity: .45; cursor: not-allowed; }
+
+    #submit-btn {
+      background: var(--accent);
+      color: #0f172a;
+      border: none;
+      border-radius: var(--r);
+      padding: 11px 18px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity .15s;
+    }
+    #submit-btn:hover:not(:disabled) { opacity: .85; }
+    #submit-btn:disabled { opacity: .35; cursor: not-allowed; }
+
+    #attempts-label {
+      font-size: .75rem;
+      color: var(--muted);
+      text-align: center;
+      min-height: 1.1em;
+    }
+
+    .guesses { display: flex; flex-direction: column; gap: 7px; }
+
+    .guess {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 13px;
+      font-size: .95rem;
+      animation: slide-in .18s ease-out;
+    }
+    .guess.correct { border-color: var(--correct); }
+    .guess.wrong   { color: var(--muted); }
+
+    .gi { flex-shrink: 0; font-style: normal; }
+    .guess.correct .gi::before { content: '✓'; color: var(--correct); font-weight: 700; }
+    .guess.wrong   .gi::before { content: '✗'; color: var(--wrong); }
+
+    @keyframes slide-in {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      20%,60%  { transform: translateX(-5px); }
+      40%,80%  { transform: translateX(5px); }
+    }
+    .shake { animation: shake .3s ease-out; }
+
+    .result { display: flex; flex-direction: column; gap: 12px; }
+
+    .result-title { font-size: 1.15rem; font-weight: 700; text-align: center; }
+    .result-title.win  { color: var(--correct); }
+    .result-title.lose { color: var(--wrong); }
+
+    .result-answer { font-size: .88rem; color: var(--muted); text-align: center; }
+    .result-answer strong { color: var(--text); }
+
+    hr { border: none; border-top: 1px solid var(--border); }
+
+    .share-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--surface2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px;
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: background .15s;
+    }
+    .share-btn:hover { background: var(--border); }
+
+    .copied {
+      font-size: .75rem;
+      color: var(--correct);
+      text-align: center;
+      opacity: 0;
+      transition: opacity .25s;
+    }
+    .copied.show { opacity: 1; }
+
+    .countdown { font-size: .8rem; color: var(--muted); text-align: center; }
+
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Geo<span>Trivia</span></div>
+  <div class="hdr-right">
+    <div class="streak">🔥 <strong id="streak-val">0</strong></div>
+    <select id="locale-pick">
+      <option value="en">EN</option>
+      <option value="es">ES</option>
+      <option value="fr">FR</option>
+      <option value="ja">JA</option>
+      <option value="pt">PT</option>
+    </select>
+  </div>
+</header>
+
+<main>
+  <div class="loading" id="loading">Loading…</div>
+</main>
+
+<script>
+/* ── Localization engine (browser mirror of localization.js) ─────────────── */
+
+function normalize(s) {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim().replace(/\s+/g,' ');
+}
+function loc(map, locale) { return map[locale] ?? map.en; }
+
+function entityLabel(ents, id, locale) { return loc(ents[id].labels, locale); }
+
+function entityAliases(ents, id, locale) {
+  const e = ents[id];
+  const la = e.aliases[locale] ?? [];
+  const ea = e.aliases.en ?? [];
+  const seen = new Set(), out = [];
+  for (const a of [...la, ...ea]) {
+    const k = normalize(a);
+    if (!seen.has(k)) { seen.add(k); out.push(a); }
+  }
+  return out;
+}
+
+function checkAnswer(ents, input, entityId, locale) {
+  const n = normalize(input);
+  return entityAliases(ents, entityId, locale).some(a => normalize(a) === n);
+}
+
+function renderQ(ents, tmpl, q, locale) {
+  let text = loc(tmpl[q.template], locale);
+  for (const [k, id] of Object.entries(q.params))
+    text = text.replace(`{${k}}`, entityLabel(ents, id, locale));
+  return text;
+}
+
+function uiS(ui, key, locale, vars = {}) {
+  let s = loc(ui[key], locale);
+  for (const [k,v] of Object.entries(vars)) s = s.replace(`{${k}}`, v);
+  return s;
+}
+
+/* ── Utilities ───────────────────────────────────────────────────────────── */
+
+function esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function getDayNumber() {
+  const n = new Date();
+  return Math.floor(Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate()) / 86400000);
+}
+
+function pickQuestion(questions, day) {
+  const pool = questions.filter(q => q.template === 'capital_of_country');
+  // Non-sequential walk: step is coprime with pool length for full coverage
+  const step = Math.ceil(pool.length * 0.618); // golden-ratio-ish skip
+  return pool[(day * step) % pool.length];
+}
+
+function buildShareText(day, guesses, won) {
+  const grid = guesses.map((_, i) =>
+    (won && i === guesses.length - 1) ? '🟩' : '🟥'
+  ).join('');
+  return `GeoTrivia #${day}\n${grid} ${won ? guesses.length + '/6' : 'X/6'}`;
+}
+
+function countdown() {
+  const n = new Date();
+  const ms = Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate() + 1) - Date.now();
+  const h = String(Math.floor(ms / 3600000)).padStart(2,'0');
+  const m = String(Math.floor(ms % 3600000 / 60000)).padStart(2,'0');
+  const s = String(Math.floor(ms % 60000 / 1000)).padStart(2,'0');
+  return `${h}:${m}:${s}`;
+}
+
+/* ── LocalStorage ────────────────────────────────────────────────────────── */
+
+const STORE = 'geotrivia_v1';
+function loadState() { try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch { return {}; } }
+function saveState(s) { localStorage.setItem(STORE, JSON.stringify(s)); }
+
+function getLocale() { return localStorage.getItem('geotrivia_locale') || 'en'; }
+function setLocale(l) { localStorage.setItem('geotrivia_locale', l); }
+
+/* ── Constants ───────────────────────────────────────────────────────────── */
+
+const MAX = 6;
+
+/* ── Render ──────────────────────────────────────────────────────────────── */
+
+function mount(data, day, q, locale, state) {
+  const { ents, tmpl, ui } = data;
+  const saved  = state.days?.[day];
+  const guesses = saved?.guesses ?? [];
+  const won     = saved?.won     ?? false;
+  const done    = won || guesses.length >= MAX;
+
+  const qText = renderQ(ents, tmpl, q, locale);
+  const placeholder = uiS(ui, 'enter_answer', locale).trim();
+
+  document.querySelector('main').innerHTML = `
+    <p class="day-tag">Daily Puzzle · Day #${day}</p>
+
+    <div class="card">
+      <p class="q-label">Question</p>
+      <p id="question-text">${esc(qText)}</p>
+    </div>
+
+    <div class="answer-row">
+      <input id="answer-input" type="text" autocomplete="off" spellcheck="false"
+             placeholder="${esc(placeholder)}" ${done ? 'disabled' : ''} />
+      <button id="submit-btn" type="button" ${done ? 'disabled' : ''}>→</button>
+    </div>
+
+    <p id="attempts-label">${done ? '' : `${guesses.length} / ${MAX} guesses`}</p>
+
+    <div class="guesses" id="guesses"></div>
+
+    <div class="card" id="result-card" ${done ? '' : 'hidden'}></div>
+  `;
+
+  guesses.forEach((g, i) => addRow(g, won && i === guesses.length - 1));
+  if (done) renderResult(data, day, q, locale, guesses, won);
+
+  document.getElementById('submit-btn').addEventListener('click', () => submit(data, day, q, locale, state));
+  document.getElementById('answer-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') submit(data, day, q, locale, state);
+  });
+
+  if (!done) document.getElementById('answer-input').focus();
+}
+
+function submit(data, day, q, locale, state) {
+  const input = document.getElementById('answer-input');
+  const val = input.value.trim();
+  if (!val) return;
+
+  const { ents, ui } = data;
+  const saved    = state.days?.[day] ?? { guesses: [], won: false };
+  if (saved.won || saved.guesses.length >= MAX) return;
+
+  const correct    = checkAnswer(ents, val, q.answer, locale);
+  const newGuesses = [...saved.guesses, val];
+  const nowDone    = correct || newGuesses.length >= MAX;
+
+  // Persist
+  state.days = state.days ?? {};
+  state.days[day] = { guesses: newGuesses, won: correct };
+
+  if (correct) {
+    const prevWon = state.lastWonDay === day - 1;
+    state.streak    = prevWon ? (state.streak ?? 0) + 1 : 1;
+    state.lastWonDay = day;
+  } else if (nowDone) {
+    state.streak = 0;
+  }
+  saveState(state);
+  setStreak(state.streak ?? 0);
+
+  input.value = '';
+  addRow(val, correct);
+
+  if (!correct && !nowDone) {
+    input.classList.add('shake');
+    input.addEventListener('animationend', () => input.classList.remove('shake'), { once: true });
+  }
+
+  document.getElementById('attempts-label').textContent =
+    nowDone ? '' : `${newGuesses.length} / ${MAX} guesses`;
+
+  if (nowDone) {
+    input.disabled = true;
+    document.getElementById('submit-btn').disabled = true;
+    const card = document.getElementById('result-card');
+    card.removeAttribute('hidden');
+    renderResult(data, day, q, locale, newGuesses, correct);
+  }
+}
+
+function addRow(text, correct) {
+  const el = document.createElement('div');
+  el.className = `guess ${correct ? 'correct' : 'wrong'}`;
+  el.innerHTML = `<i class="gi"></i><span>${esc(text)}</span>`;
+  document.getElementById('guesses').appendChild(el);
+  el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function renderResult(data, day, q, locale, guesses, won) {
+  const { ents, ui } = data;
+  const ansLabel = entityLabel(ents, q.answer, locale);
+  const card = document.getElementById('result-card');
+
+  card.innerHTML = `
+    <div class="result">
+      <p class="result-title ${won ? 'win' : 'lose'}">
+        ${esc(uiS(ui, won ? 'correct' : 'game_over', locale))}
+      </p>
+      ${!won ? `<p class="result-answer">${esc(uiS(ui,'wrong',locale,{answer:ansLabel}))}</p>` : ''}
+      <hr />
+      <button class="share-btn" id="share-btn">📋 Share result</button>
+      <p class="copied" id="copied">Copied to clipboard!</p>
+      <p class="countdown" id="cd"></p>
+    </div>
+  `;
+
+  document.getElementById('share-btn').addEventListener('click', async () => {
+    const text = buildShareText(day, guesses, won);
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      // Fallback for environments without clipboard API
+      const ta = Object.assign(document.createElement('textarea'), { value: text });
+      ta.style.cssText = 'position:fixed;top:-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+    const msg = document.getElementById('copied');
+    msg.classList.add('show');
+    setTimeout(() => msg.classList.remove('show'), 2000);
+  });
+
+  const cdEl = document.getElementById('cd');
+  function tick() { cdEl.textContent = `Next puzzle in ${countdown()}`; }
+  tick();
+  setInterval(tick, 1000);
+}
+
+function setStreak(n) { document.getElementById('streak-val').textContent = n; }
+
+/* ── Boot ────────────────────────────────────────────────────────────────── */
+
+(async () => {
+  const [ents, tmpl, questions, ui] = await Promise.all([
+    fetch('data/entities.json').then(r => r.json()),
+    fetch('data/question_templates.json').then(r => r.json()),
+    fetch('data/questions.json').then(r => r.json()),
+    fetch('data/ui_strings.json').then(r => r.json()),
+  ]);
+  const data = { ents, tmpl, ui };
+
+  const state  = loadState();
+  let   locale = getLocale();
+  const day    = getDayNumber();
+  const q      = pickQuestion(questions, day);
+
+  // Reset streak if a win day was skipped
+  if (!state.days?.[day]?.won && state.lastWonDay !== undefined && state.lastWonDay < day - 1) {
+    state.streak = 0;
+    saveState(state);
+  }
+
+  // Sync locale picker
+  const picker = document.getElementById('locale-pick');
+  picker.value = locale;
+  picker.addEventListener('change', e => {
+    locale = e.target.value;
+    setLocale(locale);
+    // Live-update question text and input placeholder without a full re-render
+    document.getElementById('question-text').textContent = renderQ(ents, tmpl, q, locale);
+    const inp = document.getElementById('answer-input');
+    if (inp) inp.placeholder = uiS(ui, 'enter_answer', locale).trim();
+  });
+
+  setStreak(state.streak ?? 0);
+  mount(data, day, q, locale, state);
+})();
+</script>
+</body>
+</html>
