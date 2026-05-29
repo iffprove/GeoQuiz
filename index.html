@@ -340,7 +340,7 @@ function buildShareText(day, guesses, won, mode) {
     (won && i === guesses.length - 1) ? '🟩' : '🟥'
   ).join('');
   const label = mode === 'mc' ? 'MC' : 'Text';
-  return `GeoTrivia #${day} [${label}]\n${grid} ${won ? guesses.length + '/' + (mode === 'mc' ? '4' : '6') : 'X'}`;
+  return `GeoTrivia #${day} [${label}]\n${grid} ${won ? guesses.length + '/' + (mode === 'mc' ? '4' : '6') : 'X'}\nhttps://iffprove.github.io/geoquiz`;
 }
 
 function countdown() {
