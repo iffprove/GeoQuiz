@@ -1,6 +1,7 @@
 {
   "DZ": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Algeria",
       "es": "Argelia",
@@ -56,6 +57,7 @@
   },
   "AO": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Angola",
       "es": "Angola",
@@ -111,6 +113,7 @@
   },
   "BJ": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Benin",
       "es": "Benin",
@@ -166,6 +169,7 @@
   },
   "BW": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Botswana",
       "es": "Botswana",
@@ -221,6 +225,7 @@
   },
   "BF": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Burkina Faso",
       "es": "Burkina Faso",
@@ -276,6 +281,7 @@
   },
   "BI": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Burundi",
       "es": "Burundi",
@@ -331,6 +337,7 @@
   },
   "CV": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Cape Verde",
       "es": "Cabo Verde",
@@ -386,6 +393,7 @@
   },
   "CM": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Cameroon",
       "es": "Camerún",
@@ -441,6 +449,7 @@
   },
   "CF": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Central African Republic",
       "es": "República Centroafricana",
@@ -496,6 +505,7 @@
   },
   "TD": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Chad",
       "es": "Chad",
@@ -551,6 +561,7 @@
   },
   "KM": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Comoros",
       "es": "Comoros",
@@ -606,6 +617,7 @@
   },
   "CG": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Republic of the Congo",
       "es": "República del Congo",
@@ -666,6 +678,7 @@
   },
   "CD": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Democratic Republic of the Congo",
       "es": "República Democrática del Congo",
@@ -731,6 +744,7 @@
   },
   "DJ": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Djibouti",
       "es": "Djibouti",
@@ -786,6 +800,7 @@
   },
   "EG": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Egypt",
       "es": "Egipto",
@@ -841,6 +856,7 @@
   },
   "GQ": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Equatorial Guinea",
       "es": "Guinea Ecuatorial",
@@ -896,6 +912,7 @@
   },
   "ER": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Eritrea",
       "es": "Eritrea",
@@ -951,6 +968,7 @@
   },
   "SZ": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Eswatini",
       "es": "Eswatini",
@@ -1011,6 +1029,7 @@
   },
   "ET": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Ethiopia",
       "es": "Etiopía",
@@ -1066,6 +1085,7 @@
   },
   "GA": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Gabon",
       "es": "Gabon",
@@ -1121,6 +1141,7 @@
   },
   "GM": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Gambia",
       "es": "Gambia",
@@ -1176,6 +1197,7 @@
   },
   "GH": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Ghana",
       "es": "Ghana",
@@ -1231,6 +1253,7 @@
   },
   "GN": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Guinea",
       "es": "Guinea",
@@ -1286,6 +1309,7 @@
   },
   "GW": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Guinea-Bissau",
       "es": "Guinea-Bissau",
@@ -1341,6 +1365,7 @@
   },
   "CI": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Ivory Coast",
       "es": "Costa de Marfil",
@@ -1405,6 +1430,7 @@
   },
   "KE": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Kenya",
       "es": "Kenia",
@@ -1460,6 +1486,7 @@
   },
   "LS": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Lesotho",
       "es": "Lesotho",
@@ -1515,6 +1542,7 @@
   },
   "LR": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Liberia",
       "es": "Liberia",
@@ -1570,6 +1598,7 @@
   },
   "LY": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Libya",
       "es": "Libia",
@@ -1625,6 +1654,7 @@
   },
   "MG": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Madagascar",
       "es": "Madagascar",
@@ -1680,6 +1710,7 @@
   },
   "MW": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Malawi",
       "es": "Malawi",
@@ -1735,6 +1766,7 @@
   },
   "ML": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Mali",
       "es": "Malí",
@@ -1790,6 +1822,7 @@
   },
   "MR": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Mauritania",
       "es": "Mauritania",
@@ -1845,6 +1878,7 @@
   },
   "MU": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Mauritius",
       "es": "Mauricio",
@@ -1900,6 +1934,7 @@
   },
   "MA": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Morocco",
       "es": "Marruecos",
@@ -1955,6 +1990,7 @@
   },
   "MZ": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Mozambique",
       "es": "Mozambique",
@@ -2010,6 +2046,7 @@
   },
   "NA": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Namibia",
       "es": "Namibia",
@@ -2065,6 +2102,7 @@
   },
   "NE": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Niger",
       "es": "Níger",
@@ -2120,6 +2158,7 @@
   },
   "NG": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Nigeria",
       "es": "Nigeria",
@@ -2175,6 +2214,7 @@
   },
   "RW": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Rwanda",
       "es": "Rwanda",
@@ -2230,6 +2270,7 @@
   },
   "ST": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "São Tomé and Príncipe",
       "es": "São Tomé and Príncipe",
@@ -2285,6 +2326,7 @@
   },
   "SN": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Senegal",
       "es": "Senegal",
@@ -2340,6 +2382,7 @@
   },
   "SC": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Seychelles",
       "es": "Seychelles",
@@ -2395,6 +2438,7 @@
   },
   "SL": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Sierra Leone",
       "es": "Sierra Leone",
@@ -2450,6 +2494,7 @@
   },
   "SO": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Somalia",
       "es": "Somalia",
@@ -2505,6 +2550,7 @@
   },
   "ZA": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "South Africa",
       "es": "Sudáfrica",
@@ -2560,6 +2606,7 @@
   },
   "SS": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "South Sudan",
       "es": "Sudán del Sur",
@@ -2615,6 +2662,7 @@
   },
   "SD": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Sudan",
       "es": "Sudán",
@@ -2670,6 +2718,7 @@
   },
   "TZ": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Tanzania",
       "es": "Tanzania",
@@ -2725,6 +2774,7 @@
   },
   "TG": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Togo",
       "es": "Togo",
@@ -2780,6 +2830,7 @@
   },
   "TN": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Tunisia",
       "es": "Túnez",
@@ -2835,6 +2886,7 @@
   },
   "UG": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Uganda",
       "es": "Uganda",
@@ -2890,6 +2942,7 @@
   },
   "ZM": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Zambia",
       "es": "Zambia",
@@ -2945,6 +2998,7 @@
   },
   "ZW": {
     "type": "country",
+    "continent": "AF",
     "labels": {
       "en": "Zimbabwe",
       "es": "Zimbabwe",
@@ -3000,6 +3054,7 @@
   },
   "AF": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Afghanistan",
       "es": "Afganistán",
@@ -3055,6 +3110,7 @@
   },
   "AM": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Armenia",
       "es": "Armenia",
@@ -3110,6 +3166,7 @@
   },
   "AZ": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Azerbaijan",
       "es": "Azerbaiyán",
@@ -3165,6 +3222,7 @@
   },
   "BH": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Bahrain",
       "es": "Baréin",
@@ -3220,6 +3278,7 @@
   },
   "BD": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Bangladesh",
       "es": "Bangladés",
@@ -3275,6 +3334,7 @@
   },
   "BT": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Bhutan",
       "es": "Bhutan",
@@ -3330,6 +3390,7 @@
   },
   "BN": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Brunei",
       "es": "Brunei",
@@ -3385,6 +3446,7 @@
   },
   "KH": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Cambodia",
       "es": "Camboya",
@@ -3440,6 +3502,7 @@
   },
   "CN": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "China",
       "es": "China",
@@ -3505,6 +3568,7 @@
   },
   "CY": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Cyprus",
       "es": "Chipre",
@@ -3560,6 +3624,7 @@
   },
   "GE": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Georgia",
       "es": "Georgia",
@@ -3615,6 +3680,7 @@
   },
   "IN": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "India",
       "es": "India",
@@ -3670,6 +3736,7 @@
   },
   "ID": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Indonesia",
       "es": "Indonesia",
@@ -3725,6 +3792,7 @@
   },
   "IR": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Iran",
       "es": "Irán",
@@ -3785,6 +3853,7 @@
   },
   "IQ": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Iraq",
       "es": "Irak",
@@ -3840,6 +3909,7 @@
   },
   "IL": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Israel",
       "es": "Israel",
@@ -3895,6 +3965,7 @@
   },
   "JP": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Japan",
       "es": "Japón",
@@ -3959,6 +4030,7 @@
   },
   "JO": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Jordan",
       "es": "Jordania",
@@ -4014,6 +4086,7 @@
   },
   "KZ": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Kazakhstan",
       "es": "Kazajistán",
@@ -4079,6 +4152,7 @@
   },
   "KW": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Kuwait",
       "es": "Kuwait",
@@ -4134,6 +4208,7 @@
   },
   "KG": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Kyrgyzstan",
       "es": "Kyrgyzstan",
@@ -4189,6 +4264,7 @@
   },
   "LA": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Laos",
       "es": "Laos",
@@ -4244,6 +4320,7 @@
   },
   "LB": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Lebanon",
       "es": "Líbano",
@@ -4299,6 +4376,7 @@
   },
   "MY": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Malaysia",
       "es": "Malasia",
@@ -4354,6 +4432,7 @@
   },
   "MV": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Maldives",
       "es": "Maldives",
@@ -4409,6 +4488,7 @@
   },
   "MN": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Mongolia",
       "es": "Mongolia",
@@ -4469,6 +4549,7 @@
   },
   "MM": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Myanmar",
       "es": "Birmania",
@@ -4539,6 +4620,7 @@
   },
   "NP": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Nepal",
       "es": "Nepal",
@@ -4594,6 +4676,7 @@
   },
   "KP": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "North Korea",
       "es": "Corea del Norte",
@@ -4654,6 +4737,7 @@
   },
   "OM": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Oman",
       "es": "Omán",
@@ -4709,6 +4793,7 @@
   },
   "PK": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Pakistan",
       "es": "Pakistán",
@@ -4764,6 +4849,7 @@
   },
   "PH": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Philippines",
       "es": "Filipinas",
@@ -4819,6 +4905,7 @@
   },
   "QA": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Qatar",
       "es": "Catar",
@@ -4874,6 +4961,7 @@
   },
   "SA": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Saudi Arabia",
       "es": "Arabia Saudita",
@@ -4929,6 +5017,7 @@
   },
   "SG": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Singapore",
       "es": "Singapur",
@@ -4984,6 +5073,7 @@
   },
   "KR": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "South Korea",
       "es": "Corea del Sur",
@@ -5044,6 +5134,7 @@
   },
   "LK": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Sri Lanka",
       "es": "Sri Lanka",
@@ -5109,6 +5200,7 @@
   },
   "SY": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Syria",
       "es": "Siria",
@@ -5164,6 +5256,7 @@
   },
   "TJ": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Tajikistan",
       "es": "Tayikistán",
@@ -5219,6 +5312,7 @@
   },
   "TH": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Thailand",
       "es": "Tailandia",
@@ -5274,6 +5368,7 @@
   },
   "TL": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Timor-Leste",
       "es": "Timor Oriental",
@@ -5334,6 +5429,7 @@
   },
   "TR": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Turkey",
       "es": "Turquía",
@@ -5394,6 +5490,7 @@
   },
   "TM": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Turkmenistan",
       "es": "Turkmenistán",
@@ -5449,6 +5546,7 @@
   },
   "AE": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "United Arab Emirates",
       "es": "Emiratos Árabes Unidos",
@@ -5504,6 +5602,7 @@
   },
   "UZ": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Uzbekistan",
       "es": "Uzbekistán",
@@ -5559,6 +5658,7 @@
   },
   "VN": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Vietnam",
       "es": "Vietnam",
@@ -5614,6 +5714,7 @@
   },
   "YE": {
     "type": "country",
+    "continent": "AS",
     "labels": {
       "en": "Yemen",
       "es": "Yemen",
@@ -5669,6 +5770,7 @@
   },
   "AL": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Albania",
       "es": "Albania",
@@ -5724,6 +5826,7 @@
   },
   "AD": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Andorra",
       "es": "Andorra",
@@ -5779,6 +5882,7 @@
   },
   "AT": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Austria",
       "es": "Austria",
@@ -5834,6 +5938,7 @@
   },
   "BY": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Belarus",
       "es": "Bielorrusia",
@@ -5889,6 +5994,7 @@
   },
   "BE": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Belgium",
       "es": "Bélgica",
@@ -5944,6 +6050,7 @@
   },
   "BA": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Bosnia and Herzegovina",
       "es": "Bosnia y Herzegovina",
@@ -5999,6 +6106,7 @@
   },
   "BG": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Bulgaria",
       "es": "Bulgaria",
@@ -6054,6 +6162,7 @@
   },
   "HR": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Croatia",
       "es": "Croacia",
@@ -6109,6 +6218,7 @@
   },
   "CZ": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Czech Republic",
       "es": "República Checa",
@@ -6169,6 +6279,7 @@
   },
   "DK": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Denmark",
       "es": "Dinamarca",
@@ -6224,6 +6335,7 @@
   },
   "EE": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Estonia",
       "es": "Estonia",
@@ -6279,6 +6391,7 @@
   },
   "FI": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Finland",
       "es": "Finlandia",
@@ -6334,6 +6447,7 @@
   },
   "FR": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "France",
       "es": "Francia",
@@ -6389,6 +6503,7 @@
   },
   "DE": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Germany",
       "es": "Alemania",
@@ -6444,6 +6559,7 @@
   },
   "GR": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Greece",
       "es": "Grecia",
@@ -6499,6 +6615,7 @@
   },
   "HU": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Hungary",
       "es": "Hungría",
@@ -6554,6 +6671,7 @@
   },
   "IS": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Iceland",
       "es": "Islandia",
@@ -6609,6 +6727,7 @@
   },
   "IE": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Ireland",
       "es": "Irlanda",
@@ -6664,6 +6783,7 @@
   },
   "IT": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Italy",
       "es": "Italia",
@@ -6719,6 +6839,7 @@
   },
   "LV": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Latvia",
       "es": "Letonia",
@@ -6774,6 +6895,7 @@
   },
   "LI": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Liechtenstein",
       "es": "Liechtenstein",
@@ -6829,6 +6951,7 @@
   },
   "LT": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Lithuania",
       "es": "Lituania",
@@ -6884,6 +7007,7 @@
   },
   "LU": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Luxembourg",
       "es": "Luxemburgo",
@@ -6939,6 +7063,7 @@
   },
   "MT": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Malta",
       "es": "Malta",
@@ -6994,6 +7119,7 @@
   },
   "MD": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Moldova",
       "es": "Moldavia",
@@ -7054,6 +7180,7 @@
   },
   "MC": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Monaco",
       "es": "Monaco",
@@ -7109,6 +7236,7 @@
   },
   "ME": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Montenegro",
       "es": "Montenegro",
@@ -7164,6 +7292,7 @@
   },
   "NL": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Netherlands",
       "es": "Países Bajos",
@@ -7219,6 +7348,7 @@
   },
   "MK": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "North Macedonia",
       "es": "Macedonia del Norte",
@@ -7279,6 +7409,7 @@
   },
   "NO": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Norway",
       "es": "Noruega",
@@ -7334,6 +7465,7 @@
   },
   "PL": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Poland",
       "es": "Polonia",
@@ -7389,6 +7521,7 @@
   },
   "PT": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Portugal",
       "es": "Portugal",
@@ -7444,6 +7577,7 @@
   },
   "RO": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Romania",
       "es": "Rumanía",
@@ -7499,6 +7633,7 @@
   },
   "RU": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Russia",
       "es": "Rusia",
@@ -7559,6 +7694,7 @@
   },
   "SM": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "San Marino",
       "es": "San Marino",
@@ -7614,6 +7750,7 @@
   },
   "RS": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Serbia",
       "es": "Serbia",
@@ -7669,6 +7806,7 @@
   },
   "SK": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Slovakia",
       "es": "Eslovaquia",
@@ -7724,6 +7862,7 @@
   },
   "SI": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Slovenia",
       "es": "Eslovenia",
@@ -7779,6 +7918,7 @@
   },
   "ES": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Spain",
       "es": "España",
@@ -7834,6 +7974,7 @@
   },
   "SE": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Sweden",
       "es": "Suecia",
@@ -7889,6 +8030,7 @@
   },
   "CH": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Switzerland",
       "es": "Suiza",
@@ -7944,6 +8086,7 @@
   },
   "UA": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Ukraine",
       "es": "Ucrania",
@@ -8006,6 +8149,7 @@
   },
   "GB": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "United Kingdom",
       "es": "Reino Unido",
@@ -8081,6 +8225,7 @@
   },
   "VA": {
     "type": "country",
+    "continent": "EU",
     "labels": {
       "en": "Vatican City",
       "es": "Vatican City",
@@ -8141,6 +8286,7 @@
   },
   "AG": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Antigua and Barbuda",
       "es": "Antigua and Barbuda",
@@ -8196,6 +8342,7 @@
   },
   "BS": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Bahamas",
       "es": "Bahamas",
@@ -8251,6 +8398,7 @@
   },
   "BB": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Barbados",
       "es": "Barbados",
@@ -8306,6 +8454,7 @@
   },
   "BZ": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Belize",
       "es": "Belize",
@@ -8361,6 +8510,7 @@
   },
   "CA": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Canada",
       "es": "Canadá",
@@ -8416,6 +8566,7 @@
   },
   "CR": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Costa Rica",
       "es": "Costa Rica",
@@ -8471,6 +8622,7 @@
   },
   "CU": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Cuba",
       "es": "Cuba",
@@ -8526,6 +8678,7 @@
   },
   "DM": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Dominica",
       "es": "Dominica",
@@ -8581,6 +8734,7 @@
   },
   "DO": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Dominican Republic",
       "es": "República Dominicana",
@@ -8636,6 +8790,7 @@
   },
   "SV": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "El Salvador",
       "es": "El Salvador",
@@ -8691,6 +8846,7 @@
   },
   "GD": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Grenada",
       "es": "Grenada",
@@ -8746,6 +8902,7 @@
   },
   "GT": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Guatemala",
       "es": "Guatemala",
@@ -8801,6 +8958,7 @@
   },
   "HT": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Haiti",
       "es": "Haití",
@@ -8856,6 +9014,7 @@
   },
   "HN": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Honduras",
       "es": "Honduras",
@@ -8911,6 +9070,7 @@
   },
   "JM": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Jamaica",
       "es": "Jamaica",
@@ -8966,6 +9126,7 @@
   },
   "MX": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Mexico",
       "es": "México",
@@ -9031,6 +9192,7 @@
   },
   "NI": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Nicaragua",
       "es": "Nicaragua",
@@ -9086,6 +9248,7 @@
   },
   "PA": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Panama",
       "es": "Panamá",
@@ -9141,6 +9304,7 @@
   },
   "KN": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Saint Kitts and Nevis",
       "es": "Saint Kitts and Nevis",
@@ -9196,6 +9360,7 @@
   },
   "LC": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Saint Lucia",
       "es": "Saint Lucia",
@@ -9251,6 +9416,7 @@
   },
   "VC": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Saint Vincent and the Grenadines",
       "es": "Saint Vincent and the Grenadines",
@@ -9306,6 +9472,7 @@
   },
   "TT": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "Trinidad and Tobago",
       "es": "Trinidad y Tobago",
@@ -9361,6 +9528,7 @@
   },
   "US": {
     "type": "country",
+    "continent": "NA",
     "labels": {
       "en": "United States",
       "es": "Estados Unidos",
@@ -9451,6 +9619,7 @@
   },
   "AR": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Argentina",
       "es": "Argentina",
@@ -9506,6 +9675,7 @@
   },
   "BO": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Bolivia",
       "es": "Bolivia",
@@ -9566,6 +9736,7 @@
   },
   "BR": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Brazil",
       "es": "Brasil",
@@ -9621,6 +9792,7 @@
   },
   "CL": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Chile",
       "es": "Chile",
@@ -9676,6 +9848,7 @@
   },
   "CO": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Colombia",
       "es": "Colombia",
@@ -9731,6 +9904,7 @@
   },
   "EC": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Ecuador",
       "es": "Ecuador",
@@ -9786,6 +9960,7 @@
   },
   "GY": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Guyana",
       "es": "Guyana",
@@ -9841,6 +10016,7 @@
   },
   "PY": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Paraguay",
       "es": "Paraguay",
@@ -9896,6 +10072,7 @@
   },
   "PE": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Peru",
       "es": "Perú",
@@ -9951,6 +10128,7 @@
   },
   "SR": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Suriname",
       "es": "Suriname",
@@ -10006,6 +10184,7 @@
   },
   "UY": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Uruguay",
       "es": "Uruguay",
@@ -10061,6 +10240,7 @@
   },
   "VE": {
     "type": "country",
+    "continent": "SA",
     "labels": {
       "en": "Venezuela",
       "es": "Venezuela",
@@ -10116,6 +10296,7 @@
   },
   "AU": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Australia",
       "es": "Australia",
@@ -10171,6 +10352,7 @@
   },
   "FJ": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Fiji",
       "es": "Fiji",
@@ -10226,6 +10408,7 @@
   },
   "KI": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Kiribati",
       "es": "Kiribati",
@@ -10281,6 +10464,7 @@
   },
   "MH": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Marshall Islands",
       "es": "Marshall Islands",
@@ -10336,6 +10520,7 @@
   },
   "FM": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Micronesia",
       "es": "Micronesia",
@@ -10391,6 +10576,7 @@
   },
   "NR": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Nauru",
       "es": "Nauru",
@@ -10446,6 +10632,7 @@
   },
   "NZ": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "New Zealand",
       "es": "Nueva Zelanda",
@@ -10501,6 +10688,7 @@
   },
   "PW": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Palau",
       "es": "Palau",
@@ -10556,6 +10744,7 @@
   },
   "PG": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Papua New Guinea",
       "es": "Papua New Guinea",
@@ -10611,6 +10800,7 @@
   },
   "WS": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Samoa",
       "es": "Samoa",
@@ -10666,6 +10856,7 @@
   },
   "SB": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Solomon Islands",
       "es": "Solomon Islands",
@@ -10721,6 +10912,7 @@
   },
   "TO": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Tonga",
       "es": "Tonga",
@@ -10776,6 +10968,7 @@
   },
   "TV": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Tuvalu",
       "es": "Tuvalu",
@@ -10831,6 +11024,7 @@
   },
   "VU": {
     "type": "country",
+    "continent": "OC",
     "labels": {
       "en": "Vanuatu",
       "es": "Vanuatu",

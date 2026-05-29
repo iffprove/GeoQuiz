@@ -1,0 +1,1360 @@
+{
+  "cap_AD": {
+    "distractors": [
+      "TALLINN",
+      "BRUSSELS",
+      "MADRID"
+    ]
+  },
+  "cap_AE": {
+    "distractors": [
+      "THIMPHU",
+      "PHNOM_PENH",
+      "MANAMA"
+    ]
+  },
+  "cap_AF": {
+    "distractors": [
+      "KUWAIT_CITY",
+      "ISLAMABAD",
+      "PHNOM_PENH"
+    ]
+  },
+  "cap_AG": {
+    "distractors": [
+      "ROSEAU",
+      "SANTO_DOMINGO",
+      "HAVANA"
+    ]
+  },
+  "cap_AL": {
+    "distractors": [
+      "LONDON",
+      "VIENNA",
+      "RIGA"
+    ]
+  },
+  "cap_AM": {
+    "distractors": [
+      "SINGAPORE_CITY",
+      "SRI_JAYAWARDENEPURA_KOTTE",
+      "MALE"
+    ]
+  },
+  "cap_AO": {
+    "distractors": [
+      "MAPUTO",
+      "BRAZZAVILLE",
+      "ALGIERS"
+    ]
+  },
+  "cap_AR": {
+    "distractors": [
+      "SANTIAGO",
+      "BRASILIA",
+      "ASUNCION"
+    ]
+  },
+  "cap_AT": {
+    "distractors": [
+      "LJUBLJANA",
+      "SOFIA",
+      "VATICAN_CITY"
+    ]
+  },
+  "cap_AU": {
+    "distractors": [
+      "YAREN",
+      "SUVA",
+      "MAJURO"
+    ]
+  },
+  "cap_AZ": {
+    "distractors": [
+      "ISLAMABAD",
+      "MALE",
+      "JAKARTA"
+    ]
+  },
+  "cap_BA": {
+    "distractors": [
+      "PRAGUE",
+      "LUXEMBOURG_CITY",
+      "SKOPJE"
+    ]
+  },
+  "cap_BB": {
+    "distractors": [
+      "PANAMA_CITY",
+      "PORT_AU_PRINCE",
+      "SAN_SALVADOR"
+    ]
+  },
+  "cap_BD": {
+    "distractors": [
+      "KUWAIT_CITY",
+      "TOKYO",
+      "AMMAN"
+    ]
+  },
+  "cap_BE": {
+    "distractors": [
+      "BERLIN",
+      "VALLETTA",
+      "TIRANA"
+    ]
+  },
+  "cap_BF": {
+    "distractors": [
+      "BANGUI",
+      "YAMOUSSOUKRO",
+      "NAIROBI"
+    ]
+  },
+  "cap_BG": {
+    "distractors": [
+      "VILNIUS",
+      "LUXEMBOURG_CITY",
+      "BUCHAREST"
+    ]
+  },
+  "cap_BH": {
+    "distractors": [
+      "BISHKEK",
+      "RIYADH",
+      "AMMAN"
+    ]
+  },
+  "cap_BI": {
+    "distractors": [
+      "KIGALI",
+      "MASERU",
+      "ADDIS_ABABA"
+    ]
+  },
+  "cap_BJ": {
+    "distractors": [
+      "LUANDA",
+      "DJIBOUTI",
+      "SAO_TOME"
+    ]
+  },
+  "cap_BN": {
+    "distractors": [
+      "SEOUL",
+      "YEREVAN",
+      "TASHKENT"
+    ]
+  },
+  "cap_BO": {
+    "distractors": [
+      "MONTEVIDEO",
+      "BRASILIA",
+      "BOGOTA"
+    ]
+  },
+  "cap_BR": {
+    "distractors": [
+      "ASUNCION",
+      "SANTIAGO",
+      "GEORGETOWN"
+    ]
+  },
+  "cap_BS": {
+    "distractors": [
+      "HAVANA",
+      "BRIDGETOWN",
+      "BELMOPAN"
+    ]
+  },
+  "cap_BT": {
+    "distractors": [
+      "MANILA",
+      "KATHMANDU",
+      "BAGHDAD"
+    ]
+  },
+  "cap_BW": {
+    "distractors": [
+      "MONROVIA",
+      "PRAIA",
+      "KIGALI"
+    ]
+  },
+  "cap_BY": {
+    "distractors": [
+      "PRAGUE",
+      "DUBLIN",
+      "VALLETTA"
+    ]
+  },
+  "cap_BZ": {
+    "distractors": [
+      "PANAMA_CITY",
+      "BRIDGETOWN",
+      "OTTAWA"
+    ]
+  },
+  "cap_CA": {
+    "distractors": [
+      "SAN_SALVADOR",
+      "SAINT_GEORGE_S",
+      "PORT_OF_SPAIN"
+    ]
+  },
+  "cap_CD": {
+    "distractors": [
+      "PORT_LOUIS",
+      "BRAZZAVILLE",
+      "MORONI"
+    ]
+  },
+  "cap_CF": {
+    "distractors": [
+      "DAKAR",
+      "BAMAKO",
+      "KINSHASA"
+    ]
+  },
+  "cap_CG": {
+    "distractors": [
+      "PORTO_NOVO",
+      "TRIPOLI",
+      "YAOUNDE"
+    ]
+  },
+  "cap_CH": {
+    "distractors": [
+      "ZAGREB",
+      "LISBON",
+      "PODGORICA"
+    ]
+  },
+  "cap_CI": {
+    "distractors": [
+      "CAIRO",
+      "HARARE",
+      "MOGADISHU"
+    ]
+  },
+  "cap_CL": {
+    "distractors": [
+      "LIMA",
+      "CARACAS",
+      "BRASILIA"
+    ]
+  },
+  "cap_CM": {
+    "distractors": [
+      "ANTANANARIVO",
+      "PORT_LOUIS",
+      "ACCRA"
+    ]
+  },
+  "cap_CN": {
+    "distractors": [
+      "MANAMA",
+      "SINGAPORE_CITY",
+      "SANA_A"
+    ]
+  },
+  "cap_CO": {
+    "distractors": [
+      "SANTIAGO",
+      "BUENOS_AIRES",
+      "MONTEVIDEO"
+    ]
+  },
+  "cap_CR": {
+    "distractors": [
+      "KINGSTOWN",
+      "SANTO_DOMINGO",
+      "HAVANA"
+    ]
+  },
+  "cap_CU": {
+    "distractors": [
+      "BELMOPAN",
+      "ROSEAU",
+      "SAINT_GEORGE_S"
+    ]
+  },
+  "cap_CV": {
+    "distractors": [
+      "LILONGWE",
+      "YAMOUSSOUKRO",
+      "WINDHOEK"
+    ]
+  },
+  "cap_CY": {
+    "distractors": [
+      "DOHA",
+      "KUALA_LUMPUR",
+      "PHNOM_PENH"
+    ]
+  },
+  "cap_CZ": {
+    "distractors": [
+      "BUCHAREST",
+      "ATHENS",
+      "SKOPJE"
+    ]
+  },
+  "cap_DE": {
+    "distractors": [
+      "VIENNA",
+      "ROME",
+      "SAN_MARINO_CITY"
+    ]
+  },
+  "cap_DJ": {
+    "distractors": [
+      "BISSAU",
+      "MASERU",
+      "ACCRA"
+    ]
+  },
+  "cap_DK": {
+    "distractors": [
+      "SOFIA",
+      "CHISINAU",
+      "BRATISLAVA"
+    ]
+  },
+  "cap_DM": {
+    "distractors": [
+      "SAINT_GEORGE_S",
+      "PORT_AU_PRINCE",
+      "HAVANA"
+    ]
+  },
+  "cap_DO": {
+    "distractors": [
+      "HAVANA",
+      "SAN_JOSE",
+      "BELMOPAN"
+    ]
+  },
+  "cap_DZ": {
+    "distractors": [
+      "KINSHASA",
+      "HARARE",
+      "MBABANE"
+    ]
+  },
+  "cap_EC": {
+    "distractors": [
+      "GEORGETOWN",
+      "SANTIAGO",
+      "PARAMARIBO"
+    ]
+  },
+  "cap_EE": {
+    "distractors": [
+      "BERLIN",
+      "MADRID",
+      "VALLETTA"
+    ]
+  },
+  "cap_EG": {
+    "distractors": [
+      "BANJUL",
+      "ADDIS_ABABA",
+      "MALABO"
+    ]
+  },
+  "cap_ER": {
+    "distractors": [
+      "PORT_LOUIS",
+      "LOME",
+      "TRIPOLI"
+    ]
+  },
+  "cap_ES": {
+    "distractors": [
+      "VADUZ",
+      "MONACO_CITY",
+      "VATICAN_CITY"
+    ]
+  },
+  "cap_ET": {
+    "distractors": [
+      "MAPUTO",
+      "LOME",
+      "BANJUL"
+    ]
+  },
+  "cap_FI": {
+    "distractors": [
+      "MADRID",
+      "SAN_MARINO_CITY",
+      "BRUSSELS"
+    ]
+  },
+  "cap_FJ": {
+    "distractors": [
+      "CANBERRA",
+      "HONIARA",
+      "WELLINGTON"
+    ]
+  },
+  "cap_FM": {
+    "distractors": [
+      "NUKU_ALOFA",
+      "WELLINGTON",
+      "FUNAFUTI"
+    ]
+  },
+  "cap_FR": {
+    "distractors": [
+      "STOCKHOLM",
+      "LUXEMBOURG_CITY",
+      "SKOPJE"
+    ]
+  },
+  "cap_GA": {
+    "distractors": [
+      "LUSAKA",
+      "MORONI",
+      "OUAGADOUGOU"
+    ]
+  },
+  "cap_GB": {
+    "distractors": [
+      "PRAGUE",
+      "AMSTERDAM",
+      "SAN_MARINO_CITY"
+    ]
+  },
+  "cap_GD": {
+    "distractors": [
+      "BELMOPAN",
+      "BASSETERRE",
+      "OTTAWA"
+    ]
+  },
+  "cap_GE": {
+    "distractors": [
+      "ASHGABAT",
+      "THIMPHU",
+      "ULAANBAATAR"
+    ]
+  },
+  "cap_GH": {
+    "distractors": [
+      "LUANDA",
+      "PRAIA",
+      "YAMOUSSOUKRO"
+    ]
+  },
+  "cap_GM": {
+    "distractors": [
+      "CAIRO",
+      "BAMAKO",
+      "BISSAU"
+    ]
+  },
+  "cap_GN": {
+    "distractors": [
+      "ANTANANARIVO",
+      "JUBA",
+      "GITEGA"
+    ]
+  },
+  "cap_GQ": {
+    "distractors": [
+      "ALGIERS",
+      "PRAIA",
+      "BRAZZAVILLE"
+    ]
+  },
+  "cap_GR": {
+    "distractors": [
+      "BUCHAREST",
+      "RIGA",
+      "BRUSSELS"
+    ]
+  },
+  "cap_GT": {
+    "distractors": [
+      "BELMOPAN",
+      "KINGSTOWN",
+      "SAINT_GEORGE_S"
+    ]
+  },
+  "cap_GW": {
+    "distractors": [
+      "MOGADISHU",
+      "HARARE",
+      "LUSAKA"
+    ]
+  },
+  "cap_GY": {
+    "distractors": [
+      "SANTIAGO",
+      "QUITO",
+      "PARAMARIBO"
+    ]
+  },
+  "cap_HN": {
+    "distractors": [
+      "ROSEAU",
+      "PORT_OF_SPAIN",
+      "HAVANA"
+    ]
+  },
+  "cap_HR": {
+    "distractors": [
+      "LONDON",
+      "BRATISLAVA",
+      "VILNIUS"
+    ]
+  },
+  "cap_HT": {
+    "distractors": [
+      "KINGSTOWN",
+      "WASHINGTON_D_C",
+      "SAN_JOSE"
+    ]
+  },
+  "cap_HU": {
+    "distractors": [
+      "BERN",
+      "TIRANA",
+      "VALLETTA"
+    ]
+  },
+  "cap_ID": {
+    "distractors": [
+      "KATHMANDU",
+      "BAGHDAD",
+      "BAKU"
+    ]
+  },
+  "cap_IE": {
+    "distractors": [
+      "BERN",
+      "WARSAW",
+      "BUCHAREST"
+    ]
+  },
+  "cap_IL": {
+    "distractors": [
+      "MANAMA",
+      "YEREVAN",
+      "BAGHDAD"
+    ]
+  },
+  "cap_IN": {
+    "distractors": [
+      "AMMAN",
+      "JAKARTA",
+      "DILI"
+    ]
+  },
+  "cap_IQ": {
+    "distractors": [
+      "MUSCAT",
+      "DUSHANBE",
+      "BEIRUT"
+    ]
+  },
+  "cap_IR": {
+    "distractors": [
+      "THIMPHU",
+      "SINGAPORE_CITY",
+      "AMMAN"
+    ]
+  },
+  "cap_IS": {
+    "distractors": [
+      "VATICAN_CITY",
+      "BRATISLAVA",
+      "WARSAW"
+    ]
+  },
+  "cap_IT": {
+    "distractors": [
+      "MINSK",
+      "CHISINAU",
+      "VATICAN_CITY"
+    ]
+  },
+  "cap_JM": {
+    "distractors": [
+      "PORT_OF_SPAIN",
+      "PANAMA_CITY",
+      "BELMOPAN"
+    ]
+  },
+  "cap_JO": {
+    "distractors": [
+      "PHNOM_PENH",
+      "MANILA",
+      "DILI"
+    ]
+  },
+  "cap_JP": {
+    "distractors": [
+      "KABUL",
+      "ASTANA",
+      "BAKU"
+    ]
+  },
+  "cap_KE": {
+    "distractors": [
+      "JUBA",
+      "MAPUTO",
+      "KIGALI"
+    ]
+  },
+  "cap_KG": {
+    "distractors": [
+      "DAMASCUS",
+      "SEOUL",
+      "NICOSIA"
+    ]
+  },
+  "cap_KH": {
+    "distractors": [
+      "BAGHDAD",
+      "YEREVAN",
+      "SANA_A"
+    ]
+  },
+  "cap_KI": {
+    "distractors": [
+      "SUVA",
+      "NUKU_ALOFA",
+      "HONIARA"
+    ]
+  },
+  "cap_KM": {
+    "distractors": [
+      "RABAT",
+      "NOUAKCHOTT",
+      "MBABANE"
+    ]
+  },
+  "cap_KN": {
+    "distractors": [
+      "BRIDGETOWN",
+      "PORT_AU_PRINCE",
+      "CASTRIES"
+    ]
+  },
+  "cap_KP": {
+    "distractors": [
+      "DHAKA",
+      "BAGHDAD",
+      "TBILISI"
+    ]
+  },
+  "cap_KR": {
+    "distractors": [
+      "MALE",
+      "PHNOM_PENH",
+      "NEW_DELHI"
+    ]
+  },
+  "cap_KW": {
+    "distractors": [
+      "DOHA",
+      "DUSHANBE",
+      "SEOUL"
+    ]
+  },
+  "cap_KZ": {
+    "distractors": [
+      "RIYADH",
+      "TASHKENT",
+      "NEW_DELHI"
+    ]
+  },
+  "cap_LA": {
+    "distractors": [
+      "MANILA",
+      "DILI",
+      "TASHKENT"
+    ]
+  },
+  "cap_LB": {
+    "distractors": [
+      "RIYADH",
+      "MUSCAT",
+      "SEOUL"
+    ]
+  },
+  "cap_LC": {
+    "distractors": [
+      "WASHINGTON_D_C",
+      "SANTO_DOMINGO",
+      "KINGSTON"
+    ]
+  },
+  "cap_LI": {
+    "distractors": [
+      "ANDORRA_LA_VELLA",
+      "LISBON",
+      "SAN_MARINO_CITY"
+    ]
+  },
+  "cap_LK": {
+    "distractors": [
+      "AMMAN",
+      "ANKARA",
+      "NICOSIA"
+    ]
+  },
+  "cap_LR": {
+    "distractors": [
+      "CAIRO",
+      "MAPUTO",
+      "SAO_TOME"
+    ]
+  },
+  "cap_LS": {
+    "distractors": [
+      "MORONI",
+      "TRIPOLI",
+      "DODOMA"
+    ]
+  },
+  "cap_LT": {
+    "distractors": [
+      "PODGORICA",
+      "LUXEMBOURG_CITY",
+      "OSLO"
+    ]
+  },
+  "cap_LU": {
+    "distractors": [
+      "ZAGREB",
+      "BERLIN",
+      "VADUZ"
+    ]
+  },
+  "cap_LV": {
+    "distractors": [
+      "VIENNA",
+      "LUXEMBOURG_CITY",
+      "BERN"
+    ]
+  },
+  "cap_LY": {
+    "distractors": [
+      "ACCRA",
+      "KIGALI",
+      "MONROVIA"
+    ]
+  },
+  "cap_MA": {
+    "distractors": [
+      "ACCRA",
+      "TRIPOLI",
+      "MALABO"
+    ]
+  },
+  "cap_MC": {
+    "distractors": [
+      "BRATISLAVA",
+      "VIENNA",
+      "STOCKHOLM"
+    ]
+  },
+  "cap_MD": {
+    "distractors": [
+      "SOFIA",
+      "BRATISLAVA",
+      "PODGORICA"
+    ]
+  },
+  "cap_ME": {
+    "distractors": [
+      "ZAGREB",
+      "MINSK",
+      "CHISINAU"
+    ]
+  },
+  "cap_MG": {
+    "distractors": [
+      "LIBREVILLE",
+      "HARARE",
+      "DAKAR"
+    ]
+  },
+  "cap_MH": {
+    "distractors": [
+      "FUNAFUTI",
+      "PORT_MORESBY",
+      "YAREN"
+    ]
+  },
+  "cap_MK": {
+    "distractors": [
+      "SOFIA",
+      "RIGA",
+      "ANDORRA_LA_VELLA"
+    ]
+  },
+  "cap_ML": {
+    "distractors": [
+      "MBABANE",
+      "N_DJAMENA",
+      "MOGADISHU"
+    ]
+  },
+  "cap_MM": {
+    "distractors": [
+      "RIYADH",
+      "JERUSALEM",
+      "KATHMANDU"
+    ]
+  },
+  "cap_MN": {
+    "distractors": [
+      "DHAKA",
+      "TOKYO",
+      "DILI"
+    ]
+  },
+  "cap_MR": {
+    "distractors": [
+      "PRETORIA",
+      "KHARTOUM",
+      "NAIROBI"
+    ]
+  },
+  "cap_MT": {
+    "distractors": [
+      "STOCKHOLM",
+      "MOSCOW",
+      "BELGRADE"
+    ]
+  },
+  "cap_MU": {
+    "distractors": [
+      "BANJUL",
+      "BAMAKO",
+      "LUSAKA"
+    ]
+  },
+  "cap_MV": {
+    "distractors": [
+      "AMMAN",
+      "BISHKEK",
+      "BEIRUT"
+    ]
+  },
+  "cap_MW": {
+    "distractors": [
+      "NOUAKCHOTT",
+      "BRAZZAVILLE",
+      "PORT_LOUIS"
+    ]
+  },
+  "cap_MX": {
+    "distractors": [
+      "PANAMA_CITY",
+      "NASSAU",
+      "SAINT_GEORGE_S"
+    ]
+  },
+  "cap_MY": {
+    "distractors": [
+      "RIYADH",
+      "BISHKEK",
+      "KATHMANDU"
+    ]
+  },
+  "cap_MZ": {
+    "distractors": [
+      "FREETOWN",
+      "LOME",
+      "VICTORIA"
+    ]
+  },
+  "cap_NA": {
+    "distractors": [
+      "ASMARA",
+      "ADDIS_ABABA",
+      "RABAT"
+    ]
+  },
+  "cap_NE": {
+    "distractors": [
+      "YAMOUSSOUKRO",
+      "KHARTOUM",
+      "DAKAR"
+    ]
+  },
+  "cap_NG": {
+    "distractors": [
+      "N_DJAMENA",
+      "LOME",
+      "LUANDA"
+    ]
+  },
+  "cap_NI": {
+    "distractors": [
+      "KINGSTOWN",
+      "BELMOPAN",
+      "BRIDGETOWN"
+    ]
+  },
+  "cap_NL": {
+    "distractors": [
+      "SAN_MARINO_CITY",
+      "MADRID",
+      "LUXEMBOURG_CITY"
+    ]
+  },
+  "cap_NO": {
+    "distractors": [
+      "SOFIA",
+      "BERLIN",
+      "BRUSSELS"
+    ]
+  },
+  "cap_NP": {
+    "distractors": [
+      "BANDAR_SERI_BEGAWAN",
+      "DUSHANBE",
+      "ULAANBAATAR"
+    ]
+  },
+  "cap_NR": {
+    "distractors": [
+      "MAJURO",
+      "FUNAFUTI",
+      "NUKU_ALOFA"
+    ]
+  },
+  "cap_NZ": {
+    "distractors": [
+      "YAREN",
+      "NUKU_ALOFA",
+      "APIA"
+    ]
+  },
+  "cap_OM": {
+    "distractors": [
+      "BANDAR_SERI_BEGAWAN",
+      "BANGKOK",
+      "TBILISI"
+    ]
+  },
+  "cap_PA": {
+    "distractors": [
+      "SAINT_GEORGE_S",
+      "OTTAWA",
+      "SANTO_DOMINGO"
+    ]
+  },
+  "cap_PE": {
+    "distractors": [
+      "CARACAS",
+      "PARAMARIBO",
+      "SUCRE"
+    ]
+  },
+  "cap_PG": {
+    "distractors": [
+      "CANBERRA",
+      "PALIKIR",
+      "SUVA"
+    ]
+  },
+  "cap_PH": {
+    "distractors": [
+      "JAKARTA",
+      "TOKYO",
+      "TASHKENT"
+    ]
+  },
+  "cap_PK": {
+    "distractors": [
+      "BAGHDAD",
+      "ABU_DHABI",
+      "ULAANBAATAR"
+    ]
+  },
+  "cap_PL": {
+    "distractors": [
+      "ROME",
+      "VILNIUS",
+      "SOFIA"
+    ]
+  },
+  "cap_PT": {
+    "distractors": [
+      "ROME",
+      "TIRANA",
+      "ANDORRA_LA_VELLA"
+    ]
+  },
+  "cap_PW": {
+    "distractors": [
+      "WELLINGTON",
+      "PALIKIR",
+      "CANBERRA"
+    ]
+  },
+  "cap_PY": {
+    "distractors": [
+      "BOGOTA",
+      "BRASILIA",
+      "SUCRE"
+    ]
+  },
+  "cap_QA": {
+    "distractors": [
+      "YEREVAN",
+      "HANOI",
+      "SANA_A"
+    ]
+  },
+  "cap_RO": {
+    "distractors": [
+      "LJUBLJANA",
+      "BRATISLAVA",
+      "REYKJAVIK"
+    ]
+  },
+  "cap_RS": {
+    "distractors": [
+      "LJUBLJANA",
+      "HELSINKI",
+      "DUBLIN"
+    ]
+  },
+  "cap_RU": {
+    "distractors": [
+      "BRUSSELS",
+      "SKOPJE",
+      "VATICAN_CITY"
+    ]
+  },
+  "cap_RW": {
+    "distractors": [
+      "FREETOWN",
+      "YAMOUSSOUKRO",
+      "BISSAU"
+    ]
+  },
+  "cap_SA": {
+    "distractors": [
+      "BISHKEK",
+      "ULAANBAATAR",
+      "BAGHDAD"
+    ]
+  },
+  "cap_SB": {
+    "distractors": [
+      "CANBERRA",
+      "MAJURO",
+      "WELLINGTON"
+    ]
+  },
+  "cap_SC": {
+    "distractors": [
+      "FREETOWN",
+      "LOME",
+      "NIAMEY"
+    ]
+  },
+  "cap_SD": {
+    "distractors": [
+      "LIBREVILLE",
+      "LILONGWE",
+      "N_DJAMENA"
+    ]
+  },
+  "cap_SE": {
+    "distractors": [
+      "WARSAW",
+      "CHISINAU",
+      "RIGA"
+    ]
+  },
+  "cap_SG": {
+    "distractors": [
+      "PYONGYANG",
+      "DUSHANBE",
+      "DHAKA"
+    ]
+  },
+  "cap_SI": {
+    "distractors": [
+      "MONACO_CITY",
+      "TIRANA",
+      "PARIS"
+    ]
+  },
+  "cap_SK": {
+    "distractors": [
+      "BUCHAREST",
+      "TIRANA",
+      "BERN"
+    ]
+  },
+  "cap_SL": {
+    "distractors": [
+      "YAOUNDE",
+      "KAMPALA",
+      "LUANDA"
+    ]
+  },
+  "cap_SM": {
+    "distractors": [
+      "ZAGREB",
+      "LJUBLJANA",
+      "LUXEMBOURG_CITY"
+    ]
+  },
+  "cap_SN": {
+    "distractors": [
+      "BANJUL",
+      "CAIRO",
+      "HARARE"
+    ]
+  },
+  "cap_SO": {
+    "distractors": [
+      "NIAMEY",
+      "TRIPOLI",
+      "RABAT"
+    ]
+  },
+  "cap_SR": {
+    "distractors": [
+      "GEORGETOWN",
+      "SANTIAGO",
+      "SUCRE"
+    ]
+  },
+  "cap_SS": {
+    "distractors": [
+      "PRETORIA",
+      "NOUAKCHOTT",
+      "BANGUI"
+    ]
+  },
+  "cap_ST": {
+    "distractors": [
+      "YAOUNDE",
+      "MORONI",
+      "BANJUL"
+    ]
+  },
+  "cap_SV": {
+    "distractors": [
+      "HAVANA",
+      "KINGSTON",
+      "KINGSTOWN"
+    ]
+  },
+  "cap_SY": {
+    "distractors": [
+      "JERUSALEM",
+      "ASHGABAT",
+      "BAKU"
+    ]
+  },
+  "cap_SZ": {
+    "distractors": [
+      "ACCRA",
+      "TRIPOLI",
+      "HARARE"
+    ]
+  },
+  "cap_TD": {
+    "distractors": [
+      "LUANDA",
+      "BAMAKO",
+      "ABUJA"
+    ]
+  },
+  "cap_TG": {
+    "distractors": [
+      "CAIRO",
+      "HARARE",
+      "BISSAU"
+    ]
+  },
+  "cap_TH": {
+    "distractors": [
+      "SEOUL",
+      "THIMPHU",
+      "NEW_DELHI"
+    ]
+  },
+  "cap_TJ": {
+    "distractors": [
+      "MUSCAT",
+      "PYONGYANG",
+      "TBILISI"
+    ]
+  },
+  "cap_TL": {
+    "distractors": [
+      "PHNOM_PENH",
+      "TASHKENT",
+      "NEW_DELHI"
+    ]
+  },
+  "cap_TM": {
+    "distractors": [
+      "RIYADH",
+      "BISHKEK",
+      "DHAKA"
+    ]
+  },
+  "cap_TN": {
+    "distractors": [
+      "LILONGWE",
+      "YAMOUSSOUKRO",
+      "LUANDA"
+    ]
+  },
+  "cap_TO": {
+    "distractors": [
+      "MAJURO",
+      "FUNAFUTI",
+      "APIA"
+    ]
+  },
+  "cap_TR": {
+    "distractors": [
+      "TBILISI",
+      "JAKARTA",
+      "TASHKENT"
+    ]
+  },
+  "cap_TT": {
+    "distractors": [
+      "SAN_SALVADOR",
+      "SAINT_GEORGE_S",
+      "BELMOPAN"
+    ]
+  },
+  "cap_TV": {
+    "distractors": [
+      "HONIARA",
+      "PORT_MORESBY",
+      "NUKU_ALOFA"
+    ]
+  },
+  "cap_TZ": {
+    "distractors": [
+      "JUBA",
+      "N_DJAMENA",
+      "MAPUTO"
+    ]
+  },
+  "cap_UA": {
+    "distractors": [
+      "REYKJAVIK",
+      "LISBON",
+      "RIGA"
+    ]
+  },
+  "cap_UG": {
+    "distractors": [
+      "ANTANANARIVO",
+      "MASERU",
+      "BISSAU"
+    ]
+  },
+  "cap_US": {
+    "distractors": [
+      "PORT_AU_PRINCE",
+      "HAVANA",
+      "ROSEAU"
+    ]
+  },
+  "cap_UY": {
+    "distractors": [
+      "BUENOS_AIRES",
+      "GEORGETOWN",
+      "BOGOTA"
+    ]
+  },
+  "cap_UZ": {
+    "distractors": [
+      "HANOI",
+      "SINGAPORE_CITY",
+      "YEREVAN"
+    ]
+  },
+  "cap_VA": {
+    "distractors": [
+      "SAN_MARINO_CITY",
+      "ATHENS",
+      "WARSAW"
+    ]
+  },
+  "cap_VC": {
+    "distractors": [
+      "PANAMA_CITY",
+      "SANTO_DOMINGO",
+      "MANAGUA"
+    ]
+  },
+  "cap_VE": {
+    "distractors": [
+      "BRASILIA",
+      "BUENOS_AIRES",
+      "MONTEVIDEO"
+    ]
+  },
+  "cap_VN": {
+    "distractors": [
+      "AMMAN",
+      "JERUSALEM",
+      "BEIRUT"
+    ]
+  },
+  "cap_VU": {
+    "distractors": [
+      "SUVA",
+      "FUNAFUTI",
+      "HONIARA"
+    ]
+  },
+  "cap_WS": {
+    "distractors": [
+      "CANBERRA",
+      "PORT_MORESBY",
+      "HONIARA"
+    ]
+  },
+  "cap_YE": {
+    "distractors": [
+      "PYONGYANG",
+      "MALE",
+      "NEW_DELHI"
+    ]
+  },
+  "cap_ZA": {
+    "distractors": [
+      "MOGADISHU",
+      "TRIPOLI",
+      "ANTANANARIVO"
+    ]
+  },
+  "cap_ZM": {
+    "distractors": [
+      "DAKAR",
+      "MASERU",
+      "TUNIS"
+    ]
+  },
+  "cap_ZW": {
+    "distractors": [
+      "MBABANE",
+      "BAMAKO",
+      "DJIBOUTI"
+    ]
+  }
+}

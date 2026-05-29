@@ -21,6 +21,7 @@
       --r:       12px;
     }
 
+    *, *::before, *::after { box-sizing: border-box; }
     body {
       background: var(--bg);
       color: var(--text);
@@ -34,39 +35,44 @@
     header {
       width: 100%;
       max-width: 480px;
-      padding: 14px 20px;
+      padding: 12px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid var(--border);
+      gap: 8px;
     }
 
-    .brand { font-size: 1.2rem; font-weight: 800; letter-spacing: -.03em; }
+    .brand { font-size: 1.15rem; font-weight: 800; letter-spacing: -.03em; white-space: nowrap; }
     .brand span { color: var(--accent); }
 
-    .hdr-right { display: flex; align-items: center; gap: 12px; }
+    .hdr-right { display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; }
 
-    .streak { font-size: .85rem; color: var(--muted); display: flex; align-items: center; gap: 4px; }
+    .streak { font-size: .82rem; color: var(--muted); display: flex; align-items: center; gap: 3px; white-space: nowrap; }
     .streak strong { color: var(--text); }
 
-    select {
+    select, .mode-toggle {
       background: var(--surface);
       color: var(--text);
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 4px 8px;
-      font-size: .85rem;
+      font-size: .82rem;
       cursor: pointer;
+      white-space: nowrap;
     }
+    .mode-toggle { font-weight: 600; transition: background .15s; }
+    .mode-toggle:hover { background: var(--surface2); }
+    .mode-toggle.locked { opacity: .45; cursor: default; }
 
     main {
       width: 100%;
       max-width: 480px;
-      padding: 20px;
+      padding: 18px;
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
 
     .day-tag {
@@ -85,7 +91,7 @@
     }
 
     .q-label {
-      font-size: .7rem;
+      font-size: .68rem;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: .06em;
@@ -93,16 +99,14 @@
     }
 
     #question-text {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 600;
       line-height: 1.45;
       text-align: center;
     }
 
-    .answer-row {
-      display: flex;
-      gap: 8px;
-    }
+    /* ── Text-input mode ── */
+    .answer-row { display: flex; gap: 8px; }
 
     #answer-input {
       flex: 1;
@@ -116,7 +120,7 @@
       transition: border-color .15s;
     }
     #answer-input:focus   { border-color: var(--accent); }
-    #answer-input:disabled { opacity: .45; cursor: not-allowed; }
+    #answer-input:disabled { opacity: .4; cursor: not-allowed; }
 
     #submit-btn {
       background: var(--accent);
@@ -132,13 +136,52 @@
     #submit-btn:hover:not(:disabled) { opacity: .85; }
     #submit-btn:disabled { opacity: .35; cursor: not-allowed; }
 
-    #attempts-label {
-      font-size: .75rem;
-      color: var(--muted);
-      text-align: center;
-      min-height: 1.1em;
+    /* ── MC mode ── */
+    .mc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
     }
 
+    .mc-btn {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 14px 10px;
+      font-size: .92rem;
+      font-weight: 500;
+      cursor: pointer;
+      line-height: 1.35;
+      text-align: center;
+      transition: background .12s, border-color .12s, color .12s;
+    }
+    .mc-btn:hover:not(:disabled):not(.revealed-correct):not(.wrong) {
+      background: var(--surface2);
+      border-color: var(--accent);
+    }
+    .mc-btn.wrong {
+      border-color: var(--wrong);
+      color: var(--muted);
+      cursor: not-allowed;
+    }
+    .mc-btn.correct, .mc-btn.revealed-correct {
+      border-color: var(--correct);
+      background: #162b1f;
+      color: var(--correct);
+      font-weight: 700;
+    }
+    .mc-btn:disabled { cursor: not-allowed; }
+
+    /* ── Attempts ── */
+    #attempts-label {
+      font-size: .73rem;
+      color: var(--muted);
+      text-align: center;
+      min-height: 1em;
+    }
+
+    /* ── Guess history ── */
     .guesses { display: flex; flex-direction: column; gap: 7px; }
 
     .guess {
@@ -149,13 +192,12 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 9px 13px;
-      font-size: .95rem;
+      font-size: .92rem;
       animation: slide-in .18s ease-out;
     }
     .guess.correct { border-color: var(--correct); }
     .guess.wrong   { color: var(--muted); }
-
-    .gi { flex-shrink: 0; font-style: normal; }
+    .gi { flex-shrink: 0; }
     .guess.correct .gi::before { content: '✓'; color: var(--correct); font-weight: 700; }
     .guess.wrong   .gi::before { content: '✗'; color: var(--wrong); }
 
@@ -170,53 +212,36 @@
     }
     .shake { animation: shake .3s ease-out; }
 
-    .result { display: flex; flex-direction: column; gap: 12px; }
-
-    .result-title { font-size: 1.15rem; font-weight: 700; text-align: center; }
+    /* ── Result panel ── */
+    .result { display: flex; flex-direction: column; gap: 11px; }
+    .result-title { font-size: 1.1rem; font-weight: 700; text-align: center; }
     .result-title.win  { color: var(--correct); }
     .result-title.lose { color: var(--wrong); }
-
-    .result-answer { font-size: .88rem; color: var(--muted); text-align: center; }
+    .result-answer { font-size: .86rem; color: var(--muted); text-align: center; }
     .result-answer strong { color: var(--text); }
 
     hr { border: none; border-top: 1px solid var(--border); }
 
     .share-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--surface2);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 10px;
-      font-size: .9rem;
-      font-weight: 600;
-      cursor: pointer;
-      width: 100%;
-      transition: background .15s;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--surface2); color: var(--text);
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 10px; font-size: .88rem; font-weight: 600;
+      cursor: pointer; width: 100%; transition: background .15s;
     }
     .share-btn:hover { background: var(--border); }
 
     .copied {
-      font-size: .75rem;
-      color: var(--correct);
-      text-align: center;
-      opacity: 0;
-      transition: opacity .25s;
+      font-size: .73rem; color: var(--correct); text-align: center;
+      opacity: 0; transition: opacity .25s;
     }
     .copied.show { opacity: 1; }
 
-    .countdown { font-size: .8rem; color: var(--muted); text-align: center; }
+    .countdown { font-size: .78rem; color: var(--muted); text-align: center; }
 
     .loading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
-      color: var(--muted);
-      font-size: .9rem;
+      display: flex; align-items: center; justify-content: center;
+      flex: 1; color: var(--muted); font-size: .9rem;
     }
 
     [hidden] { display: none !important; }
@@ -228,6 +253,7 @@
   <div class="brand">Geo<span>Trivia</span></div>
   <div class="hdr-right">
     <div class="streak">🔥 <strong id="streak-val">0</strong></div>
+    <button class="mode-toggle" id="mode-btn" hidden>MC</button>
     <select id="locale-pick">
       <option value="en">EN</option>
       <option value="es">ES</option>
@@ -243,19 +269,17 @@
 </main>
 
 <script>
-/* ── Localization engine (browser mirror of localization.js) ─────────────── */
+/* ── Localization engine ─────────────────────────────────────────────────── */
 
 function normalize(s) {
   return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim().replace(/\s+/g,' ');
 }
 function loc(map, locale) { return map[locale] ?? map.en; }
-
 function entityLabel(ents, id, locale) { return loc(ents[id].labels, locale); }
 
 function entityAliases(ents, id, locale) {
   const e = ents[id];
-  const la = e.aliases[locale] ?? [];
-  const ea = e.aliases.en ?? [];
+  const la = e.aliases[locale] ?? [], ea = e.aliases.en ?? [];
   const seen = new Set(), out = [];
   for (const a of [...la, ...ea]) {
     const k = normalize(a);
@@ -295,16 +319,28 @@ function getDayNumber() {
 
 function pickQuestion(questions, day) {
   const pool = questions.filter(q => q.template === 'capital_of_country');
-  // Non-sequential walk: step is coprime with pool length for full coverage
-  const step = Math.ceil(pool.length * 0.618); // golden-ratio-ish skip
+  const step = Math.ceil(pool.length * 0.618);
   return pool[(day * step) % pool.length];
 }
 
-function buildShareText(day, guesses, won) {
+// Deterministic Fisher-Yates shuffle seeded by day number
+function shuffleOptions(arr, seed) {
+  const a = [...arr];
+  let s = seed >>> 0;
+  for (let i = a.length - 1; i > 0; i--) {
+    s = (s * 1664525 + 1013904223) >>> 0;
+    const j = s % (i + 1);
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function buildShareText(day, guesses, won, mode) {
   const grid = guesses.map((_, i) =>
     (won && i === guesses.length - 1) ? '🟩' : '🟥'
   ).join('');
-  return `GeoTrivia #${day}\n${grid} ${won ? guesses.length + '/6' : 'X/6'}`;
+  const label = mode === 'mc' ? 'MC' : 'Text';
+  return `GeoTrivia #${day} [${label}]\n${grid} ${won ? guesses.length + '/' + (mode === 'mc' ? '4' : '6') : 'X'}`;
 }
 
 function countdown() {
@@ -316,83 +352,202 @@ function countdown() {
   return `${h}:${m}:${s}`;
 }
 
-/* ── LocalStorage ────────────────────────────────────────────────────────── */
+/* ── State ───────────────────────────────────────────────────────────────── */
 
 const STORE = 'geotrivia_v1';
 function loadState() { try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch { return {}; } }
 function saveState(s) { localStorage.setItem(STORE, JSON.stringify(s)); }
-
 function getLocale() { return localStorage.getItem('geotrivia_locale') || 'en'; }
 function setLocale(l) { localStorage.setItem('geotrivia_locale', l); }
+function getMode() { return localStorage.getItem('geotrivia_mode') || 'mc'; }
+function setMode(m) { localStorage.setItem('geotrivia_mode', m); }
 
-/* ── Constants ───────────────────────────────────────────────────────────── */
+const MAX_TEXT = 6;
+const MAX_MC   = 4; // 3 wrong options + 1 correct
 
-const MAX = 6;
+/* ── Mount ───────────────────────────────────────────────────────────────── */
 
-/* ── Render ──────────────────────────────────────────────────────────────── */
-
-function mount(data, day, q, locale, state) {
+function mount(data, day, q, locale, state, flavor) {
   const { ents, tmpl, ui } = data;
-  const saved  = state.days?.[day];
+  const saved   = state.days?.[day];
   const guesses = saved?.guesses ?? [];
   const won     = saved?.won     ?? false;
-  const done    = won || guesses.length >= MAX;
+  const mode    = saved?.mode    ?? (flavor[q.id] ? getMode() : 'text');
+  const max     = mode === 'mc' ? MAX_MC : MAX_TEXT;
+  const done    = won || guesses.length >= max;
 
   const qText = renderQ(ents, tmpl, q, locale);
   const placeholder = uiS(ui, 'enter_answer', locale).trim();
 
   document.querySelector('main').innerHTML = `
     <p class="day-tag">Daily Puzzle · Day #${day}</p>
-
     <div class="card">
       <p class="q-label">Question</p>
       <p id="question-text">${esc(qText)}</p>
     </div>
-
-    <div class="answer-row">
-      <input id="answer-input" type="text" autocomplete="off" spellcheck="false"
-             placeholder="${esc(placeholder)}" ${done ? 'disabled' : ''} />
-      <button id="submit-btn" type="button" ${done ? 'disabled' : ''}>→</button>
-    </div>
-
-    <p id="attempts-label">${done ? '' : `${guesses.length} / ${MAX} guesses`}</p>
-
+    ${mode === 'mc'
+      ? renderMCHTML(ents, q, locale, flavor, day, guesses, won, done)
+      : `<div class="answer-row">
+           <input id="answer-input" type="text" autocomplete="off" spellcheck="false"
+                  placeholder="${esc(placeholder)}" ${done ? 'disabled' : ''} />
+           <button id="submit-btn" ${done ? 'disabled' : ''}>→</button>
+         </div>`
+    }
+    <p id="attempts-label">${done ? '' : attemptsLabel(mode, guesses.length, max)}</p>
     <div class="guesses" id="guesses"></div>
-
     <div class="card" id="result-card" ${done ? '' : 'hidden'}></div>
   `;
 
-  guesses.forEach((g, i) => addRow(g, won && i === guesses.length - 1));
-  if (done) renderResult(data, day, q, locale, guesses, won);
-
-  document.getElementById('submit-btn').addEventListener('click', () => submit(data, day, q, locale, state));
-  document.getElementById('answer-input').addEventListener('keydown', e => {
-    if (e.key === 'Enter') submit(data, day, q, locale, state);
+  // Render saved guesses as history rows
+  guesses.forEach((g, i) => {
+    const correct = won && i === guesses.length - 1;
+    if (mode === 'text') {
+      addRow(g, correct);
+    } else {
+      addRow(entityLabel(ents, g, locale), correct);
+    }
   });
+  if (done) renderResult(data, day, q, locale, guesses, won, mode);
 
-  if (!done) document.getElementById('answer-input').focus();
+  // Wire up events
+  if (mode === 'mc') {
+    wireMC(data, day, q, locale, state, flavor, guesses, won, done);
+  } else {
+    document.getElementById('submit-btn').addEventListener('click', () =>
+      submitText(data, day, q, locale, state, flavor));
+    document.getElementById('answer-input').addEventListener('keydown', e => {
+      if (e.key === 'Enter') submitText(data, day, q, locale, state, flavor);
+    });
+    if (!done) document.getElementById('answer-input').focus();
+  }
 }
 
-function submit(data, day, q, locale, state) {
-  const input = document.getElementById('answer-input');
-  const val = input.value.trim();
-  if (!val) return;
+function attemptsLabel(mode, used, max) {
+  if (mode === 'mc') return `${max - used} option${max - used !== 1 ? 's' : ''} remaining`;
+  return `${used} / ${max} guesses`;
+}
 
+/* ── MC rendering ────────────────────────────────────────────────────────── */
+
+function getMCOptions(ents, q, locale, flavor, day) {
+  const distractors = flavor[q.id]?.distractors ?? [];
+  const options = [q.answer, ...distractors.slice(0, 3)];
+  return shuffleOptions(options, day).map(id => ({
+    id,
+    label: entityLabel(ents, id, locale),
+  }));
+}
+
+function renderMCHTML(ents, q, locale, flavor, day, guesses, won, done) {
+  const options = getMCOptions(ents, q, locale, flavor, day);
+  const wrongSet = new Set(guesses.filter(g => !won || g !== q.answer));
+  const correctId = won ? q.answer : null;
+
+  const buttons = options.map(opt => {
+    let cls = 'mc-btn';
+    let dis = '';
+    if (opt.id === correctId) { cls += ' correct'; dis = 'disabled'; }
+    else if (wrongSet.has(opt.id)) { cls += ' wrong'; dis = 'disabled'; }
+    else if (done && !won) { cls += ' revealed-correct'; dis = 'disabled'; } // show answer on loss
+    else if (done) dis = 'disabled';
+    return `<button class="${cls}" data-id="${esc(opt.id)}" ${dis}>${esc(opt.label)}</button>`;
+  }).join('');
+
+  // On loss: reveal the correct answer among buttons
+  if (done && !won) {
+    return `<div class="mc-grid" id="mc-grid">${buttons.replace(
+      `data-id="${esc(q.answer)}"`,
+      `data-id="${esc(q.answer)}" class="mc-btn revealed-correct" disabled`
+    )}</div>`;
+  }
+
+  return `<div class="mc-grid" id="mc-grid">${buttons}</div>`;
+}
+
+function wireMC(data, day, q, locale, state, flavor, savedGuesses, savedWon, done) {
+  if (done) return;
+  const grid = document.getElementById('mc-grid');
+  if (!grid) return;
+
+  grid.addEventListener('click', e => {
+    const btn = e.target.closest('.mc-btn');
+    if (!btn || btn.disabled) return;
+    const clickedId = btn.dataset.id;
+    handleMCClick(data, day, q, locale, state, flavor, clickedId, btn, grid);
+  });
+}
+
+function handleMCClick(data, day, q, locale, state, flavor, clickedId, btn, grid) {
   const { ents, ui } = data;
-  const saved    = state.days?.[day] ?? { guesses: [], won: false };
-  if (saved.won || saved.guesses.length >= MAX) return;
+  const saved    = state.days?.[day] ?? { guesses: [], won: false, mode: 'mc' };
+  if (saved.won || saved.guesses.length >= MAX_MC) return;
 
-  const correct    = checkAnswer(ents, val, q.answer, locale);
-  const newGuesses = [...saved.guesses, val];
-  const nowDone    = correct || newGuesses.length >= MAX;
+  const correct    = clickedId === q.answer;
+  const newGuesses = [...saved.guesses, clickedId];
+  const nowDone    = correct || newGuesses.length >= MAX_MC;
 
   // Persist
   state.days = state.days ?? {};
-  state.days[day] = { guesses: newGuesses, won: correct };
-
+  state.days[day] = { guesses: newGuesses, won: correct, mode: 'mc' };
   if (correct) {
-    const prevWon = state.lastWonDay === day - 1;
-    state.streak    = prevWon ? (state.streak ?? 0) + 1 : 1;
+    state.streak    = state.lastWonDay === day - 1 ? (state.streak ?? 0) + 1 : 1;
+    state.lastWonDay = day;
+  } else if (nowDone) {
+    state.streak = 0;
+  }
+  saveState(state);
+  setStreak(state.streak ?? 0);
+
+  // Update button appearance
+  btn.disabled = true;
+  if (correct) {
+    btn.classList.add('correct');
+  } else {
+    btn.classList.add('wrong');
+    btn.classList.add('shake');
+    btn.addEventListener('animationend', () => btn.classList.remove('shake'), { once: true });
+  }
+
+  // Add guess row to history
+  addRow(entityLabel(ents, clickedId, locale), correct);
+
+  document.getElementById('attempts-label').textContent =
+    nowDone ? '' : attemptsLabel('mc', newGuesses.length, MAX_MC);
+
+  if (nowDone) {
+    // Disable remaining buttons; reveal correct if lost
+    grid.querySelectorAll('.mc-btn').forEach(b => {
+      b.disabled = true;
+      if (!correct && b.dataset.id === q.answer) {
+        b.classList.remove('wrong');
+        b.classList.add('revealed-correct');
+      }
+    });
+    const card = document.getElementById('result-card');
+    card.removeAttribute('hidden');
+    renderResult(data, day, q, locale, newGuesses, correct, 'mc');
+  }
+}
+
+/* ── Text-input mode ─────────────────────────────────────────────────────── */
+
+function submitText(data, day, q, locale, state, flavor) {
+  const input = document.getElementById('answer-input');
+  const val   = input.value.trim();
+  if (!val) return;
+
+  const { ents } = data;
+  const saved    = state.days?.[day] ?? { guesses: [], won: false, mode: 'text' };
+  if (saved.won || saved.guesses.length >= MAX_TEXT) return;
+
+  const correct    = checkAnswer(ents, val, q.answer, locale);
+  const newGuesses = [...saved.guesses, val];
+  const nowDone    = correct || newGuesses.length >= MAX_TEXT;
+
+  state.days = state.days ?? {};
+  state.days[day] = { guesses: newGuesses, won: correct, mode: 'text' };
+  if (correct) {
+    state.streak    = state.lastWonDay === day - 1 ? (state.streak ?? 0) + 1 : 1;
     state.lastWonDay = day;
   } else if (nowDone) {
     state.streak = 0;
@@ -409,26 +564,28 @@ function submit(data, day, q, locale, state) {
   }
 
   document.getElementById('attempts-label').textContent =
-    nowDone ? '' : `${newGuesses.length} / ${MAX} guesses`;
+    nowDone ? '' : attemptsLabel('text', newGuesses.length, MAX_TEXT);
 
   if (nowDone) {
     input.disabled = true;
     document.getElementById('submit-btn').disabled = true;
     const card = document.getElementById('result-card');
     card.removeAttribute('hidden');
-    renderResult(data, day, q, locale, newGuesses, correct);
+    renderResult(data, day, q, locale, newGuesses, correct, 'text');
   }
 }
 
-function addRow(text, correct) {
+/* ── Shared helpers ──────────────────────────────────────────────────────── */
+
+function addRow(displayText, correct) {
   const el = document.createElement('div');
   el.className = `guess ${correct ? 'correct' : 'wrong'}`;
-  el.innerHTML = `<i class="gi"></i><span>${esc(text)}</span>`;
+  el.innerHTML = `<i class="gi"></i><span>${esc(displayText)}</span>`;
   document.getElementById('guesses').appendChild(el);
   el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-function renderResult(data, day, q, locale, guesses, won) {
+function renderResult(data, day, q, locale, guesses, won, mode) {
   const { ents, ui } = data;
   const ansLabel = entityLabel(ents, q.answer, locale);
   const card = document.getElementById('result-card');
@@ -441,17 +598,16 @@ function renderResult(data, day, q, locale, guesses, won) {
       ${!won ? `<p class="result-answer">${esc(uiS(ui,'wrong',locale,{answer:ansLabel}))}</p>` : ''}
       <hr />
       <button class="share-btn" id="share-btn">📋 Share result</button>
-      <p class="copied" id="copied">Copied to clipboard!</p>
+      <p class="copied" id="copied">Copied!</p>
       <p class="countdown" id="cd"></p>
     </div>
   `;
 
   document.getElementById('share-btn').addEventListener('click', async () => {
-    const text = buildShareText(day, guesses, won);
+    const text = buildShareText(day, guesses, won, mode);
     try {
       await navigator.clipboard.writeText(text);
     } catch {
-      // Fallback for environments without clipboard API
       const ta = Object.assign(document.createElement('textarea'), { value: text });
       ta.style.cssText = 'position:fixed;top:-9999px';
       document.body.appendChild(ta);
@@ -475,18 +631,19 @@ function setStreak(n) { document.getElementById('streak-val').textContent = n; }
 /* ── Boot ────────────────────────────────────────────────────────────────── */
 
 (async () => {
-  const [ents, tmpl, questions, ui] = await Promise.all([
+  const [ents, tmpl, questions, ui, flavor] = await Promise.all([
     fetch('data/entities.json').then(r => r.json()),
     fetch('data/question_templates.json').then(r => r.json()),
     fetch('data/questions.json').then(r => r.json()),
     fetch('data/ui_strings.json').then(r => r.json()),
+    fetch('data/flavor.json').then(r => r.json()).catch(() => ({})),
   ]);
   const data = { ents, tmpl, ui };
 
-  const state  = loadState();
-  let   locale = getLocale();
-  const day    = getDayNumber();
-  const q      = pickQuestion(questions, day);
+  const state = loadState();
+  let locale  = getLocale();
+  const day   = getDayNumber();
+  const q     = pickQuestion(questions, day);
 
   // Reset streak if a win day was skipped
   if (!state.days?.[day]?.won && state.lastWonDay !== undefined && state.lastWonDay < day - 1) {
@@ -494,20 +651,51 @@ function setStreak(n) { document.getElementById('streak-val').textContent = n; }
     saveState(state);
   }
 
-  // Sync locale picker
+  // Mode toggle button: show only if flavor available and game not started
+  const hasFlavor = !!flavor[q.id];
+  const started   = !!(state.days?.[day]);
+  const modeBtn   = document.getElementById('mode-btn');
+  const savedMode = state.days?.[day]?.mode ?? getMode();
+
+  if (hasFlavor) {
+    modeBtn.removeAttribute('hidden');
+    modeBtn.textContent = savedMode === 'mc' ? 'MC' : 'Text';
+    if (started) modeBtn.classList.add('locked');
+    modeBtn.addEventListener('click', () => {
+      if (started) return;
+      const next = getMode() === 'mc' ? 'text' : 'mc';
+      setMode(next);
+      modeBtn.textContent = next === 'mc' ? 'MC' : 'Text';
+      mount(data, day, q, locale, state, flavor);
+    });
+  }
+
+  // Locale picker
   const picker = document.getElementById('locale-pick');
   picker.value = locale;
   picker.addEventListener('change', e => {
     locale = e.target.value;
     setLocale(locale);
-    // Live-update question text and input placeholder without a full re-render
     document.getElementById('question-text').textContent = renderQ(ents, tmpl, q, locale);
     const inp = document.getElementById('answer-input');
     if (inp) inp.placeholder = uiS(ui, 'enter_answer', locale).trim();
+    // Re-render MC buttons with new locale labels if MC and not done
+    if (!state.days?.[day] || (!state.days[day].won && state.days[day].guesses.length < MAX_MC)) {
+      const grid = document.getElementById('mc-grid');
+      if (grid) {
+        const saved   = state.days?.[day] ?? { guesses: [], won: false };
+        const options = getMCOptions(ents, q, locale, flavor, day);
+        const wrongSet = new Set(saved.guesses.filter(g => !saved.won || g !== q.answer));
+        grid.querySelectorAll('.mc-btn').forEach((btn, i) => {
+          const opt = options[i];
+          if (opt) btn.textContent = opt.label;
+        });
+      }
+    }
   });
 
   setStreak(state.streak ?? 0);
-  mount(data, day, q, locale, state);
+  mount(data, day, q, locale, state, flavor);
 })();
 </script>
 </body>
