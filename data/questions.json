@@ -1,0 +1,44 @@
+[
+  {
+    "id": "q1",
+    "template": "capital_of_country",
+    "params": { "country": "FR" },
+    "answer": "PARIS"
+  },
+  {
+    "id": "q2",
+    "template": "capital_of_country",
+    "params": { "country": "BR" },
+    "answer": "BRASILIA"
+  },
+  {
+    "id": "q3",
+    "template": "capital_of_country",
+    "params": { "country": "JP" },
+    "answer": "TOKYO"
+  },
+  {
+    "id": "q4",
+    "template": "capital_of_country",
+    "params": { "country": "DE" },
+    "answer": "BERLIN"
+  },
+  {
+    "id": "q5",
+    "template": "capital_of_country",
+    "params": { "country": "EG" },
+    "answer": "CAIRO"
+  },
+  {
+    "id": "q6",
+    "template": "country_of_capital",
+    "params": { "city": "PARIS" },
+    "answer": "FR"
+  },
+  {
+    "id": "q7",
+    "template": "country_of_capital",
+    "params": { "city": "TOKYO" },
+    "answer": "JP"
+  }
+]

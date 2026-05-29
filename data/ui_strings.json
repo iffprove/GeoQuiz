@@ -1,0 +1,37 @@
+{
+  "correct": {
+    "en": "Correct!",
+    "es": "¡Correcto!",
+    "fr": "Correct !",
+    "ja": "正解！",
+    "pt": "Correto!"
+  },
+  "wrong": {
+    "en": "Wrong. The answer is {answer}.",
+    "es": "Incorrecto. La respuesta es {answer}.",
+    "fr": "Faux. La réponse est {answer}.",
+    "ja": "不正解。正解は{answer}です。",
+    "pt": "Errado. A resposta é {answer}."
+  },
+  "score": {
+    "en": "Score: {score}/{total}",
+    "es": "Puntuación: {score}/{total}",
+    "fr": "Score : {score}/{total}",
+    "ja": "スコア：{score}/{total}",
+    "pt": "Pontuação: {score}/{total}"
+  },
+  "enter_answer": {
+    "en": "Your answer: ",
+    "es": "Tu respuesta: ",
+    "fr": "Votre réponse : ",
+    "ja": "あなたの答え：",
+    "pt": "Sua resposta: "
+  },
+  "game_over": {
+    "en": "Game over!",
+    "es": "¡Juego terminado!",
+    "fr": "Partie terminée !",
+    "ja": "ゲームオーバー！",
+    "pt": "Fim de jogo!"
+  }
+}

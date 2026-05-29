@@ -1,0 +1,16 @@
+{
+  "capital_of_country": {
+    "en": "What is the capital of {country}?",
+    "es": "¿Cuál es la capital de {country}?",
+    "fr": "Quelle est la capitale de {country}?",
+    "ja": "{country}の首都はどこですか？",
+    "pt": "Qual é a capital de {country}?"
+  },
+  "country_of_capital": {
+    "en": "In which country is {city} the capital?",
+    "es": "¿En qué país es {city} la capital?",
+    "fr": "Dans quel pays {city} est-elle la capitale?",
+    "ja": "{city}はどの国の首都ですか？",
+    "pt": "Em qual país {city} é a capital?"
+  }
+}

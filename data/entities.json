@@ -1,0 +1,177 @@
+{
+  "FR": {
+    "type": "country",
+    "labels": {
+      "en": "France",
+      "es": "Francia",
+      "fr": "France",
+      "ja": "フランス",
+      "pt": "França"
+    },
+    "aliases": {
+      "en": ["France", "French Republic"],
+      "es": ["Francia", "República Francesa"],
+      "fr": ["France", "République française"],
+      "ja": ["フランス", "フランス共和国"],
+      "pt": ["França", "República Francesa"]
+    }
+  },
+  "PARIS": {
+    "type": "city",
+    "country": "FR",
+    "labels": {
+      "en": "Paris",
+      "es": "París",
+      "fr": "Paris",
+      "ja": "パリ",
+      "pt": "Paris"
+    },
+    "aliases": {
+      "en": ["Paris", "City of Light"],
+      "es": ["París", "Paris"],
+      "fr": ["Paris"],
+      "ja": ["パリ", "パリ市"],
+      "pt": ["Paris"]
+    }
+  },
+  "BR": {
+    "type": "country",
+    "labels": {
+      "en": "Brazil",
+      "es": "Brasil",
+      "fr": "Brésil",
+      "ja": "ブラジル",
+      "pt": "Brasil"
+    },
+    "aliases": {
+      "en": ["Brazil", "Brasil", "Federative Republic of Brazil"],
+      "es": ["Brasil", "República Federativa de Brasil"],
+      "fr": ["Brésil", "République fédérative du Brésil"],
+      "ja": ["ブラジル", "ブラジル連邦共和国"],
+      "pt": ["Brasil", "República Federativa do Brasil"]
+    }
+  },
+  "BRASILIA": {
+    "type": "city",
+    "country": "BR",
+    "labels": {
+      "en": "Brasília",
+      "es": "Brasilia",
+      "fr": "Brasilia",
+      "ja": "ブラジリア",
+      "pt": "Brasília"
+    },
+    "aliases": {
+      "en": ["Brasília", "Brasilia"],
+      "es": ["Brasilia", "Brasília"],
+      "fr": ["Brasília", "Brasilia"],
+      "ja": ["ブラジリア"],
+      "pt": ["Brasília", "Brasilia"]
+    }
+  },
+  "JP": {
+    "type": "country",
+    "labels": {
+      "en": "Japan",
+      "es": "Japón",
+      "fr": "Japon",
+      "ja": "日本",
+      "pt": "Japão"
+    },
+    "aliases": {
+      "en": ["Japan", "Nippon", "Nihon"],
+      "es": ["Japón", "Nippon"],
+      "fr": ["Japon", "Nippon"],
+      "ja": ["日本", "にほん", "ニホン", "ニッポン"],
+      "pt": ["Japão", "Japao", "Nihon"]
+    }
+  },
+  "TOKYO": {
+    "type": "city",
+    "country": "JP",
+    "labels": {
+      "en": "Tokyo",
+      "es": "Tokio",
+      "fr": "Tokyo",
+      "ja": "東京",
+      "pt": "Tóquio"
+    },
+    "aliases": {
+      "en": ["Tokyo", "Tōkyō", "Tokio"],
+      "es": ["Tokio", "Tokyo"],
+      "fr": ["Tokyo", "Tōkyō"],
+      "ja": ["東京", "とうきょう", "トウキョウ"],
+      "pt": ["Tóquio", "Toquio", "Tokyo"]
+    }
+  },
+  "DE": {
+    "type": "country",
+    "labels": {
+      "en": "Germany",
+      "es": "Alemania",
+      "fr": "Allemagne",
+      "ja": "ドイツ",
+      "pt": "Alemanha"
+    },
+    "aliases": {
+      "en": ["Germany", "Deutschland", "Federal Republic of Germany"],
+      "es": ["Alemania", "Deutschland"],
+      "fr": ["Allemagne", "Deutschland"],
+      "ja": ["ドイツ", "ドイツ連邦共和国"],
+      "pt": ["Alemanha", "Deutschland"]
+    }
+  },
+  "BERLIN": {
+    "type": "city",
+    "country": "DE",
+    "labels": {
+      "en": "Berlin",
+      "es": "Berlín",
+      "fr": "Berlin",
+      "ja": "ベルリン",
+      "pt": "Berlim"
+    },
+    "aliases": {
+      "en": ["Berlin"],
+      "es": ["Berlín", "Berlin"],
+      "fr": ["Berlin"],
+      "ja": ["ベルリン"],
+      "pt": ["Berlim", "Berlin"]
+    }
+  },
+  "EG": {
+    "type": "country",
+    "labels": {
+      "en": "Egypt",
+      "es": "Egipto",
+      "fr": "Égypte",
+      "ja": "エジプト",
+      "pt": "Egito"
+    },
+    "aliases": {
+      "en": ["Egypt", "Arab Republic of Egypt"],
+      "es": ["Egipto", "República Árabe de Egipto"],
+      "fr": ["Égypte", "Egypte", "République arabe d'Égypte"],
+      "ja": ["エジプト", "エジプト・アラブ共和国"],
+      "pt": ["Egito", "República Árabe do Egito"]
+    }
+  },
+  "CAIRO": {
+    "type": "city",
+    "country": "EG",
+    "labels": {
+      "en": "Cairo",
+      "es": "El Cairo",
+      "fr": "Le Caire",
+      "ja": "カイロ",
+      "pt": "Cairo"
+    },
+    "aliases": {
+      "en": ["Cairo", "Al-Qahirah"],
+      "es": ["El Cairo", "Cairo"],
+      "fr": ["Le Caire", "Cairo", "Al-Qahirah"],
+      "ja": ["カイロ", "アル＝カーヒラ"],
+      "pt": ["Cairo", "El Cairo"]
+    }
+  }
+}
