@@ -339,15 +339,21 @@
     }
     .practice-next-btn:hover { background: rgba(56,189,248,.1); }
 
-    .practice-launch-btn {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--surface); color: var(--muted);
-      border: 1px dashed var(--border); border-radius: 8px;
-      padding: 10px; font-size: .85rem; font-weight: 600;
-      cursor: pointer; width: 100%; transition: all .15s;
-      margin-top: 4px;
+    .view-tabs {
+      width: 100%; max-width: 480px;
+      display: flex; padding: 0 18px;
+      border-bottom: 1px solid var(--border);
     }
-    .practice-launch-btn:hover { background: var(--surface2); color: var(--text); border-color: var(--accent); }
+    .view-tab {
+      padding: 10px 16px 9px;
+      background: none; color: var(--muted);
+      border: none; border-bottom: 2px solid transparent;
+      font-size: .85rem; font-weight: 700;
+      cursor: pointer; transition: color .15s, border-color .15s;
+      margin-bottom: -1px;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
 
     .loading {
       display: flex; align-items: center; justify-content: center;
@@ -373,6 +379,11 @@
     </select>
   </div>
 </header>
+
+<nav class="view-tabs" id="view-tabs" hidden>
+  <button class="view-tab active" id="tab-daily"></button>
+  <button class="view-tab" id="tab-endless"></button>
+</nav>
 
 <main>
   <div class="loading" id="loading">Loading…</div>
@@ -725,23 +736,35 @@ const MAX_MC   = 4;
 /* ── Practice session ────────────────────────────────────────────────────── */
 
 let practiceSession = null;
+let activeView = 'daily';
 
 function startPractice(allQuestions, data, locale) {
   const pool = allQuestions.filter(q => q.template === 'capital_of_country');
   const indices = pool.map((_, i) => i);
   const shuffled = shuffleOptions(indices, Date.now() >>> 0).map(i => pool[i]);
-  practiceSession = { questions: shuffled, index: 0 };
+  practiceSession = { questions: shuffled, index: 0, correct: 0, attempted: 0 };
   mountPractice(data, locale);
 }
 
 function mountPractice(data, locale) {
-  if (!practiceSession || practiceSession.index >= practiceSession.questions.length) {
-    practiceSession = null;
-    return;
+  if (!practiceSession) return;
+  if (practiceSession.index >= practiceSession.questions.length) {
+    // Reshuffle the deck to keep endless going; preserve score
+    const pool = practiceSession.questions;
+    practiceSession.questions = shuffleOptions(pool.map((_, i) => i), Date.now() >>> 0).map(i => pool[i]);
+    practiceSession.index = 0;
   }
   const q = practiceSession.questions[practiceSession.index];
-  // Fresh in-memory state per practice question
   mount(data, 'practice', q, locale, {}, true);
+}
+
+function refreshEndlessTag(ui, locale) {
+  const tag = document.querySelector('.practice-day-tag');
+  if (!tag || !practiceSession) return;
+  const base = uiS(ui, 'tab_endless', locale);
+  tag.textContent = practiceSession.attempted > 0
+    ? `${base} · ${practiceSession.correct} / ${practiceSession.attempted}`
+    : base;
 }
 
 /* ── Mount ───────────────────────────────────────────────────────────────── */
@@ -758,8 +781,10 @@ function mount(data, day, q, locale, state, isPractice) {
   const qText      = renderQ(ents, tmpl, q, locale);
   const placeholder = uiS(ui, 'enter_answer', locale).trim();
 
+  const endlessScore = isPractice && practiceSession && practiceSession.attempted > 0
+    ? ` · ${practiceSession.correct} / ${practiceSession.attempted}` : '';
   const dayTagHTML = isPractice
-    ? `<p class="practice-day-tag">✦ ${esc(uiS(ui, 'practice_tag', locale))}</p>`
+    ? `<p class="practice-day-tag">${esc(uiS(ui, 'tab_endless', locale) + endlessScore)}</p>`
     : `<p class="day-tag">Daily Puzzle · Day #${day}</p>`;
 
   document.querySelector('main').innerHTML = `
@@ -906,6 +931,12 @@ function handleMCClick(data, day, q, locale, state, clickedId, btn, grid, isPrac
     state.days['practice'] = { guesses: newGuesses, won: correct, mode: 'mc' };
   }
 
+  if (isPractice && nowDone && practiceSession) {
+    practiceSession.attempted++;
+    if (correct) practiceSession.correct++;
+    refreshEndlessTag(data.ui, locale);
+  }
+
   btn.disabled = true;
   btn.classList.add(correct ? 'correct' : 'wrong');
   if (!correct) {
@@ -966,6 +997,12 @@ function submitText(data, day, q, locale, state, isPractice) {
     state.days['practice'] = { guesses: newGuesses, won: correct, mode: 'text' };
   }
 
+  if (isPractice && nowDone && practiceSession) {
+    practiceSession.attempted++;
+    if (correct) practiceSession.correct++;
+    refreshEndlessTag(data.ui, locale);
+  }
+
   input.value = '';
   addRow(val, correct);
 
@@ -1022,7 +1059,7 @@ function renderResult(data, day, q, locale, guesses, won, mode, isPractice) {
           <p>${esc(funFact)}</p>
         </div>` : ''}
       <hr />
-      <button class="share-btn" id="share-btn">↗ ${esc(uiS(ui, 'share_btn', locale))}</button>
+      ${!isPractice ? `<button class="share-btn" id="share-btn">↗ ${esc(uiS(ui, 'share_btn', locale))}</button>` : ''}
       ${isPractice
         ? `<button class="practice-next-btn" id="next-btn">→ Next question</button>`
         : `<p class="countdown" id="cd"></p>`
@@ -1030,11 +1067,13 @@ function renderResult(data, day, q, locale, guesses, won, mode, isPractice) {
     </div>
   `;
 
-  document.getElementById('share-btn').addEventListener('click', () => {
-    const canvas = buildShareCanvas(day, guesses, won, mode, locale, q, data);
-    const text   = buildShareText(day, guesses, won, mode, locale, q, flavor);
-    showShareSheet(canvas, text);
-  });
+  if (!isPractice) {
+    document.getElementById('share-btn').addEventListener('click', () => {
+      const canvas = buildShareCanvas(day, guesses, won, mode, locale, q, data);
+      const text   = buildShareText(day, guesses, won, mode, locale, q, flavor);
+      showShareSheet(canvas, text);
+    });
+  }
 
   if (isPractice) {
     document.getElementById('next-btn').addEventListener('click', () => {
@@ -1089,7 +1128,7 @@ function renderResult(data, day, q, locale, guesses, won, mode, isPractice) {
     saveState(state);
   }
 
-  // Mode toggle: show only if flavor has distractors for this question
+  // Mode toggle: show only if daily question has distractors
   const hasFlavor  = !!flavor[q.id];
   const started    = !!(state.days?.[day]);
   const modeBtn    = document.getElementById('mode-btn');
@@ -1100,13 +1139,40 @@ function renderResult(data, day, q, locale, guesses, won, mode, isPractice) {
     modeBtn.textContent = savedMode === 'mc' ? 'MC' : 'Text';
     if (started) modeBtn.classList.add('locked');
     modeBtn.addEventListener('click', () => {
-      if (started) return;
+      if (activeView === 'daily' && started) return;
       const next = getMode() === 'mc' ? 'text' : 'mc';
       setMode(next);
       modeBtn.textContent = next === 'mc' ? 'MC' : 'Text';
-      mount(data, day, q, locale, state, false);
+      if (activeView === 'endless') mountPractice(data, locale);
+      else mount(data, day, q, locale, state, false);
     });
   }
+
+  // View tabs
+  const tabDaily   = document.getElementById('tab-daily');
+  const tabEndless = document.getElementById('tab-endless');
+  tabDaily.textContent   = uiS(ui, 'tab_daily',   locale);
+  tabEndless.textContent = uiS(ui, 'tab_endless',  locale);
+  document.getElementById('view-tabs').removeAttribute('hidden');
+
+  tabDaily.addEventListener('click', () => {
+    if (activeView === 'daily') return;
+    activeView = 'daily';
+    tabDaily.classList.add('active');
+    tabEndless.classList.remove('active');
+    if (hasFlavor) modeBtn.removeAttribute('hidden');
+    mount(data, day, q, locale, state, false);
+  });
+
+  tabEndless.addEventListener('click', () => {
+    if (activeView === 'endless') return;
+    activeView = 'endless';
+    tabEndless.classList.add('active');
+    tabDaily.classList.remove('active');
+    modeBtn.setAttribute('hidden', '');
+    if (!practiceSession) startPractice(questions, data, locale);
+    else mountPractice(data, locale);
+  });
 
   // Locale picker
   const picker = document.getElementById('locale-pick');
@@ -1114,7 +1180,9 @@ function renderResult(data, day, q, locale, guesses, won, mode, isPractice) {
   picker.addEventListener('change', e => {
     locale = e.target.value;
     setLocale(locale);
-    if (practiceSession) {
+    tabDaily.textContent   = uiS(ui, 'tab_daily',   locale);
+    tabEndless.textContent = uiS(ui, 'tab_endless',  locale);
+    if (activeView === 'endless') {
       mountPractice(data, locale);
       return;
     }
@@ -1135,21 +1203,6 @@ function renderResult(data, day, q, locale, guesses, won, mode, isPractice) {
 
   setStreak(state.streak ?? 0, state.frozeStreak);
   mount(data, day, q, locale, state, false);
-
-  // After daily puzzle is done: offer practice mode
-  const dailyDone = state.days?.[day] && (state.days[day].won || state.days[day].guesses.length >= (state.days[day].mode === 'mc' ? MAX_MC : MAX_TEXT));
-  if (dailyDone) {
-    const mainEl = document.querySelector('main');
-    const practiceDiv = document.createElement('div');
-    practiceDiv.innerHTML = `<button class="practice-launch-btn" id="practice-launch-btn">
-      ✦ ${esc(uiS(ui, 'practice_btn', locale))}
-    </button>`;
-    mainEl.appendChild(practiceDiv.firstElementChild);
-    document.getElementById('practice-launch-btn').addEventListener('click', () => {
-      document.getElementById('practice-launch-btn').remove();
-      startPractice(questions, data, locale);
-    });
-  }
 })();
 </script>
 </body>

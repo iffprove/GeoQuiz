@@ -82,5 +82,19 @@
     "fr": "Entraînement — sans impact sur la série",
     "ja": "練習 — ストリークに影響しません",
     "pt": "Prática — não afeta sua sequência"
+  },
+  "tab_daily": {
+    "en": "Daily",
+    "es": "Diario",
+    "fr": "Quotidien",
+    "ja": "デイリー",
+    "pt": "Diário"
+  },
+  "tab_endless": {
+    "en": "Endless",
+    "es": "Sin límite",
+    "fr": "Infini",
+    "ja": "無限",
+    "pt": "Infinito"
   }
 }
