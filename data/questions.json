@@ -1,44 +1,3106 @@
 [
   {
-    "id": "q1",
+    "id": "cap_AD",
     "template": "capital_of_country",
-    "params": { "country": "FR" },
-    "answer": "PARIS"
+    "params": {
+      "country": "AD"
+    },
+    "answer": "ANDORRA_LA_VELLA"
   },
   {
-    "id": "q2",
+    "id": "cap_AE",
     "template": "capital_of_country",
-    "params": { "country": "BR" },
+    "params": {
+      "country": "AE"
+    },
+    "answer": "ABU_DHABI"
+  },
+  {
+    "id": "cap_AF",
+    "template": "capital_of_country",
+    "params": {
+      "country": "AF"
+    },
+    "answer": "KABUL"
+  },
+  {
+    "id": "cap_AG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "AG"
+    },
+    "answer": "SAINT_JOHN_S"
+  },
+  {
+    "id": "cap_AL",
+    "template": "capital_of_country",
+    "params": {
+      "country": "AL"
+    },
+    "answer": "TIRANA"
+  },
+  {
+    "id": "cap_AM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "AM"
+    },
+    "answer": "YEREVAN"
+  },
+  {
+    "id": "cap_AO",
+    "template": "capital_of_country",
+    "params": {
+      "country": "AO"
+    },
+    "answer": "LUANDA"
+  },
+  {
+    "id": "cap_AR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "AR"
+    },
+    "answer": "BUENOS_AIRES"
+  },
+  {
+    "id": "cap_AT",
+    "template": "capital_of_country",
+    "params": {
+      "country": "AT"
+    },
+    "answer": "VIENNA"
+  },
+  {
+    "id": "cap_AU",
+    "template": "capital_of_country",
+    "params": {
+      "country": "AU"
+    },
+    "answer": "CANBERRA"
+  },
+  {
+    "id": "cap_AZ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "AZ"
+    },
+    "answer": "BAKU"
+  },
+  {
+    "id": "cap_BA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BA"
+    },
+    "answer": "SARAJEVO"
+  },
+  {
+    "id": "cap_BB",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BB"
+    },
+    "answer": "BRIDGETOWN"
+  },
+  {
+    "id": "cap_BD",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BD"
+    },
+    "answer": "DHAKA"
+  },
+  {
+    "id": "cap_BE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BE"
+    },
+    "answer": "BRUSSELS"
+  },
+  {
+    "id": "cap_BF",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BF"
+    },
+    "answer": "OUAGADOUGOU"
+  },
+  {
+    "id": "cap_BG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BG"
+    },
+    "answer": "SOFIA"
+  },
+  {
+    "id": "cap_BH",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BH"
+    },
+    "answer": "MANAMA"
+  },
+  {
+    "id": "cap_BI",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BI"
+    },
+    "answer": "GITEGA"
+  },
+  {
+    "id": "cap_BJ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BJ"
+    },
+    "answer": "PORTO_NOVO"
+  },
+  {
+    "id": "cap_BN",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BN"
+    },
+    "answer": "BANDAR_SERI_BEGAWAN"
+  },
+  {
+    "id": "cap_BO",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BO"
+    },
+    "answer": "SUCRE"
+  },
+  {
+    "id": "cap_BR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BR"
+    },
     "answer": "BRASILIA"
   },
   {
-    "id": "q3",
+    "id": "cap_BS",
     "template": "capital_of_country",
-    "params": { "country": "JP" },
-    "answer": "TOKYO"
+    "params": {
+      "country": "BS"
+    },
+    "answer": "NASSAU"
   },
   {
-    "id": "q4",
+    "id": "cap_BT",
     "template": "capital_of_country",
-    "params": { "country": "DE" },
+    "params": {
+      "country": "BT"
+    },
+    "answer": "THIMPHU"
+  },
+  {
+    "id": "cap_BW",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BW"
+    },
+    "answer": "GABORONE"
+  },
+  {
+    "id": "cap_BY",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BY"
+    },
+    "answer": "MINSK"
+  },
+  {
+    "id": "cap_BZ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "BZ"
+    },
+    "answer": "BELMOPAN"
+  },
+  {
+    "id": "cap_CA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CA"
+    },
+    "answer": "OTTAWA"
+  },
+  {
+    "id": "cap_CD",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CD"
+    },
+    "answer": "KINSHASA"
+  },
+  {
+    "id": "cap_CF",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CF"
+    },
+    "answer": "BANGUI"
+  },
+  {
+    "id": "cap_CG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CG"
+    },
+    "answer": "BRAZZAVILLE"
+  },
+  {
+    "id": "cap_CH",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CH"
+    },
+    "answer": "BERN"
+  },
+  {
+    "id": "cap_CI",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CI"
+    },
+    "answer": "YAMOUSSOUKRO"
+  },
+  {
+    "id": "cap_CL",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CL"
+    },
+    "answer": "SANTIAGO"
+  },
+  {
+    "id": "cap_CM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CM"
+    },
+    "answer": "YAOUNDE"
+  },
+  {
+    "id": "cap_CN",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CN"
+    },
+    "answer": "BEIJING"
+  },
+  {
+    "id": "cap_CO",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CO"
+    },
+    "answer": "BOGOTA"
+  },
+  {
+    "id": "cap_CR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CR"
+    },
+    "answer": "SAN_JOSE"
+  },
+  {
+    "id": "cap_CU",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CU"
+    },
+    "answer": "HAVANA"
+  },
+  {
+    "id": "cap_CV",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CV"
+    },
+    "answer": "PRAIA"
+  },
+  {
+    "id": "cap_CY",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CY"
+    },
+    "answer": "NICOSIA"
+  },
+  {
+    "id": "cap_CZ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "CZ"
+    },
+    "answer": "PRAGUE"
+  },
+  {
+    "id": "cap_DE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "DE"
+    },
     "answer": "BERLIN"
   },
   {
-    "id": "q5",
+    "id": "cap_DJ",
     "template": "capital_of_country",
-    "params": { "country": "EG" },
+    "params": {
+      "country": "DJ"
+    },
+    "answer": "DJIBOUTI"
+  },
+  {
+    "id": "cap_DK",
+    "template": "capital_of_country",
+    "params": {
+      "country": "DK"
+    },
+    "answer": "COPENHAGEN"
+  },
+  {
+    "id": "cap_DM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "DM"
+    },
+    "answer": "ROSEAU"
+  },
+  {
+    "id": "cap_DO",
+    "template": "capital_of_country",
+    "params": {
+      "country": "DO"
+    },
+    "answer": "SANTO_DOMINGO"
+  },
+  {
+    "id": "cap_DZ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "DZ"
+    },
+    "answer": "ALGIERS"
+  },
+  {
+    "id": "cap_EC",
+    "template": "capital_of_country",
+    "params": {
+      "country": "EC"
+    },
+    "answer": "QUITO"
+  },
+  {
+    "id": "cap_EE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "EE"
+    },
+    "answer": "TALLINN"
+  },
+  {
+    "id": "cap_EG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "EG"
+    },
     "answer": "CAIRO"
   },
   {
-    "id": "q6",
+    "id": "cap_ER",
+    "template": "capital_of_country",
+    "params": {
+      "country": "ER"
+    },
+    "answer": "ASMARA"
+  },
+  {
+    "id": "cap_ES",
+    "template": "capital_of_country",
+    "params": {
+      "country": "ES"
+    },
+    "answer": "MADRID"
+  },
+  {
+    "id": "cap_ET",
+    "template": "capital_of_country",
+    "params": {
+      "country": "ET"
+    },
+    "answer": "ADDIS_ABABA"
+  },
+  {
+    "id": "cap_FI",
+    "template": "capital_of_country",
+    "params": {
+      "country": "FI"
+    },
+    "answer": "HELSINKI"
+  },
+  {
+    "id": "cap_FJ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "FJ"
+    },
+    "answer": "SUVA"
+  },
+  {
+    "id": "cap_FM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "FM"
+    },
+    "answer": "PALIKIR"
+  },
+  {
+    "id": "cap_FR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "FR"
+    },
+    "answer": "PARIS"
+  },
+  {
+    "id": "cap_GA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GA"
+    },
+    "answer": "LIBREVILLE"
+  },
+  {
+    "id": "cap_GB",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GB"
+    },
+    "answer": "LONDON"
+  },
+  {
+    "id": "cap_GD",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GD"
+    },
+    "answer": "SAINT_GEORGE_S"
+  },
+  {
+    "id": "cap_GE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GE"
+    },
+    "answer": "TBILISI"
+  },
+  {
+    "id": "cap_GH",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GH"
+    },
+    "answer": "ACCRA"
+  },
+  {
+    "id": "cap_GM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GM"
+    },
+    "answer": "BANJUL"
+  },
+  {
+    "id": "cap_GN",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GN"
+    },
+    "answer": "CONAKRY"
+  },
+  {
+    "id": "cap_GQ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GQ"
+    },
+    "answer": "MALABO"
+  },
+  {
+    "id": "cap_GR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GR"
+    },
+    "answer": "ATHENS"
+  },
+  {
+    "id": "cap_GT",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GT"
+    },
+    "answer": "GUATEMALA_CITY"
+  },
+  {
+    "id": "cap_GW",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GW"
+    },
+    "answer": "BISSAU"
+  },
+  {
+    "id": "cap_GY",
+    "template": "capital_of_country",
+    "params": {
+      "country": "GY"
+    },
+    "answer": "GEORGETOWN"
+  },
+  {
+    "id": "cap_HN",
+    "template": "capital_of_country",
+    "params": {
+      "country": "HN"
+    },
+    "answer": "TEGUCIGALPA"
+  },
+  {
+    "id": "cap_HR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "HR"
+    },
+    "answer": "ZAGREB"
+  },
+  {
+    "id": "cap_HT",
+    "template": "capital_of_country",
+    "params": {
+      "country": "HT"
+    },
+    "answer": "PORT_AU_PRINCE"
+  },
+  {
+    "id": "cap_HU",
+    "template": "capital_of_country",
+    "params": {
+      "country": "HU"
+    },
+    "answer": "BUDAPEST"
+  },
+  {
+    "id": "cap_ID",
+    "template": "capital_of_country",
+    "params": {
+      "country": "ID"
+    },
+    "answer": "JAKARTA"
+  },
+  {
+    "id": "cap_IE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "IE"
+    },
+    "answer": "DUBLIN"
+  },
+  {
+    "id": "cap_IL",
+    "template": "capital_of_country",
+    "params": {
+      "country": "IL"
+    },
+    "answer": "JERUSALEM"
+  },
+  {
+    "id": "cap_IN",
+    "template": "capital_of_country",
+    "params": {
+      "country": "IN"
+    },
+    "answer": "NEW_DELHI"
+  },
+  {
+    "id": "cap_IQ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "IQ"
+    },
+    "answer": "BAGHDAD"
+  },
+  {
+    "id": "cap_IR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "IR"
+    },
+    "answer": "TEHRAN"
+  },
+  {
+    "id": "cap_IS",
+    "template": "capital_of_country",
+    "params": {
+      "country": "IS"
+    },
+    "answer": "REYKJAVIK"
+  },
+  {
+    "id": "cap_IT",
+    "template": "capital_of_country",
+    "params": {
+      "country": "IT"
+    },
+    "answer": "ROME"
+  },
+  {
+    "id": "cap_JM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "JM"
+    },
+    "answer": "KINGSTON"
+  },
+  {
+    "id": "cap_JO",
+    "template": "capital_of_country",
+    "params": {
+      "country": "JO"
+    },
+    "answer": "AMMAN"
+  },
+  {
+    "id": "cap_JP",
+    "template": "capital_of_country",
+    "params": {
+      "country": "JP"
+    },
+    "answer": "TOKYO"
+  },
+  {
+    "id": "cap_KE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "KE"
+    },
+    "answer": "NAIROBI"
+  },
+  {
+    "id": "cap_KG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "KG"
+    },
+    "answer": "BISHKEK"
+  },
+  {
+    "id": "cap_KH",
+    "template": "capital_of_country",
+    "params": {
+      "country": "KH"
+    },
+    "answer": "PHNOM_PENH"
+  },
+  {
+    "id": "cap_KI",
+    "template": "capital_of_country",
+    "params": {
+      "country": "KI"
+    },
+    "answer": "SOUTH_TARAWA"
+  },
+  {
+    "id": "cap_KM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "KM"
+    },
+    "answer": "MORONI"
+  },
+  {
+    "id": "cap_KN",
+    "template": "capital_of_country",
+    "params": {
+      "country": "KN"
+    },
+    "answer": "BASSETERRE"
+  },
+  {
+    "id": "cap_KP",
+    "template": "capital_of_country",
+    "params": {
+      "country": "KP"
+    },
+    "answer": "PYONGYANG"
+  },
+  {
+    "id": "cap_KR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "KR"
+    },
+    "answer": "SEOUL"
+  },
+  {
+    "id": "cap_KW",
+    "template": "capital_of_country",
+    "params": {
+      "country": "KW"
+    },
+    "answer": "KUWAIT_CITY"
+  },
+  {
+    "id": "cap_KZ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "KZ"
+    },
+    "answer": "ASTANA"
+  },
+  {
+    "id": "cap_LA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LA"
+    },
+    "answer": "VIENTIANE"
+  },
+  {
+    "id": "cap_LB",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LB"
+    },
+    "answer": "BEIRUT"
+  },
+  {
+    "id": "cap_LC",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LC"
+    },
+    "answer": "CASTRIES"
+  },
+  {
+    "id": "cap_LI",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LI"
+    },
+    "answer": "VADUZ"
+  },
+  {
+    "id": "cap_LK",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LK"
+    },
+    "answer": "SRI_JAYAWARDENEPURA_KOTTE"
+  },
+  {
+    "id": "cap_LR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LR"
+    },
+    "answer": "MONROVIA"
+  },
+  {
+    "id": "cap_LS",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LS"
+    },
+    "answer": "MASERU"
+  },
+  {
+    "id": "cap_LT",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LT"
+    },
+    "answer": "VILNIUS"
+  },
+  {
+    "id": "cap_LU",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LU"
+    },
+    "answer": "LUXEMBOURG_CITY"
+  },
+  {
+    "id": "cap_LV",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LV"
+    },
+    "answer": "RIGA"
+  },
+  {
+    "id": "cap_LY",
+    "template": "capital_of_country",
+    "params": {
+      "country": "LY"
+    },
+    "answer": "TRIPOLI"
+  },
+  {
+    "id": "cap_MA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MA"
+    },
+    "answer": "RABAT"
+  },
+  {
+    "id": "cap_MC",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MC"
+    },
+    "answer": "MONACO_CITY"
+  },
+  {
+    "id": "cap_MD",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MD"
+    },
+    "answer": "CHISINAU"
+  },
+  {
+    "id": "cap_ME",
+    "template": "capital_of_country",
+    "params": {
+      "country": "ME"
+    },
+    "answer": "PODGORICA"
+  },
+  {
+    "id": "cap_MG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MG"
+    },
+    "answer": "ANTANANARIVO"
+  },
+  {
+    "id": "cap_MH",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MH"
+    },
+    "answer": "MAJURO"
+  },
+  {
+    "id": "cap_MK",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MK"
+    },
+    "answer": "SKOPJE"
+  },
+  {
+    "id": "cap_ML",
+    "template": "capital_of_country",
+    "params": {
+      "country": "ML"
+    },
+    "answer": "BAMAKO"
+  },
+  {
+    "id": "cap_MM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MM"
+    },
+    "answer": "NAYPYIDAW"
+  },
+  {
+    "id": "cap_MN",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MN"
+    },
+    "answer": "ULAANBAATAR"
+  },
+  {
+    "id": "cap_MR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MR"
+    },
+    "answer": "NOUAKCHOTT"
+  },
+  {
+    "id": "cap_MT",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MT"
+    },
+    "answer": "VALLETTA"
+  },
+  {
+    "id": "cap_MU",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MU"
+    },
+    "answer": "PORT_LOUIS"
+  },
+  {
+    "id": "cap_MV",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MV"
+    },
+    "answer": "MALE"
+  },
+  {
+    "id": "cap_MW",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MW"
+    },
+    "answer": "LILONGWE"
+  },
+  {
+    "id": "cap_MX",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MX"
+    },
+    "answer": "MEXICO_CITY"
+  },
+  {
+    "id": "cap_MY",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MY"
+    },
+    "answer": "KUALA_LUMPUR"
+  },
+  {
+    "id": "cap_MZ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "MZ"
+    },
+    "answer": "MAPUTO"
+  },
+  {
+    "id": "cap_NA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "NA"
+    },
+    "answer": "WINDHOEK"
+  },
+  {
+    "id": "cap_NE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "NE"
+    },
+    "answer": "NIAMEY"
+  },
+  {
+    "id": "cap_NG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "NG"
+    },
+    "answer": "ABUJA"
+  },
+  {
+    "id": "cap_NI",
+    "template": "capital_of_country",
+    "params": {
+      "country": "NI"
+    },
+    "answer": "MANAGUA"
+  },
+  {
+    "id": "cap_NL",
+    "template": "capital_of_country",
+    "params": {
+      "country": "NL"
+    },
+    "answer": "AMSTERDAM"
+  },
+  {
+    "id": "cap_NO",
+    "template": "capital_of_country",
+    "params": {
+      "country": "NO"
+    },
+    "answer": "OSLO"
+  },
+  {
+    "id": "cap_NP",
+    "template": "capital_of_country",
+    "params": {
+      "country": "NP"
+    },
+    "answer": "KATHMANDU"
+  },
+  {
+    "id": "cap_NR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "NR"
+    },
+    "answer": "YAREN"
+  },
+  {
+    "id": "cap_NZ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "NZ"
+    },
+    "answer": "WELLINGTON"
+  },
+  {
+    "id": "cap_OM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "OM"
+    },
+    "answer": "MUSCAT"
+  },
+  {
+    "id": "cap_PA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "PA"
+    },
+    "answer": "PANAMA_CITY"
+  },
+  {
+    "id": "cap_PE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "PE"
+    },
+    "answer": "LIMA"
+  },
+  {
+    "id": "cap_PG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "PG"
+    },
+    "answer": "PORT_MORESBY"
+  },
+  {
+    "id": "cap_PH",
+    "template": "capital_of_country",
+    "params": {
+      "country": "PH"
+    },
+    "answer": "MANILA"
+  },
+  {
+    "id": "cap_PK",
+    "template": "capital_of_country",
+    "params": {
+      "country": "PK"
+    },
+    "answer": "ISLAMABAD"
+  },
+  {
+    "id": "cap_PL",
+    "template": "capital_of_country",
+    "params": {
+      "country": "PL"
+    },
+    "answer": "WARSAW"
+  },
+  {
+    "id": "cap_PT",
+    "template": "capital_of_country",
+    "params": {
+      "country": "PT"
+    },
+    "answer": "LISBON"
+  },
+  {
+    "id": "cap_PW",
+    "template": "capital_of_country",
+    "params": {
+      "country": "PW"
+    },
+    "answer": "NGERULMUD"
+  },
+  {
+    "id": "cap_PY",
+    "template": "capital_of_country",
+    "params": {
+      "country": "PY"
+    },
+    "answer": "ASUNCION"
+  },
+  {
+    "id": "cap_QA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "QA"
+    },
+    "answer": "DOHA"
+  },
+  {
+    "id": "cap_RO",
+    "template": "capital_of_country",
+    "params": {
+      "country": "RO"
+    },
+    "answer": "BUCHAREST"
+  },
+  {
+    "id": "cap_RS",
+    "template": "capital_of_country",
+    "params": {
+      "country": "RS"
+    },
+    "answer": "BELGRADE"
+  },
+  {
+    "id": "cap_RU",
+    "template": "capital_of_country",
+    "params": {
+      "country": "RU"
+    },
+    "answer": "MOSCOW"
+  },
+  {
+    "id": "cap_RW",
+    "template": "capital_of_country",
+    "params": {
+      "country": "RW"
+    },
+    "answer": "KIGALI"
+  },
+  {
+    "id": "cap_SA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SA"
+    },
+    "answer": "RIYADH"
+  },
+  {
+    "id": "cap_SB",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SB"
+    },
+    "answer": "HONIARA"
+  },
+  {
+    "id": "cap_SC",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SC"
+    },
+    "answer": "VICTORIA"
+  },
+  {
+    "id": "cap_SD",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SD"
+    },
+    "answer": "KHARTOUM"
+  },
+  {
+    "id": "cap_SE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SE"
+    },
+    "answer": "STOCKHOLM"
+  },
+  {
+    "id": "cap_SG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SG"
+    },
+    "answer": "SINGAPORE_CITY"
+  },
+  {
+    "id": "cap_SI",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SI"
+    },
+    "answer": "LJUBLJANA"
+  },
+  {
+    "id": "cap_SK",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SK"
+    },
+    "answer": "BRATISLAVA"
+  },
+  {
+    "id": "cap_SL",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SL"
+    },
+    "answer": "FREETOWN"
+  },
+  {
+    "id": "cap_SM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SM"
+    },
+    "answer": "SAN_MARINO_CITY"
+  },
+  {
+    "id": "cap_SN",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SN"
+    },
+    "answer": "DAKAR"
+  },
+  {
+    "id": "cap_SO",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SO"
+    },
+    "answer": "MOGADISHU"
+  },
+  {
+    "id": "cap_SR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SR"
+    },
+    "answer": "PARAMARIBO"
+  },
+  {
+    "id": "cap_SS",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SS"
+    },
+    "answer": "JUBA"
+  },
+  {
+    "id": "cap_ST",
+    "template": "capital_of_country",
+    "params": {
+      "country": "ST"
+    },
+    "answer": "SAO_TOME"
+  },
+  {
+    "id": "cap_SV",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SV"
+    },
+    "answer": "SAN_SALVADOR"
+  },
+  {
+    "id": "cap_SY",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SY"
+    },
+    "answer": "DAMASCUS"
+  },
+  {
+    "id": "cap_SZ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "SZ"
+    },
+    "answer": "MBABANE"
+  },
+  {
+    "id": "cap_TD",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TD"
+    },
+    "answer": "N_DJAMENA"
+  },
+  {
+    "id": "cap_TG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TG"
+    },
+    "answer": "LOME"
+  },
+  {
+    "id": "cap_TH",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TH"
+    },
+    "answer": "BANGKOK"
+  },
+  {
+    "id": "cap_TJ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TJ"
+    },
+    "answer": "DUSHANBE"
+  },
+  {
+    "id": "cap_TL",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TL"
+    },
+    "answer": "DILI"
+  },
+  {
+    "id": "cap_TM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TM"
+    },
+    "answer": "ASHGABAT"
+  },
+  {
+    "id": "cap_TN",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TN"
+    },
+    "answer": "TUNIS"
+  },
+  {
+    "id": "cap_TO",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TO"
+    },
+    "answer": "NUKU_ALOFA"
+  },
+  {
+    "id": "cap_TR",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TR"
+    },
+    "answer": "ANKARA"
+  },
+  {
+    "id": "cap_TT",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TT"
+    },
+    "answer": "PORT_OF_SPAIN"
+  },
+  {
+    "id": "cap_TV",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TV"
+    },
+    "answer": "FUNAFUTI"
+  },
+  {
+    "id": "cap_TZ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "TZ"
+    },
+    "answer": "DODOMA"
+  },
+  {
+    "id": "cap_UA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "UA"
+    },
+    "answer": "KYIV"
+  },
+  {
+    "id": "cap_UG",
+    "template": "capital_of_country",
+    "params": {
+      "country": "UG"
+    },
+    "answer": "KAMPALA"
+  },
+  {
+    "id": "cap_US",
+    "template": "capital_of_country",
+    "params": {
+      "country": "US"
+    },
+    "answer": "WASHINGTON_D_C"
+  },
+  {
+    "id": "cap_UY",
+    "template": "capital_of_country",
+    "params": {
+      "country": "UY"
+    },
+    "answer": "MONTEVIDEO"
+  },
+  {
+    "id": "cap_UZ",
+    "template": "capital_of_country",
+    "params": {
+      "country": "UZ"
+    },
+    "answer": "TASHKENT"
+  },
+  {
+    "id": "cap_VA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "VA"
+    },
+    "answer": "VATICAN_CITY"
+  },
+  {
+    "id": "cap_VC",
+    "template": "capital_of_country",
+    "params": {
+      "country": "VC"
+    },
+    "answer": "KINGSTOWN"
+  },
+  {
+    "id": "cap_VE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "VE"
+    },
+    "answer": "CARACAS"
+  },
+  {
+    "id": "cap_VN",
+    "template": "capital_of_country",
+    "params": {
+      "country": "VN"
+    },
+    "answer": "HANOI"
+  },
+  {
+    "id": "cap_VU",
+    "template": "capital_of_country",
+    "params": {
+      "country": "VU"
+    },
+    "answer": "PORT_VILA"
+  },
+  {
+    "id": "cap_WS",
+    "template": "capital_of_country",
+    "params": {
+      "country": "WS"
+    },
+    "answer": "APIA"
+  },
+  {
+    "id": "cap_YE",
+    "template": "capital_of_country",
+    "params": {
+      "country": "YE"
+    },
+    "answer": "SANA_A"
+  },
+  {
+    "id": "cap_ZA",
+    "template": "capital_of_country",
+    "params": {
+      "country": "ZA"
+    },
+    "answer": "PRETORIA"
+  },
+  {
+    "id": "cap_ZM",
+    "template": "capital_of_country",
+    "params": {
+      "country": "ZM"
+    },
+    "answer": "LUSAKA"
+  },
+  {
+    "id": "cap_ZW",
+    "template": "capital_of_country",
+    "params": {
+      "country": "ZW"
+    },
+    "answer": "HARARE"
+  },
+  {
+    "id": "ctry_ABU_DHABI",
     "template": "country_of_capital",
-    "params": { "city": "PARIS" },
+    "params": {
+      "city": "ABU_DHABI"
+    },
+    "answer": "AE"
+  },
+  {
+    "id": "ctry_ABUJA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ABUJA"
+    },
+    "answer": "NG"
+  },
+  {
+    "id": "ctry_ACCRA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ACCRA"
+    },
+    "answer": "GH"
+  },
+  {
+    "id": "ctry_ADDIS_ABABA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ADDIS_ABABA"
+    },
+    "answer": "ET"
+  },
+  {
+    "id": "ctry_ALGIERS",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ALGIERS"
+    },
+    "answer": "DZ"
+  },
+  {
+    "id": "ctry_AMMAN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "AMMAN"
+    },
+    "answer": "JO"
+  },
+  {
+    "id": "ctry_AMSTERDAM",
+    "template": "country_of_capital",
+    "params": {
+      "city": "AMSTERDAM"
+    },
+    "answer": "NL"
+  },
+  {
+    "id": "ctry_ANDORRA_LA_VELLA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ANDORRA_LA_VELLA"
+    },
+    "answer": "AD"
+  },
+  {
+    "id": "ctry_ANKARA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ANKARA"
+    },
+    "answer": "TR"
+  },
+  {
+    "id": "ctry_ANTANANARIVO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ANTANANARIVO"
+    },
+    "answer": "MG"
+  },
+  {
+    "id": "ctry_APIA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "APIA"
+    },
+    "answer": "WS"
+  },
+  {
+    "id": "ctry_ASHGABAT",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ASHGABAT"
+    },
+    "answer": "TM"
+  },
+  {
+    "id": "ctry_ASMARA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ASMARA"
+    },
+    "answer": "ER"
+  },
+  {
+    "id": "ctry_ASTANA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ASTANA"
+    },
+    "answer": "KZ"
+  },
+  {
+    "id": "ctry_ASUNCION",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ASUNCION"
+    },
+    "answer": "PY"
+  },
+  {
+    "id": "ctry_ATHENS",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ATHENS"
+    },
+    "answer": "GR"
+  },
+  {
+    "id": "ctry_BAGHDAD",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BAGHDAD"
+    },
+    "answer": "IQ"
+  },
+  {
+    "id": "ctry_BAKU",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BAKU"
+    },
+    "answer": "AZ"
+  },
+  {
+    "id": "ctry_BAMAKO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BAMAKO"
+    },
+    "answer": "ML"
+  },
+  {
+    "id": "ctry_BANDAR_SERI_BEGAWAN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BANDAR_SERI_BEGAWAN"
+    },
+    "answer": "BN"
+  },
+  {
+    "id": "ctry_BANGKOK",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BANGKOK"
+    },
+    "answer": "TH"
+  },
+  {
+    "id": "ctry_BANGUI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BANGUI"
+    },
+    "answer": "CF"
+  },
+  {
+    "id": "ctry_BANJUL",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BANJUL"
+    },
+    "answer": "GM"
+  },
+  {
+    "id": "ctry_BASSETERRE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BASSETERRE"
+    },
+    "answer": "KN"
+  },
+  {
+    "id": "ctry_BEIJING",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BEIJING"
+    },
+    "answer": "CN"
+  },
+  {
+    "id": "ctry_BEIRUT",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BEIRUT"
+    },
+    "answer": "LB"
+  },
+  {
+    "id": "ctry_BELGRADE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BELGRADE"
+    },
+    "answer": "RS"
+  },
+  {
+    "id": "ctry_BELMOPAN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BELMOPAN"
+    },
+    "answer": "BZ"
+  },
+  {
+    "id": "ctry_BERLIN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BERLIN"
+    },
+    "answer": "DE"
+  },
+  {
+    "id": "ctry_BERN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BERN"
+    },
+    "answer": "CH"
+  },
+  {
+    "id": "ctry_BISHKEK",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BISHKEK"
+    },
+    "answer": "KG"
+  },
+  {
+    "id": "ctry_BISSAU",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BISSAU"
+    },
+    "answer": "GW"
+  },
+  {
+    "id": "ctry_BOGOTA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BOGOTA"
+    },
+    "answer": "CO"
+  },
+  {
+    "id": "ctry_BRASILIA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BRASILIA"
+    },
+    "answer": "BR"
+  },
+  {
+    "id": "ctry_BRATISLAVA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BRATISLAVA"
+    },
+    "answer": "SK"
+  },
+  {
+    "id": "ctry_BRAZZAVILLE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BRAZZAVILLE"
+    },
+    "answer": "CG"
+  },
+  {
+    "id": "ctry_BRIDGETOWN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BRIDGETOWN"
+    },
+    "answer": "BB"
+  },
+  {
+    "id": "ctry_BRUSSELS",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BRUSSELS"
+    },
+    "answer": "BE"
+  },
+  {
+    "id": "ctry_BUCHAREST",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BUCHAREST"
+    },
+    "answer": "RO"
+  },
+  {
+    "id": "ctry_BUDAPEST",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BUDAPEST"
+    },
+    "answer": "HU"
+  },
+  {
+    "id": "ctry_BUENOS_AIRES",
+    "template": "country_of_capital",
+    "params": {
+      "city": "BUENOS_AIRES"
+    },
+    "answer": "AR"
+  },
+  {
+    "id": "ctry_CAIRO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "CAIRO"
+    },
+    "answer": "EG"
+  },
+  {
+    "id": "ctry_CANBERRA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "CANBERRA"
+    },
+    "answer": "AU"
+  },
+  {
+    "id": "ctry_CARACAS",
+    "template": "country_of_capital",
+    "params": {
+      "city": "CARACAS"
+    },
+    "answer": "VE"
+  },
+  {
+    "id": "ctry_CASTRIES",
+    "template": "country_of_capital",
+    "params": {
+      "city": "CASTRIES"
+    },
+    "answer": "LC"
+  },
+  {
+    "id": "ctry_CHISINAU",
+    "template": "country_of_capital",
+    "params": {
+      "city": "CHISINAU"
+    },
+    "answer": "MD"
+  },
+  {
+    "id": "ctry_CONAKRY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "CONAKRY"
+    },
+    "answer": "GN"
+  },
+  {
+    "id": "ctry_COPENHAGEN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "COPENHAGEN"
+    },
+    "answer": "DK"
+  },
+  {
+    "id": "ctry_DAKAR",
+    "template": "country_of_capital",
+    "params": {
+      "city": "DAKAR"
+    },
+    "answer": "SN"
+  },
+  {
+    "id": "ctry_DAMASCUS",
+    "template": "country_of_capital",
+    "params": {
+      "city": "DAMASCUS"
+    },
+    "answer": "SY"
+  },
+  {
+    "id": "ctry_DHAKA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "DHAKA"
+    },
+    "answer": "BD"
+  },
+  {
+    "id": "ctry_DILI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "DILI"
+    },
+    "answer": "TL"
+  },
+  {
+    "id": "ctry_DJIBOUTI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "DJIBOUTI"
+    },
+    "answer": "DJ"
+  },
+  {
+    "id": "ctry_DODOMA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "DODOMA"
+    },
+    "answer": "TZ"
+  },
+  {
+    "id": "ctry_DOHA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "DOHA"
+    },
+    "answer": "QA"
+  },
+  {
+    "id": "ctry_DUBLIN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "DUBLIN"
+    },
+    "answer": "IE"
+  },
+  {
+    "id": "ctry_DUSHANBE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "DUSHANBE"
+    },
+    "answer": "TJ"
+  },
+  {
+    "id": "ctry_FREETOWN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "FREETOWN"
+    },
+    "answer": "SL"
+  },
+  {
+    "id": "ctry_FUNAFUTI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "FUNAFUTI"
+    },
+    "answer": "TV"
+  },
+  {
+    "id": "ctry_GABORONE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "GABORONE"
+    },
+    "answer": "BW"
+  },
+  {
+    "id": "ctry_GEORGETOWN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "GEORGETOWN"
+    },
+    "answer": "GY"
+  },
+  {
+    "id": "ctry_GITEGA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "GITEGA"
+    },
+    "answer": "BI"
+  },
+  {
+    "id": "ctry_GUATEMALA_CITY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "GUATEMALA_CITY"
+    },
+    "answer": "GT"
+  },
+  {
+    "id": "ctry_HANOI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "HANOI"
+    },
+    "answer": "VN"
+  },
+  {
+    "id": "ctry_HARARE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "HARARE"
+    },
+    "answer": "ZW"
+  },
+  {
+    "id": "ctry_HAVANA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "HAVANA"
+    },
+    "answer": "CU"
+  },
+  {
+    "id": "ctry_HELSINKI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "HELSINKI"
+    },
+    "answer": "FI"
+  },
+  {
+    "id": "ctry_HONIARA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "HONIARA"
+    },
+    "answer": "SB"
+  },
+  {
+    "id": "ctry_ISLAMABAD",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ISLAMABAD"
+    },
+    "answer": "PK"
+  },
+  {
+    "id": "ctry_JAKARTA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "JAKARTA"
+    },
+    "answer": "ID"
+  },
+  {
+    "id": "ctry_JERUSALEM",
+    "template": "country_of_capital",
+    "params": {
+      "city": "JERUSALEM"
+    },
+    "answer": "IL"
+  },
+  {
+    "id": "ctry_JUBA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "JUBA"
+    },
+    "answer": "SS"
+  },
+  {
+    "id": "ctry_KABUL",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KABUL"
+    },
+    "answer": "AF"
+  },
+  {
+    "id": "ctry_KAMPALA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KAMPALA"
+    },
+    "answer": "UG"
+  },
+  {
+    "id": "ctry_KATHMANDU",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KATHMANDU"
+    },
+    "answer": "NP"
+  },
+  {
+    "id": "ctry_KHARTOUM",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KHARTOUM"
+    },
+    "answer": "SD"
+  },
+  {
+    "id": "ctry_KIGALI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KIGALI"
+    },
+    "answer": "RW"
+  },
+  {
+    "id": "ctry_KINGSTON",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KINGSTON"
+    },
+    "answer": "JM"
+  },
+  {
+    "id": "ctry_KINGSTOWN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KINGSTOWN"
+    },
+    "answer": "VC"
+  },
+  {
+    "id": "ctry_KINSHASA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KINSHASA"
+    },
+    "answer": "CD"
+  },
+  {
+    "id": "ctry_KUALA_LUMPUR",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KUALA_LUMPUR"
+    },
+    "answer": "MY"
+  },
+  {
+    "id": "ctry_KUWAIT_CITY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KUWAIT_CITY"
+    },
+    "answer": "KW"
+  },
+  {
+    "id": "ctry_KYIV",
+    "template": "country_of_capital",
+    "params": {
+      "city": "KYIV"
+    },
+    "answer": "UA"
+  },
+  {
+    "id": "ctry_LIBREVILLE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "LIBREVILLE"
+    },
+    "answer": "GA"
+  },
+  {
+    "id": "ctry_LILONGWE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "LILONGWE"
+    },
+    "answer": "MW"
+  },
+  {
+    "id": "ctry_LIMA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "LIMA"
+    },
+    "answer": "PE"
+  },
+  {
+    "id": "ctry_LISBON",
+    "template": "country_of_capital",
+    "params": {
+      "city": "LISBON"
+    },
+    "answer": "PT"
+  },
+  {
+    "id": "ctry_LJUBLJANA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "LJUBLJANA"
+    },
+    "answer": "SI"
+  },
+  {
+    "id": "ctry_LOME",
+    "template": "country_of_capital",
+    "params": {
+      "city": "LOME"
+    },
+    "answer": "TG"
+  },
+  {
+    "id": "ctry_LONDON",
+    "template": "country_of_capital",
+    "params": {
+      "city": "LONDON"
+    },
+    "answer": "GB"
+  },
+  {
+    "id": "ctry_LUANDA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "LUANDA"
+    },
+    "answer": "AO"
+  },
+  {
+    "id": "ctry_LUSAKA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "LUSAKA"
+    },
+    "answer": "ZM"
+  },
+  {
+    "id": "ctry_LUXEMBOURG_CITY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "LUXEMBOURG_CITY"
+    },
+    "answer": "LU"
+  },
+  {
+    "id": "ctry_MADRID",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MADRID"
+    },
+    "answer": "ES"
+  },
+  {
+    "id": "ctry_MAJURO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MAJURO"
+    },
+    "answer": "MH"
+  },
+  {
+    "id": "ctry_MALABO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MALABO"
+    },
+    "answer": "GQ"
+  },
+  {
+    "id": "ctry_MALE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MALE"
+    },
+    "answer": "MV"
+  },
+  {
+    "id": "ctry_MANAGUA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MANAGUA"
+    },
+    "answer": "NI"
+  },
+  {
+    "id": "ctry_MANAMA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MANAMA"
+    },
+    "answer": "BH"
+  },
+  {
+    "id": "ctry_MANILA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MANILA"
+    },
+    "answer": "PH"
+  },
+  {
+    "id": "ctry_MAPUTO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MAPUTO"
+    },
+    "answer": "MZ"
+  },
+  {
+    "id": "ctry_MASERU",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MASERU"
+    },
+    "answer": "LS"
+  },
+  {
+    "id": "ctry_MBABANE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MBABANE"
+    },
+    "answer": "SZ"
+  },
+  {
+    "id": "ctry_MEXICO_CITY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MEXICO_CITY"
+    },
+    "answer": "MX"
+  },
+  {
+    "id": "ctry_MINSK",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MINSK"
+    },
+    "answer": "BY"
+  },
+  {
+    "id": "ctry_MOGADISHU",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MOGADISHU"
+    },
+    "answer": "SO"
+  },
+  {
+    "id": "ctry_MONACO_CITY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MONACO_CITY"
+    },
+    "answer": "MC"
+  },
+  {
+    "id": "ctry_MONROVIA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MONROVIA"
+    },
+    "answer": "LR"
+  },
+  {
+    "id": "ctry_MONTEVIDEO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MONTEVIDEO"
+    },
+    "answer": "UY"
+  },
+  {
+    "id": "ctry_MORONI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MORONI"
+    },
+    "answer": "KM"
+  },
+  {
+    "id": "ctry_MOSCOW",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MOSCOW"
+    },
+    "answer": "RU"
+  },
+  {
+    "id": "ctry_MUSCAT",
+    "template": "country_of_capital",
+    "params": {
+      "city": "MUSCAT"
+    },
+    "answer": "OM"
+  },
+  {
+    "id": "ctry_N_DJAMENA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "N_DJAMENA"
+    },
+    "answer": "TD"
+  },
+  {
+    "id": "ctry_NAIROBI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "NAIROBI"
+    },
+    "answer": "KE"
+  },
+  {
+    "id": "ctry_NASSAU",
+    "template": "country_of_capital",
+    "params": {
+      "city": "NASSAU"
+    },
+    "answer": "BS"
+  },
+  {
+    "id": "ctry_NAYPYIDAW",
+    "template": "country_of_capital",
+    "params": {
+      "city": "NAYPYIDAW"
+    },
+    "answer": "MM"
+  },
+  {
+    "id": "ctry_NEW_DELHI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "NEW_DELHI"
+    },
+    "answer": "IN"
+  },
+  {
+    "id": "ctry_NGERULMUD",
+    "template": "country_of_capital",
+    "params": {
+      "city": "NGERULMUD"
+    },
+    "answer": "PW"
+  },
+  {
+    "id": "ctry_NIAMEY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "NIAMEY"
+    },
+    "answer": "NE"
+  },
+  {
+    "id": "ctry_NICOSIA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "NICOSIA"
+    },
+    "answer": "CY"
+  },
+  {
+    "id": "ctry_NOUAKCHOTT",
+    "template": "country_of_capital",
+    "params": {
+      "city": "NOUAKCHOTT"
+    },
+    "answer": "MR"
+  },
+  {
+    "id": "ctry_NUKU_ALOFA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "NUKU_ALOFA"
+    },
+    "answer": "TO"
+  },
+  {
+    "id": "ctry_OSLO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "OSLO"
+    },
+    "answer": "NO"
+  },
+  {
+    "id": "ctry_OTTAWA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "OTTAWA"
+    },
+    "answer": "CA"
+  },
+  {
+    "id": "ctry_OUAGADOUGOU",
+    "template": "country_of_capital",
+    "params": {
+      "city": "OUAGADOUGOU"
+    },
+    "answer": "BF"
+  },
+  {
+    "id": "ctry_PALIKIR",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PALIKIR"
+    },
+    "answer": "FM"
+  },
+  {
+    "id": "ctry_PANAMA_CITY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PANAMA_CITY"
+    },
+    "answer": "PA"
+  },
+  {
+    "id": "ctry_PARAMARIBO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PARAMARIBO"
+    },
+    "answer": "SR"
+  },
+  {
+    "id": "ctry_PARIS",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PARIS"
+    },
     "answer": "FR"
   },
   {
-    "id": "q7",
+    "id": "ctry_PHNOM_PENH",
     "template": "country_of_capital",
-    "params": { "city": "TOKYO" },
+    "params": {
+      "city": "PHNOM_PENH"
+    },
+    "answer": "KH"
+  },
+  {
+    "id": "ctry_PODGORICA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PODGORICA"
+    },
+    "answer": "ME"
+  },
+  {
+    "id": "ctry_PORT_AU_PRINCE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PORT_AU_PRINCE"
+    },
+    "answer": "HT"
+  },
+  {
+    "id": "ctry_PORT_LOUIS",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PORT_LOUIS"
+    },
+    "answer": "MU"
+  },
+  {
+    "id": "ctry_PORT_MORESBY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PORT_MORESBY"
+    },
+    "answer": "PG"
+  },
+  {
+    "id": "ctry_PORT_OF_SPAIN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PORT_OF_SPAIN"
+    },
+    "answer": "TT"
+  },
+  {
+    "id": "ctry_PORT_VILA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PORT_VILA"
+    },
+    "answer": "VU"
+  },
+  {
+    "id": "ctry_PORTO_NOVO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PORTO_NOVO"
+    },
+    "answer": "BJ"
+  },
+  {
+    "id": "ctry_PRAGUE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PRAGUE"
+    },
+    "answer": "CZ"
+  },
+  {
+    "id": "ctry_PRAIA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PRAIA"
+    },
+    "answer": "CV"
+  },
+  {
+    "id": "ctry_PRETORIA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PRETORIA"
+    },
+    "answer": "ZA"
+  },
+  {
+    "id": "ctry_PYONGYANG",
+    "template": "country_of_capital",
+    "params": {
+      "city": "PYONGYANG"
+    },
+    "answer": "KP"
+  },
+  {
+    "id": "ctry_QUITO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "QUITO"
+    },
+    "answer": "EC"
+  },
+  {
+    "id": "ctry_RABAT",
+    "template": "country_of_capital",
+    "params": {
+      "city": "RABAT"
+    },
+    "answer": "MA"
+  },
+  {
+    "id": "ctry_REYKJAVIK",
+    "template": "country_of_capital",
+    "params": {
+      "city": "REYKJAVIK"
+    },
+    "answer": "IS"
+  },
+  {
+    "id": "ctry_RIGA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "RIGA"
+    },
+    "answer": "LV"
+  },
+  {
+    "id": "ctry_RIYADH",
+    "template": "country_of_capital",
+    "params": {
+      "city": "RIYADH"
+    },
+    "answer": "SA"
+  },
+  {
+    "id": "ctry_ROME",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ROME"
+    },
+    "answer": "IT"
+  },
+  {
+    "id": "ctry_ROSEAU",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ROSEAU"
+    },
+    "answer": "DM"
+  },
+  {
+    "id": "ctry_SAINT_GEORGE_S",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SAINT_GEORGE_S"
+    },
+    "answer": "GD"
+  },
+  {
+    "id": "ctry_SAINT_JOHN_S",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SAINT_JOHN_S"
+    },
+    "answer": "AG"
+  },
+  {
+    "id": "ctry_SAN_JOSE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SAN_JOSE"
+    },
+    "answer": "CR"
+  },
+  {
+    "id": "ctry_SAN_MARINO_CITY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SAN_MARINO_CITY"
+    },
+    "answer": "SM"
+  },
+  {
+    "id": "ctry_SAN_SALVADOR",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SAN_SALVADOR"
+    },
+    "answer": "SV"
+  },
+  {
+    "id": "ctry_SANA_A",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SANA_A"
+    },
+    "answer": "YE"
+  },
+  {
+    "id": "ctry_SANTIAGO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SANTIAGO"
+    },
+    "answer": "CL"
+  },
+  {
+    "id": "ctry_SANTO_DOMINGO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SANTO_DOMINGO"
+    },
+    "answer": "DO"
+  },
+  {
+    "id": "ctry_SAO_TOME",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SAO_TOME"
+    },
+    "answer": "ST"
+  },
+  {
+    "id": "ctry_SARAJEVO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SARAJEVO"
+    },
+    "answer": "BA"
+  },
+  {
+    "id": "ctry_SEOUL",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SEOUL"
+    },
+    "answer": "KR"
+  },
+  {
+    "id": "ctry_SINGAPORE_CITY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SINGAPORE_CITY"
+    },
+    "answer": "SG"
+  },
+  {
+    "id": "ctry_SKOPJE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SKOPJE"
+    },
+    "answer": "MK"
+  },
+  {
+    "id": "ctry_SOFIA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SOFIA"
+    },
+    "answer": "BG"
+  },
+  {
+    "id": "ctry_SOUTH_TARAWA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SOUTH_TARAWA"
+    },
+    "answer": "KI"
+  },
+  {
+    "id": "ctry_SRI_JAYAWARDENEPURA_KOTTE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SRI_JAYAWARDENEPURA_KOTTE"
+    },
+    "answer": "LK"
+  },
+  {
+    "id": "ctry_STOCKHOLM",
+    "template": "country_of_capital",
+    "params": {
+      "city": "STOCKHOLM"
+    },
+    "answer": "SE"
+  },
+  {
+    "id": "ctry_SUCRE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SUCRE"
+    },
+    "answer": "BO"
+  },
+  {
+    "id": "ctry_SUVA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "SUVA"
+    },
+    "answer": "FJ"
+  },
+  {
+    "id": "ctry_TALLINN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "TALLINN"
+    },
+    "answer": "EE"
+  },
+  {
+    "id": "ctry_TASHKENT",
+    "template": "country_of_capital",
+    "params": {
+      "city": "TASHKENT"
+    },
+    "answer": "UZ"
+  },
+  {
+    "id": "ctry_TBILISI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "TBILISI"
+    },
+    "answer": "GE"
+  },
+  {
+    "id": "ctry_TEGUCIGALPA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "TEGUCIGALPA"
+    },
+    "answer": "HN"
+  },
+  {
+    "id": "ctry_TEHRAN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "TEHRAN"
+    },
+    "answer": "IR"
+  },
+  {
+    "id": "ctry_THIMPHU",
+    "template": "country_of_capital",
+    "params": {
+      "city": "THIMPHU"
+    },
+    "answer": "BT"
+  },
+  {
+    "id": "ctry_TIRANA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "TIRANA"
+    },
+    "answer": "AL"
+  },
+  {
+    "id": "ctry_TOKYO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "TOKYO"
+    },
     "answer": "JP"
+  },
+  {
+    "id": "ctry_TRIPOLI",
+    "template": "country_of_capital",
+    "params": {
+      "city": "TRIPOLI"
+    },
+    "answer": "LY"
+  },
+  {
+    "id": "ctry_TUNIS",
+    "template": "country_of_capital",
+    "params": {
+      "city": "TUNIS"
+    },
+    "answer": "TN"
+  },
+  {
+    "id": "ctry_ULAANBAATAR",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ULAANBAATAR"
+    },
+    "answer": "MN"
+  },
+  {
+    "id": "ctry_VADUZ",
+    "template": "country_of_capital",
+    "params": {
+      "city": "VADUZ"
+    },
+    "answer": "LI"
+  },
+  {
+    "id": "ctry_VALLETTA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "VALLETTA"
+    },
+    "answer": "MT"
+  },
+  {
+    "id": "ctry_VATICAN_CITY",
+    "template": "country_of_capital",
+    "params": {
+      "city": "VATICAN_CITY"
+    },
+    "answer": "VA"
+  },
+  {
+    "id": "ctry_VICTORIA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "VICTORIA"
+    },
+    "answer": "SC"
+  },
+  {
+    "id": "ctry_VIENNA",
+    "template": "country_of_capital",
+    "params": {
+      "city": "VIENNA"
+    },
+    "answer": "AT"
+  },
+  {
+    "id": "ctry_VIENTIANE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "VIENTIANE"
+    },
+    "answer": "LA"
+  },
+  {
+    "id": "ctry_VILNIUS",
+    "template": "country_of_capital",
+    "params": {
+      "city": "VILNIUS"
+    },
+    "answer": "LT"
+  },
+  {
+    "id": "ctry_WARSAW",
+    "template": "country_of_capital",
+    "params": {
+      "city": "WARSAW"
+    },
+    "answer": "PL"
+  },
+  {
+    "id": "ctry_WASHINGTON_D_C",
+    "template": "country_of_capital",
+    "params": {
+      "city": "WASHINGTON_D_C"
+    },
+    "answer": "US"
+  },
+  {
+    "id": "ctry_WELLINGTON",
+    "template": "country_of_capital",
+    "params": {
+      "city": "WELLINGTON"
+    },
+    "answer": "NZ"
+  },
+  {
+    "id": "ctry_WINDHOEK",
+    "template": "country_of_capital",
+    "params": {
+      "city": "WINDHOEK"
+    },
+    "answer": "NA"
+  },
+  {
+    "id": "ctry_YAMOUSSOUKRO",
+    "template": "country_of_capital",
+    "params": {
+      "city": "YAMOUSSOUKRO"
+    },
+    "answer": "CI"
+  },
+  {
+    "id": "ctry_YAOUNDE",
+    "template": "country_of_capital",
+    "params": {
+      "city": "YAOUNDE"
+    },
+    "answer": "CM"
+  },
+  {
+    "id": "ctry_YAREN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "YAREN"
+    },
+    "answer": "NR"
+  },
+  {
+    "id": "ctry_YEREVAN",
+    "template": "country_of_capital",
+    "params": {
+      "city": "YEREVAN"
+    },
+    "answer": "AM"
+  },
+  {
+    "id": "ctry_ZAGREB",
+    "template": "country_of_capital",
+    "params": {
+      "city": "ZAGREB"
+    },
+    "answer": "HR"
   }
 ]

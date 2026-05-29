@@ -3477,29 +3477,19 @@
     },
     "aliases": {
       "en": [
-        "Beijing",
-        "Peking",
-        "Peiping"
+        "Beijing"
       ],
       "es": [
-        "Pekín",
-        "Peking",
-        "Peiping"
+        "Pekín"
       ],
       "fr": [
-        "Pékin",
-        "Peking",
-        "Peiping"
+        "Pékin"
       ],
       "ja": [
-        "北京",
-        "Peking",
-        "Peiping"
+        "北京"
       ],
       "pt": [
-        "Pequim",
-        "Peking",
-        "Peiping"
+        "Pequim"
       ]
     }
   },
@@ -3932,28 +3922,19 @@
     },
     "aliases": {
       "en": [
-        "Tokyo",
-        "Tokio",
-        "Tōkyō"
+        "Tokyo"
       ],
       "es": [
-        "Tokio",
-        "Tōkyō"
+        "Tokio"
       ],
       "fr": [
-        "Tokyo",
-        "Tokio",
-        "Tōkyō"
+        "Tokyo"
       ],
       "ja": [
-        "東京",
-        "Tokio",
-        "Tōkyō"
+        "東京"
       ],
       "pt": [
-        "Tóquio",
-        "Tokio",
-        "Tōkyō"
+        "Tóquio"
       ]
     }
   },
