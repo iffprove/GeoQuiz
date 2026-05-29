@@ -67,7 +67,43 @@
       "YAREN",
       "SUVA",
       "MAJURO"
-    ]
+    ],
+    "commentary": {
+      "en": {
+        "correct": "Canberra. You knew it wasn't Sydney.",
+        "wrong": "Canberra. Not Sydney, not Melbourne — the compromise capital."
+      },
+      "es": {
+        "correct": "¡Correcto! ¡Canberra, no Sídney!",
+        "wrong": "¡Era Canberra! No Sídney, no Melbourne — la capital del compromiso."
+      },
+      "fr": {
+        "correct": "Canberra, chapeau ! Pas Sydney.",
+        "wrong": "C'était Canberra — ni Sydney, ni Melbourne. La capitale du compromis."
+      },
+      "ja": {
+        "correct": "正解！キャンベラ、シドニーじゃないですよ！さすが！",
+        "wrong": "正解はキャンベラでした。シドニーでもメルボルンでもないんです！"
+      },
+      "pt": {
+        "correct": "Canberra! Não caiu na armadilha de Sydney!",
+        "wrong": "Era Canberra! Não Sydney, não Melbourne — a capital do meio-termo."
+      }
+    },
+    "hint": {
+      "en": "It's not Sydney. Australia's capital was purpose-built as a compromise between two rival cities.",
+      "es": "No es Sídney. Fue construida como solución a la rivalidad entre dos grandes ciudades.",
+      "fr": "Ce n'est pas Sydney. Elle a été construite pour départager deux grandes villes rivales.",
+      "ja": "シドニーではありません。二つの都市の対立を解消するために計画的に建設された首都です。",
+      "pt": "Não é Sydney. Foi construída como solução para a rivalidade entre duas grandes cidades."
+    },
+    "funFact": {
+      "en": "Canberra was purpose-built as a compromise between Sydney and Melbourne, both of which wanted to be the capital.",
+      "es": "Canberra fue construida expresamente como solución al conflicto entre Sídney y Melbourne, ambas querían ser la capital.",
+      "fr": "Canberra a été construite pour résoudre le conflit entre Sydney et Melbourne, qui se disputaient le titre de capitale.",
+      "ja": "キャンベラは、どちらも首都になりたかったシドニーとメルボルンの対立を解消するために建設されました。",
+      "pt": "Canberra foi construída como compromisso entre Sydney e Melbourne, que disputavam o título de capital."
+    }
   },
   "cap_AZ": {
     "distractors": [
@@ -158,7 +194,43 @@
       "ASUNCION",
       "SANTIAGO",
       "GEORGETOWN"
-    ]
+    ],
+    "commentary": {
+      "en": {
+        "correct": "Brasília. Not São Paulo.",
+        "wrong": "Brasília. Not Rio, not São Paulo — the purpose-built capital."
+      },
+      "es": {
+        "correct": "¡Correcto! ¡Brasilia, la capital planificada!",
+        "wrong": "¡Era Brasilia! No Río, no São Paulo — construida desde cero."
+      },
+      "fr": {
+        "correct": "Brasília, très bien ! Pas Rio, hein ?",
+        "wrong": "C'était Brasília — pas Rio, pas São Paulo. La capitale conçue sur plan."
+      },
+      "ja": {
+        "correct": "正解！ブラジリアですね。すごい！",
+        "wrong": "正解はブラジリアでした。リオじゃないんですよ！次は大丈夫！"
+      },
+      "pt": {
+        "correct": "Brasília! Arrasou, conhece bem o Brasil!",
+        "wrong": "Era Brasília! Não é o Rio, não é São Paulo — é a capital planejadinha!"
+      }
+    },
+    "hint": {
+      "en": "Not the most famous Brazilian city. Think planned, inland, built in the 1950s.",
+      "es": "No es la más conocida. Es una capital planificada del interior, construida en los años 50.",
+      "fr": "Pas la plus connue des villes brésiliennes. Pensez ville nouvelle, intérieure, années 1960.",
+      "ja": "ブラジルで最も有名な都市ではありません。1950年代に計画的に建設された内陸の首都です。",
+      "pt": "Não é a cidade mais famosa do Brasil. Foi construída do zero no interior nos anos 1950."
+    },
+    "funFact": {
+      "en": "Brasília was built from scratch in the 1950s and became the national capital in 1960.",
+      "es": "Brasilia fue construida desde cero en la década de 1950 y se convirtió en capital en 1960.",
+      "fr": "Brasília a été construite de toutes pièces dans les années 1950 et est devenue capitale en 1960.",
+      "ja": "ブラジリアは1950年代にゼロから建設され、1960年に首都となりました。",
+      "pt": "Brasília foi construída do zero nos anos 1950 e tornou-se capital nacional em 1960."
+    }
   },
   "cap_BS": {
     "distractors": [
@@ -361,7 +433,43 @@
       "BANJUL",
       "ADDIS_ABABA",
       "MALABO"
-    ]
+    ],
+    "commentary": {
+      "en": {
+        "correct": "Cairo. The ancient one.",
+        "wrong": "Cairo. Ten million people and a few pyramids nearby."
+      },
+      "es": {
+        "correct": "¡Correcto! ¡El Cairo, magnífico!",
+        "wrong": "¡Era El Cairo! Diez millones de personas y unas pirámides cerca."
+      },
+      "fr": {
+        "correct": "Le Caire, très bien !",
+        "wrong": "C'était Le Caire — dix millions d'habitants et quelques pyramides à portée de main."
+      },
+      "ja": {
+        "correct": "正解！カイロですね。歴史ある都市！",
+        "wrong": "正解はカイロでした。ピラミッドのそばの大都市ですよ！"
+      },
+      "pt": {
+        "correct": "Cairo! Que cidade incrível, parabéns!",
+        "wrong": "Era Cairo! Dez milhões de pessoas e algumas pirâmides logo ali."
+      }
+    },
+    "hint": {
+      "en": "North Africa, Nile River, neighbouring some of the world's most famous ancient monuments.",
+      "es": "Norte de África, junto al Nilo, cerca de los monumentos antiguos más famosos del mundo.",
+      "fr": "Afrique du Nord, au bord du Nil, à deux pas des monuments antiques les plus célèbres du monde.",
+      "ja": "北アフリカ、ナイル川のほとり、世界で最も有名な古代遺跡のすぐそばにあります。",
+      "pt": "Norte da África, às margens do Nilo, perto dos monumentos antigos mais famosos do mundo."
+    },
+    "funFact": {
+      "en": "Cairo is Africa's largest city and one of the world's oldest continuously inhabited urban areas.",
+      "es": "El Cairo es la ciudad más grande de África y una de las áreas urbanas habitadas de forma continua más antiguas del mundo.",
+      "fr": "Le Caire est la plus grande ville d'Afrique et l'une des zones urbaines les plus anciennement peuplées du monde.",
+      "ja": "カイロはアフリカ最大の都市であり、世界で最も古くから継続して居住されている都市地域の一つです。",
+      "pt": "Cairo é a maior cidade da África e uma das áreas urbanas habitadas continuamente mais antigas do mundo."
+    }
   },
   "cap_ER": {
     "distractors": [
@@ -410,7 +518,43 @@
       "STOCKHOLM",
       "LUXEMBOURG_CITY",
       "SKOPJE"
-    ]
+    ],
+    "commentary": {
+      "en": {
+        "correct": "Paris. Bold guess.",
+        "wrong": "Paris. It's always Paris."
+      },
+      "es": {
+        "correct": "¡Correcto! ¡París, claro!",
+        "wrong": "¡Era París! ¡La ciudad del amor, no te rindas!"
+      },
+      "fr": {
+        "correct": "Paris, bien sûr. Trop facile, non ?",
+        "wrong": "C'était Paris, tout de même. La réponse était sous votre nez."
+      },
+      "ja": {
+        "correct": "正解です！パリ、よくわかりましたね！",
+        "wrong": "答えはパリでした。次は絶対できます！"
+      },
+      "pt": {
+        "correct": "Isso aí! Paris, claro que sim!",
+        "wrong": "Era Paris! Mas não tem problema, agora você sabe!"
+      }
+    },
+    "hint": {
+      "en": "Western Europe, river Seine, a very famous iron tower.",
+      "es": "Europa occidental, famosa por su icónica torre de hierro.",
+      "fr": "Une grande ville sur la Seine, quelque part dans l'Hexagone.",
+      "ja": "西ヨーロッパの国の首都です。有名な鉄塔がそびえています。",
+      "pt": "Europa ocidental, famosa por aquela torre de ferro inconfundível."
+    },
+    "funFact": {
+      "en": "Paris was founded over 2,000 years ago by a Celtic tribe called the Parisii.",
+      "es": "París fue fundada hace más de 2.000 años por una tribu celta llamada los Parisios.",
+      "fr": "Paris est habitée sans interruption depuis plus de 2 000 ans, fondée par les Parisii.",
+      "ja": "パリはケルト系のパリシイ族によって2,000年以上前に建設されました。",
+      "pt": "Paris foi fundada há mais de 2.000 anos por uma tribo celta chamada Parísios."
+    }
   },
   "cap_GA": {
     "distractors": [
@@ -599,7 +743,43 @@
       "KABUL",
       "ASTANA",
       "BAKU"
-    ]
+    ],
+    "commentary": {
+      "en": {
+        "correct": "Tokyo. Good reflexes.",
+        "wrong": "Tokyo. The largest metropolitan area on Earth."
+      },
+      "es": {
+        "correct": "¡Tokio! ¡Excelente!",
+        "wrong": "¡Era Tokio! La ciudad más grande del mundo, ¡qué lugar increíble!"
+      },
+      "fr": {
+        "correct": "Tokyo, bien joué !",
+        "wrong": "C'était Tokyo — la plus grande métropole du monde, quand même."
+      },
+      "ja": {
+        "correct": "正解！東京ですね。さすがです！",
+        "wrong": "正解は東京でした。世界最大の都市圏ですよ！次は大丈夫！"
+      },
+      "pt": {
+        "correct": "Tóquio! Você foi demais!",
+        "wrong": "Era Tóquio! A maior área metropolitana do mundo, imagine!"
+      }
+    },
+    "hint": {
+      "en": "East Asia, island nation, the city with the world's busiest rail network.",
+      "es": "País insular de Asia Oriental, famoso por su tecnología y trenes puntuales.",
+      "fr": "Un archipel très peuplé d'Asie de l'Est, côté Pacifique occidental.",
+      "ja": "日本の東部に位置する、世界最大級の都市圏の中心都市です。",
+      "pt": "País insular no leste da Ásia, famoso por tecnologia e trens pontuais."
+    },
+    "funFact": {
+      "en": "Greater Tokyo is the world's most populous metropolitan area, with over 37 million people.",
+      "es": "El área metropolitana de Tokio es la más poblada del mundo, con más de 37 millones de habitantes.",
+      "fr": "La zone métropolitaine de Tokyo est la plus peuplée au monde, avec plus de 37 millions d'habitants.",
+      "ja": "東京都市圏は人口3,700万人以上を擁し、世界最大の都市圏です。",
+      "pt": "A Grande Tóquio é a área metropolitana mais populosa do mundo, com mais de 37 milhões de pessoas."
+    }
   },
   "cap_KE": {
     "distractors": [

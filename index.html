@@ -21,7 +21,6 @@
       --r:       12px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
     body {
       background: var(--bg);
       color: var(--text);
@@ -50,6 +49,7 @@
 
     .streak { font-size: .82rem; color: var(--muted); display: flex; align-items: center; gap: 3px; white-space: nowrap; }
     .streak strong { color: var(--text); }
+    .freeze-badge { font-size: .78rem; color: #93c5fd; }
 
     select, .mode-toggle {
       background: var(--surface);
@@ -81,6 +81,17 @@
       text-align: center;
       text-transform: uppercase;
       letter-spacing: .08em;
+    }
+
+    .practice-day-tag {
+      font-size: .7rem;
+      color: var(--accent);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(56,189,248,.08);
+      border-radius: 4px;
+      padding: 3px 8px;
     }
 
     .card {
@@ -212,6 +223,26 @@
     }
     .shake { animation: shake .3s ease-out; }
 
+    /* ── Hint ── */
+    .hint-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--r);
+      padding: 10px 14px;
+      font-size: .85rem;
+      color: var(--muted);
+      animation: slide-in .25s ease-out;
+    }
+    .hint-label {
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
     /* ── Result panel ── */
     .result { display: flex; flex-direction: column; gap: 11px; }
     .result-title { font-size: 1.1rem; font-weight: 700; text-align: center; }
@@ -220,24 +251,109 @@
     .result-answer { font-size: .86rem; color: var(--muted); text-align: center; }
     .result-answer strong { color: var(--text); }
 
+    .commentary {
+      background: var(--surface2);
+      border: 1px solid var(--accent);
+      border-radius: var(--r);
+      padding: 12px 16px;
+      font-size: .9rem;
+      font-style: italic;
+      color: var(--text);
+      text-align: center;
+      line-height: 1.5;
+      animation: slide-in .3s ease-out;
+    }
+
+    .fun-fact {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 11px 14px;
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .fun-fact-label {
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
     hr { border: none; border-top: 1px solid var(--border); }
 
     .share-btn {
       display: flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--surface2); color: var(--text);
-      border: 1px solid var(--border); border-radius: 8px;
+      background: var(--accent); color: #0f172a;
+      border: 1px solid var(--accent); border-radius: 8px;
+      padding: 10px; font-size: .88rem; font-weight: 700;
+      cursor: pointer; width: 100%; transition: background .15s, border-color .15s;
+    }
+    .share-btn:hover { background: #7dd3fc; border-color: #7dd3fc; }
+
+    .share-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.72); z-index: 100;
+      display: flex; align-items: center; justify-content: center; padding: 16px;
+    }
+    .share-sheet {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+      padding: 16px; max-width: 500px; width: 100%;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .share-sheet-top {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .share-sheet-title {
+      font-size: .75rem; font-weight: 700; color: var(--muted);
+      letter-spacing: .07em; text-transform: uppercase;
+    }
+    .share-close-btn {
+      background: none; border: none; color: var(--muted); font-size: 1rem;
+      cursor: pointer; padding: 2px 6px; border-radius: 4px; line-height: 1;
+    }
+    .share-close-btn:hover { background: var(--surface2); color: var(--text); }
+    .share-preview { width: 100%; border-radius: 10px; overflow: hidden; line-height: 0; }
+    .share-sheet-actions { display: flex; gap: 8px; }
+    .share-sheet-btn {
+      flex: 1; padding: 10px 4px; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--surface2);
+      color: var(--text); font-size: .82rem; font-weight: 600;
+      cursor: pointer; transition: background .15s; text-align: center;
+    }
+    .share-sheet-btn:hover { background: var(--border); }
+    .share-sheet-btn.primary {
+      background: var(--accent); color: #0f172a; border-color: var(--accent);
+    }
+    .share-sheet-btn.primary:hover { background: #7dd3fc; border-color: #7dd3fc; }
+
+    .countdown { font-size: .78rem; color: var(--muted); text-align: center; }
+
+    .practice-next-btn {
+      display: flex; align-items: center; justify-content: center;
+      background: var(--surface); color: var(--accent);
+      border: 1px solid var(--accent); border-radius: 8px;
       padding: 10px; font-size: .88rem; font-weight: 600;
       cursor: pointer; width: 100%; transition: background .15s;
     }
-    .share-btn:hover { background: var(--border); }
+    .practice-next-btn:hover { background: rgba(56,189,248,.1); }
 
-    .copied {
-      font-size: .73rem; color: var(--correct); text-align: center;
-      opacity: 0; transition: opacity .25s;
+    .view-tabs {
+      width: 100%; max-width: 480px;
+      display: flex; padding: 0 18px;
+      border-bottom: 1px solid var(--border);
     }
-    .copied.show { opacity: 1; }
-
-    .countdown { font-size: .78rem; color: var(--muted); text-align: center; }
+    .view-tab {
+      padding: 10px 16px 9px;
+      background: none; color: var(--muted);
+      border: none; border-bottom: 2px solid transparent;
+      font-size: .85rem; font-weight: 700;
+      cursor: pointer; transition: color .15s, border-color .15s;
+      margin-bottom: -1px;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
 
     .loading {
       display: flex; align-items: center; justify-content: center;
@@ -252,7 +368,7 @@
 <header>
   <div class="brand">Geo<span>Trivia</span></div>
   <div class="hdr-right">
-    <div class="streak">🔥 <strong id="streak-val">0</strong></div>
+    <div class="streak">🔥 <strong id="streak-val">0</strong><span id="freeze-badge" class="freeze-badge" hidden>❄️</span></div>
     <button class="mode-toggle" id="mode-btn" hidden>MC</button>
     <select id="locale-pick">
       <option value="en">EN</option>
@@ -263,6 +379,11 @@
     </select>
   </div>
 </header>
+
+<nav class="view-tabs" id="view-tabs" hidden>
+  <button class="view-tab active" id="tab-daily"></button>
+  <button class="view-tab" id="tab-endless"></button>
+</nav>
 
 <main>
   <div class="loading" id="loading">Loading…</div>
@@ -301,7 +422,7 @@ function renderQ(ents, tmpl, q, locale) {
 }
 
 function uiS(ui, key, locale, vars = {}) {
-  let s = loc(ui[key], locale);
+  let s = loc(ui[key] ?? { en: key }, locale);
   for (const [k,v] of Object.entries(vars)) s = s.replace(`{${k}}`, v);
   return s;
 }
@@ -309,7 +430,21 @@ function uiS(ui, key, locale, vars = {}) {
 /* ── Utilities ───────────────────────────────────────────────────────────── */
 
 function esc(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function isoToFlag(iso2) {
+  return [...iso2.toUpperCase()].map(c =>
+    String.fromCodePoint(0x1F1E6 + c.charCodeAt(0) - 65)
+  ).join('');
+}
+
+function getVoice(flavor, qId, locale, field) {
+  const entry = flavor?.[qId];
+  if (!entry) return null;
+  const map = entry[field];
+  if (!map) return null;
+  return map[locale] ?? map.en ?? null;
 }
 
 function getDayNumber() {
@@ -323,7 +458,6 @@ function pickQuestion(questions, day) {
   return pool[(day * step) % pool.length];
 }
 
-// Deterministic Fisher-Yates shuffle seeded by day number
 function shuffleOptions(arr, seed) {
   const a = [...arr];
   let s = seed >>> 0;
@@ -335,12 +469,240 @@ function shuffleOptions(arr, seed) {
   return a;
 }
 
-function buildShareText(day, guesses, won, mode) {
+function buildShareText(day, guesses, won, mode, locale, q, flavor) {
+  const flag = isoToFlag(q.params.country);
   const grid = guesses.map((_, i) =>
-    (won && i === guesses.length - 1) ? '🟩' : '🟥'
+    (won && i === guesses.length - 1) ? '✅' : '❌'
   ).join('');
-  const label = mode === 'mc' ? 'MC' : 'Text';
-  return `GeoTrivia #${day} [${label}]\n${grid} ${won ? guesses.length + '/' + (mode === 'mc' ? '4' : '6') : 'X'}\nhttps://iffprove.github.io/geoquiz`;
+  const commentary = getVoice(flavor, q.id, locale, 'commentary');
+  const line = commentary ? (won ? commentary.correct : commentary.wrong) : null;
+  const quote = line ? `\n"${line}"` : '';
+  return `GeoTrivia #${day} ${flag} · ${locale.toUpperCase()}\n${grid}${quote}\nhttps://iffprove.github.io/geoquiz`;
+}
+
+function canvasToBlob(cv) {
+  return new Promise(res => cv.toBlob(res, 'image/png'));
+}
+
+function buildShareCanvas(day, guesses, won, mode, locale, q, data) {
+  const { ents, flavor } = data;
+  const SCALE = Math.min(window.devicePixelRatio || 1, 3);
+  const W = 600, H = 320;
+  const cv  = document.createElement('canvas');
+  cv.width  = W * SCALE;
+  cv.height = H * SCALE;
+  cv.style.cssText = `width:${W}px;height:${H}px;`;
+  const ctx = cv.getContext('2d');
+  ctx.scale(SCALE, SCALE);
+  ctx.textBaseline = 'middle';
+
+  const P = {
+    bg: '#0f172a', surface: '#1e293b', surface2: '#334155',
+    accent: '#38bdf8', text: '#f1f5f9', muted: '#94a3b8',
+    correct: '#4ade80', wrong: '#f87171',
+  };
+  const F = 'system-ui,-apple-system,BlinkMacSystemFont,sans-serif';
+
+  // Works for both question templates
+  const countryId    = q.params.country || (ents[q.answer]?.type === 'country' ? q.answer : '');
+  const flag         = countryId ? isoToFlag(countryId) : '🌍';
+  const countryLabel = countryId ? entityLabel(ents, countryId, locale) : '';
+
+  const LANG_ISO   = { en: 'US', es: 'ES', fr: 'FR', ja: 'JP', pt: 'BR' };
+  const localeFlag = isoToFlag(LANG_ISO[locale] || 'US');
+
+  const commentary = getVoice(flavor, q.id, locale, 'commentary');
+  const verdict    = commentary ? (won ? commentary.correct : commentary.wrong) : null;
+
+  // ── Background ───────────────────────────────────────────
+  ctx.fillStyle = P.bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // ── Header strip ─────────────────────────────────────────
+  ctx.fillStyle = P.surface;
+  ctx.fillRect(0, 0, W, 52);
+  // Accent top stripe
+  ctx.fillStyle = P.accent;
+  ctx.fillRect(0, 0, W, 3);
+
+  // Brand: "Geo" white + "Trivia" accent
+  ctx.font = `bold 22px ${F}`;
+  ctx.fillStyle = P.text;
+  ctx.fillText('Geo', 20, 29);
+  const geoW = ctx.measureText('Geo').width;
+  ctx.fillStyle = P.accent;
+  ctx.fillText('Trivia', 20 + geoW, 29);
+
+  // Day number
+  ctx.font = `600 13px ${F}`;
+  ctx.fillStyle = P.muted;
+  ctx.textAlign = 'right';
+  ctx.fillText(`#${day}`, W - 20, 29);
+  ctx.textAlign = 'left';
+
+  // ── Country flag (hero) ───────────────────────────────────
+  ctx.font = `58px ${F}`;
+  ctx.textAlign = 'center';
+  ctx.fillText(flag, W / 2, 108);
+
+  // ── Country name ─────────────────────────────────────────
+  ctx.font = `bold 26px ${F}`;
+  ctx.fillStyle = P.text;
+  ctx.fillText(countryLabel, W / 2, 156);
+
+  // ── Separator ─────────────────────────────────────────────
+  ctx.strokeStyle = P.surface2;
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(W * 0.15, 173);
+  ctx.lineTo(W * 0.85, 173);
+  ctx.stroke();
+
+  // ── Guess dots ────────────────────────────────────────────
+  const R = 11, GAP = 12, n = guesses.length;
+  const rowW = n * R * 2 + (n - 1) * GAP;
+  let dx = (W - rowW) / 2;
+  const dotY = 204;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+
+  for (let i = 0; i < n; i++) {
+    const hit = won && i === n - 1;
+    const cx  = dx + R;
+    ctx.beginPath();
+    ctx.arc(cx, dotY, R, 0, Math.PI * 2);
+    ctx.fillStyle = hit ? P.correct : P.wrong;
+    ctx.fill();
+    ctx.strokeStyle = P.bg;
+    ctx.lineWidth = 2.5;
+    if (hit) {
+      ctx.beginPath();
+      ctx.moveTo(cx - 5,   dotY + 0.5);
+      ctx.lineTo(cx - 1.5, dotY + 5);
+      ctx.lineTo(cx + 6,   dotY - 5);
+      ctx.stroke();
+    } else {
+      ctx.beginPath();
+      ctx.moveTo(cx - 4, dotY - 4); ctx.lineTo(cx + 4, dotY + 4);
+      ctx.moveTo(cx + 4, dotY - 4); ctx.lineTo(cx - 4, dotY + 4);
+      ctx.stroke();
+    }
+    dx += R * 2 + GAP;
+  }
+
+  // ── Verdict line ──────────────────────────────────────────
+  if (verdict) {
+    ctx.font = `italic 13px ${F}`;
+    ctx.fillStyle = P.accent;
+    ctx.textAlign = 'center';
+    const maxW = W - 80;
+    let txt = `“${verdict}”`;
+    while (ctx.measureText(txt).width > maxW && txt.length > 6)
+      txt = txt.slice(0, -2) + '…”';
+    ctx.fillText(txt, W / 2, 240);
+    ctx.textAlign = 'left';
+  }
+
+  // ── Footer strip ──────────────────────────────────────────
+  ctx.fillStyle = P.surface;
+  ctx.fillRect(0, H - 42, W, 42);
+  ctx.font = `13px ${F}`;
+  ctx.fillStyle = P.muted;
+  ctx.textAlign = 'left';
+  ctx.fillText(`${localeFlag} ${locale.toUpperCase()}`, 20, H - 21);
+  ctx.textAlign = 'right';
+  ctx.fillStyle = P.accent;
+  ctx.fillText('iffprove.github.io/geoquiz', W - 20, H - 21);
+  ctx.textAlign = 'left';
+
+  return cv;
+}
+
+function showShareSheet(canvas, textFallback) {
+  const overlay = document.createElement('div');
+  overlay.className = 'share-overlay';
+
+  const sheet = document.createElement('div');
+  sheet.className = 'share-sheet';
+
+  const top = document.createElement('div');
+  top.className = 'share-sheet-top';
+  top.innerHTML = '<span class="share-sheet-title">Your result</span>'
+    + '<button class="share-close-btn" aria-label="Close">✕</button>';
+
+  const preview = document.createElement('div');
+  preview.className = 'share-preview';
+  canvas.style.cssText = 'display:block;width:100%;height:auto;';
+  preview.appendChild(canvas);
+
+  const actions = document.createElement('div');
+  actions.className = 'share-sheet-actions';
+
+  function mkBtn(label, cls) {
+    const b = document.createElement('button');
+    b.className = 'share-sheet-btn' + (cls ? ' ' + cls : '');
+    b.textContent = label;
+    return b;
+  }
+
+  const copyImg = mkBtn('📋 Copy image', 'primary');
+  const saveBtn = mkBtn('⬇ Save');
+  const copyTxt = mkBtn('Copy text');
+
+  copyImg.addEventListener('click', async () => {
+    try {
+      const blob = await canvasToBlob(canvas);
+      await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+      copyImg.textContent = '✓ Copied!';
+    } catch {
+      try { await navigator.clipboard.writeText(textFallback); } catch { /* ignore */ }
+      copyImg.textContent = '✓ Text copied';
+    }
+    setTimeout(() => { copyImg.textContent = '📋 Copy image'; }, 2500);
+  });
+
+  saveBtn.addEventListener('click', async () => {
+    const blob = await canvasToBlob(canvas);
+    const url  = URL.createObjectURL(blob);
+    Object.assign(document.createElement('a'), { href: url, download: 'geotrivia.png' }).click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+
+  copyTxt.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(textFallback); } catch { /* ignore */ }
+    copyTxt.textContent = '✓ Copied!';
+    setTimeout(() => { copyTxt.textContent = 'Copy text'; }, 2500);
+  });
+
+  if (typeof navigator.share === 'function') {
+    const shareBtn = mkBtn('Share…');
+    shareBtn.addEventListener('click', async () => {
+      try {
+        const blob = await canvasToBlob(canvas);
+        const file = new File([blob], 'geotrivia.png', { type: 'image/png' });
+        if (navigator.canShare?.({ files: [file] })) {
+          await navigator.share({ files: [file], text: textFallback });
+        } else {
+          await navigator.share({ text: textFallback });
+        }
+      } catch (e) {
+        if (e.name !== 'AbortError') {
+          try { await navigator.clipboard.writeText(textFallback); } catch { /* ignore */ }
+        }
+      }
+    });
+    actions.append(copyImg, saveBtn, shareBtn);
+  } else {
+    actions.append(copyImg, saveBtn, copyTxt);
+  }
+
+  sheet.append(top, preview, actions);
+  overlay.appendChild(sheet);
+  document.body.appendChild(overlay);
+
+  const close = () => overlay.remove();
+  top.querySelector('.share-close-btn').addEventListener('click', close);
+  overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
 }
 
 function countdown() {
@@ -359,28 +721,74 @@ function loadState() { try { return JSON.parse(localStorage.getItem(STORE)) || {
 function saveState(s) { localStorage.setItem(STORE, JSON.stringify(s)); }
 function getLocale() { return localStorage.getItem('geotrivia_locale') || 'en'; }
 function setLocale(l) { localStorage.setItem('geotrivia_locale', l); }
-function getMode() { return localStorage.getItem('geotrivia_mode') || 'mc'; }
-function setMode(m) { localStorage.setItem('geotrivia_mode', m); }
+function getMode()   { return localStorage.getItem('geotrivia_mode')   || 'mc'; }
+function setMode(m)  { localStorage.setItem('geotrivia_mode', m); }
+
+function setStreak(n, froze) {
+  document.getElementById('streak-val').textContent = n;
+  const badge = document.getElementById('freeze-badge');
+  froze ? badge.removeAttribute('hidden') : badge.setAttribute('hidden', '');
+}
 
 const MAX_TEXT = 6;
-const MAX_MC   = 4; // 3 wrong options + 1 correct
+const MAX_MC   = 4;
+
+/* ── Practice session ────────────────────────────────────────────────────── */
+
+let practiceSession = null;
+let activeView = 'daily';
+
+function startPractice(allQuestions, data, locale) {
+  const pool = allQuestions.filter(q => q.template === 'capital_of_country');
+  const indices = pool.map((_, i) => i);
+  const shuffled = shuffleOptions(indices, Date.now() >>> 0).map(i => pool[i]);
+  practiceSession = { questions: shuffled, index: 0, correct: 0, attempted: 0 };
+  mountPractice(data, locale);
+}
+
+function mountPractice(data, locale) {
+  if (!practiceSession) return;
+  if (practiceSession.index >= practiceSession.questions.length) {
+    // Reshuffle the deck to keep endless going; preserve score
+    const pool = practiceSession.questions;
+    practiceSession.questions = shuffleOptions(pool.map((_, i) => i), Date.now() >>> 0).map(i => pool[i]);
+    practiceSession.index = 0;
+  }
+  const q = practiceSession.questions[practiceSession.index];
+  mount(data, 'practice', q, locale, {}, true);
+}
+
+function refreshEndlessTag(ui, locale) {
+  const tag = document.querySelector('.practice-day-tag');
+  if (!tag || !practiceSession) return;
+  const base = uiS(ui, 'tab_endless', locale);
+  tag.textContent = practiceSession.attempted > 0
+    ? `${base} · ${practiceSession.correct} / ${practiceSession.attempted}`
+    : base;
+}
 
 /* ── Mount ───────────────────────────────────────────────────────────────── */
 
-function mount(data, day, q, locale, state, flavor) {
-  const { ents, tmpl, ui } = data;
-  const saved   = state.days?.[day];
-  const guesses = saved?.guesses ?? [];
-  const won     = saved?.won     ?? false;
-  const mode    = saved?.mode    ?? (flavor[q.id] ? getMode() : 'text');
-  const max     = mode === 'mc' ? MAX_MC : MAX_TEXT;
-  const done    = won || guesses.length >= max;
+function mount(data, day, q, locale, state, isPractice) {
+  const { ents, tmpl, ui, flavor } = data;
+  const savedDay = isPractice ? null : state.days?.[day];
+  const guesses  = savedDay?.guesses ?? [];
+  const won      = savedDay?.won     ?? false;
+  const mode     = savedDay?.mode    ?? (flavor[q.id] ? getMode() : 'text');
+  const max      = mode === 'mc' ? MAX_MC : MAX_TEXT;
+  const done     = won || guesses.length >= max;
 
-  const qText = renderQ(ents, tmpl, q, locale);
+  const qText      = renderQ(ents, tmpl, q, locale);
   const placeholder = uiS(ui, 'enter_answer', locale).trim();
 
+  const endlessScore = isPractice && practiceSession && practiceSession.attempted > 0
+    ? ` · ${practiceSession.correct} / ${practiceSession.attempted}` : '';
+  const dayTagHTML = isPractice
+    ? `<p class="practice-day-tag">${esc(uiS(ui, 'tab_endless', locale) + endlessScore)}</p>`
+    : `<p class="day-tag">Daily Puzzle · Day #${day}</p>`;
+
   document.querySelector('main').innerHTML = `
-    <p class="day-tag">Daily Puzzle · Day #${day}</p>
+    ${dayTagHTML}
     <div class="card">
       <p class="q-label">Question</p>
       <p id="question-text">${esc(qText)}</p>
@@ -394,29 +802,30 @@ function mount(data, day, q, locale, state, flavor) {
          </div>`
     }
     <p id="attempts-label">${done ? '' : attemptsLabel(mode, guesses.length, max)}</p>
+    ${mode === 'text' && !done ? '<div id="hint-area"></div>' : ''}
     <div class="guesses" id="guesses"></div>
     <div class="card" id="result-card" ${done ? '' : 'hidden'}></div>
   `;
 
-  // Render saved guesses as history rows
   guesses.forEach((g, i) => {
     const correct = won && i === guesses.length - 1;
-    if (mode === 'text') {
-      addRow(g, correct);
-    } else {
-      addRow(entityLabel(ents, g, locale), correct);
-    }
+    addRow(mode === 'text' ? g : entityLabel(ents, g, locale), correct);
   });
-  if (done) renderResult(data, day, q, locale, guesses, won, mode);
 
-  // Wire up events
+  // Restore hint if game was already in progress with ≥ 2 wrong guesses
+  if (mode === 'text' && !done && guesses.length >= 2) {
+    showHint(data, q, locale);
+  }
+
+  if (done) renderResult(data, day, q, locale, guesses, won, mode, isPractice);
+
   if (mode === 'mc') {
-    wireMC(data, day, q, locale, state, flavor, guesses, won, done);
+    wireMC(data, day, q, locale, state, guesses, won, done, isPractice);
   } else {
     document.getElementById('submit-btn').addEventListener('click', () =>
-      submitText(data, day, q, locale, state, flavor));
+      submitText(data, day, q, locale, state, isPractice));
     document.getElementById('answer-input').addEventListener('keydown', e => {
-      if (e.key === 'Enter') submitText(data, day, q, locale, state, flavor);
+      if (e.key === 'Enter') submitText(data, day, q, locale, state, isPractice);
     });
     if (!done) document.getElementById('answer-input').focus();
   }
@@ -427,95 +836,120 @@ function attemptsLabel(mode, used, max) {
   return `${used} / ${max} guesses`;
 }
 
+/* ── Hint ────────────────────────────────────────────────────────────────── */
+
+function showHint(data, q, locale) {
+  const { ui, flavor } = data;
+  if (document.getElementById('hint-block')) return;
+  const hint = getVoice(flavor, q.id, locale, 'hint');
+  if (!hint) return;
+  const area = document.getElementById('hint-area');
+  if (!area) return;
+  area.innerHTML = `<div class="hint-block" id="hint-block">
+    <p class="hint-label">${esc(uiS(ui, 'hint_label', locale))}</p>
+    <p>${esc(hint)}</p>
+  </div>`;
+}
+
 /* ── MC rendering ────────────────────────────────────────────────────────── */
 
 function getMCOptions(ents, q, locale, flavor, day) {
   const distractors = flavor[q.id]?.distractors ?? [];
   const options = [q.answer, ...distractors.slice(0, 3)];
-  return shuffleOptions(options, day).map(id => ({
+  return shuffleOptions(options, typeof day === 'number' ? day : 0).map(id => ({
     id,
     label: entityLabel(ents, id, locale),
   }));
 }
 
 function renderMCHTML(ents, q, locale, flavor, day, guesses, won, done) {
-  const options = getMCOptions(ents, q, locale, flavor, day);
+  const options  = getMCOptions(ents, q, locale, flavor, day);
   const wrongSet = new Set(guesses.filter(g => !won || g !== q.answer));
   const correctId = won ? q.answer : null;
 
   const buttons = options.map(opt => {
-    let cls = 'mc-btn';
-    let dis = '';
-    if (opt.id === correctId) { cls += ' correct'; dis = 'disabled'; }
-    else if (wrongSet.has(opt.id)) { cls += ' wrong'; dis = 'disabled'; }
-    else if (done && !won) { cls += ' revealed-correct'; dis = 'disabled'; } // show answer on loss
-    else if (done) dis = 'disabled';
+    let cls = 'mc-btn', dis = '';
+    if (opt.id === correctId)        { cls += ' correct';          dis = 'disabled'; }
+    else if (wrongSet.has(opt.id))   { cls += ' wrong';            dis = 'disabled'; }
+    else if (done)                   { dis = 'disabled'; }
     return `<button class="${cls}" data-id="${esc(opt.id)}" ${dis}>${esc(opt.label)}</button>`;
   }).join('');
 
   // On loss: reveal the correct answer among buttons
   if (done && !won) {
-    return `<div class="mc-grid" id="mc-grid">${buttons.replace(
-      `data-id="${esc(q.answer)}"`,
-      `data-id="${esc(q.answer)}" class="mc-btn revealed-correct" disabled`
-    )}</div>`;
+    const grid = `<div class="mc-grid" id="mc-grid">${buttons}</div>`;
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(grid, 'text/html');
+    const answerBtn = doc.querySelector(`[data-id="${q.answer}"]`);
+    if (answerBtn) {
+      answerBtn.className = 'mc-btn revealed-correct';
+      answerBtn.setAttribute('disabled', '');
+    }
+    return doc.body.firstChild.outerHTML;
   }
 
   return `<div class="mc-grid" id="mc-grid">${buttons}</div>`;
 }
 
-function wireMC(data, day, q, locale, state, flavor, savedGuesses, savedWon, done) {
+function wireMC(data, day, q, locale, state, savedGuesses, savedWon, done, isPractice) {
   if (done) return;
   const grid = document.getElementById('mc-grid');
   if (!grid) return;
-
   grid.addEventListener('click', e => {
     const btn = e.target.closest('.mc-btn');
     if (!btn || btn.disabled) return;
-    const clickedId = btn.dataset.id;
-    handleMCClick(data, day, q, locale, state, flavor, clickedId, btn, grid);
+    handleMCClick(data, day, q, locale, state, btn.dataset.id, btn, grid, isPractice);
   });
 }
 
-function handleMCClick(data, day, q, locale, state, flavor, clickedId, btn, grid) {
-  const { ents, ui } = data;
-  const saved    = state.days?.[day] ?? { guesses: [], won: false, mode: 'mc' };
+function handleMCClick(data, day, q, locale, state, clickedId, btn, grid, isPractice) {
+  const { ents, flavor } = data;
+  const stateKey = isPractice ? 'practice' : day;
+  const saved    = state.days?.[stateKey] ?? { guesses: [], won: false, mode: 'mc' };
   if (saved.won || saved.guesses.length >= MAX_MC) return;
 
   const correct    = clickedId === q.answer;
   const newGuesses = [...saved.guesses, clickedId];
   const nowDone    = correct || newGuesses.length >= MAX_MC;
 
-  // Persist
-  state.days = state.days ?? {};
-  state.days[day] = { guesses: newGuesses, won: correct, mode: 'mc' };
-  if (correct) {
-    state.streak    = state.lastWonDay === day - 1 ? (state.streak ?? 0) + 1 : 1;
-    state.lastWonDay = day;
-  } else if (nowDone) {
-    state.streak = 0;
-  }
-  saveState(state);
-  setStreak(state.streak ?? 0);
-
-  // Update button appearance
-  btn.disabled = true;
-  if (correct) {
-    btn.classList.add('correct');
+  if (!isPractice) {
+    state.days = state.days ?? {};
+    state.days[day] = { guesses: newGuesses, won: correct, mode: 'mc' };
+    if (correct) {
+      const froze = state.frozeStreak && state.lastWonDay === day - 2;
+      const extended = state.lastWonDay === day - 1 || froze;
+      state.streak     = extended ? (state.streak ?? 0) + 1 : 1;
+      state.frozeStreak = false;
+      state.lastWonDay  = day;
+    } else if (nowDone) {
+      state.streak = 0;
+    }
+    saveState(state);
+    setStreak(state.streak ?? 0, state.frozeStreak);
   } else {
-    btn.classList.add('wrong');
+    state.days = state.days ?? {};
+    state.days['practice'] = { guesses: newGuesses, won: correct, mode: 'mc' };
+  }
+
+  if (isPractice && nowDone && practiceSession) {
+    practiceSession.attempted++;
+    if (correct) practiceSession.correct++;
+    refreshEndlessTag(data.ui, locale);
+  }
+
+  btn.disabled = true;
+  btn.classList.add(correct ? 'correct' : 'wrong');
+  if (!correct) {
     btn.classList.add('shake');
     btn.addEventListener('animationend', () => btn.classList.remove('shake'), { once: true });
   }
 
-  // Add guess row to history
   addRow(entityLabel(ents, clickedId, locale), correct);
 
   document.getElementById('attempts-label').textContent =
     nowDone ? '' : attemptsLabel('mc', newGuesses.length, MAX_MC);
 
   if (nowDone) {
-    // Disable remaining buttons; reveal correct if lost
     grid.querySelectorAll('.mc-btn').forEach(b => {
       b.disabled = true;
       if (!correct && b.dataset.id === q.answer) {
@@ -523,37 +957,51 @@ function handleMCClick(data, day, q, locale, state, flavor, clickedId, btn, grid
         b.classList.add('revealed-correct');
       }
     });
-    const card = document.getElementById('result-card');
-    card.removeAttribute('hidden');
-    renderResult(data, day, q, locale, newGuesses, correct, 'mc');
+    document.getElementById('result-card').removeAttribute('hidden');
+    renderResult(data, day, q, locale, newGuesses, correct, 'mc', isPractice);
   }
 }
 
 /* ── Text-input mode ─────────────────────────────────────────────────────── */
 
-function submitText(data, day, q, locale, state, flavor) {
+function submitText(data, day, q, locale, state, isPractice) {
   const input = document.getElementById('answer-input');
   const val   = input.value.trim();
   if (!val) return;
 
   const { ents } = data;
-  const saved    = state.days?.[day] ?? { guesses: [], won: false, mode: 'text' };
+  const stateKey = isPractice ? 'practice' : day;
+  const saved    = state.days?.[stateKey] ?? { guesses: [], won: false, mode: 'text' };
   if (saved.won || saved.guesses.length >= MAX_TEXT) return;
 
   const correct    = checkAnswer(ents, val, q.answer, locale);
   const newGuesses = [...saved.guesses, val];
   const nowDone    = correct || newGuesses.length >= MAX_TEXT;
 
-  state.days = state.days ?? {};
-  state.days[day] = { guesses: newGuesses, won: correct, mode: 'text' };
-  if (correct) {
-    state.streak    = state.lastWonDay === day - 1 ? (state.streak ?? 0) + 1 : 1;
-    state.lastWonDay = day;
-  } else if (nowDone) {
-    state.streak = 0;
+  if (!isPractice) {
+    state.days = state.days ?? {};
+    state.days[day] = { guesses: newGuesses, won: correct, mode: 'text' };
+    if (correct) {
+      const froze    = state.frozeStreak && state.lastWonDay === day - 2;
+      const extended = state.lastWonDay === day - 1 || froze;
+      state.streak     = extended ? (state.streak ?? 0) + 1 : 1;
+      state.frozeStreak = false;
+      state.lastWonDay  = day;
+    } else if (nowDone) {
+      state.streak = 0;
+    }
+    saveState(state);
+    setStreak(state.streak ?? 0, state.frozeStreak);
+  } else {
+    state.days = state.days ?? {};
+    state.days['practice'] = { guesses: newGuesses, won: correct, mode: 'text' };
   }
-  saveState(state);
-  setStreak(state.streak ?? 0);
+
+  if (isPractice && nowDone && practiceSession) {
+    practiceSession.attempted++;
+    if (correct) practiceSession.correct++;
+    refreshEndlessTag(data.ui, locale);
+  }
 
   input.value = '';
   addRow(val, correct);
@@ -561,6 +1009,8 @@ function submitText(data, day, q, locale, state, flavor) {
   if (!correct && !nowDone) {
     input.classList.add('shake');
     input.addEventListener('animationend', () => input.classList.remove('shake'), { once: true });
+    // Show hint after 2nd wrong guess
+    if (newGuesses.length >= 2) showHint(data, q, locale);
   }
 
   document.getElementById('attempts-label').textContent =
@@ -569,9 +1019,11 @@ function submitText(data, day, q, locale, state, flavor) {
   if (nowDone) {
     input.disabled = true;
     document.getElementById('submit-btn').disabled = true;
-    const card = document.getElementById('result-card');
-    card.removeAttribute('hidden');
-    renderResult(data, day, q, locale, newGuesses, correct, 'text');
+    // Hide hint area on game end
+    const hintArea = document.getElementById('hint-area');
+    if (hintArea) hintArea.remove();
+    document.getElementById('result-card').removeAttribute('hidden');
+    renderResult(data, day, q, locale, newGuesses, correct, 'text', isPractice);
   }
 }
 
@@ -585,10 +1037,14 @@ function addRow(displayText, correct) {
   el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-function renderResult(data, day, q, locale, guesses, won, mode) {
-  const { ents, ui } = data;
+function renderResult(data, day, q, locale, guesses, won, mode, isPractice) {
+  const { ents, ui, flavor } = data;
   const ansLabel = entityLabel(ents, q.answer, locale);
-  const card = document.getElementById('result-card');
+  const card     = document.getElementById('result-card');
+
+  const commentary  = getVoice(flavor, q.id, locale, 'commentary');
+  const commentLine = commentary ? (won ? commentary.correct : commentary.wrong) : null;
+  const funFact     = getVoice(flavor, q.id, locale, 'funFact');
 
   card.innerHTML = `
     <div class="result">
@@ -596,37 +1052,43 @@ function renderResult(data, day, q, locale, guesses, won, mode) {
         ${esc(uiS(ui, won ? 'correct' : 'game_over', locale))}
       </p>
       ${!won ? `<p class="result-answer">${esc(uiS(ui,'wrong',locale,{answer:ansLabel}))}</p>` : ''}
+      ${commentLine ? `<p class="commentary">"${esc(commentLine)}"</p>` : ''}
+      ${funFact ? `
+        <div class="fun-fact">
+          <p class="fun-fact-label">${esc(uiS(ui, 'fun_fact_label', locale))}</p>
+          <p>${esc(funFact)}</p>
+        </div>` : ''}
       <hr />
-      <button class="share-btn" id="share-btn">📋 Share result</button>
-      <p class="copied" id="copied">Copied!</p>
-      <p class="countdown" id="cd"></p>
+      ${!isPractice ? `<button class="share-btn" id="share-btn">↗ ${esc(uiS(ui, 'share_btn', locale))}</button>` : ''}
+      ${isPractice
+        ? `<button class="practice-next-btn" id="next-btn">→ Next question</button>`
+        : `<p class="countdown" id="cd"></p>`
+      }
     </div>
   `;
 
-  document.getElementById('share-btn').addEventListener('click', async () => {
-    const text = buildShareText(day, guesses, won, mode);
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch {
-      const ta = Object.assign(document.createElement('textarea'), { value: text });
-      ta.style.cssText = 'position:fixed;top:-9999px';
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    }
-    const msg = document.getElementById('copied');
-    msg.classList.add('show');
-    setTimeout(() => msg.classList.remove('show'), 2000);
-  });
+  if (!isPractice) {
+    document.getElementById('share-btn').addEventListener('click', () => {
+      const canvas = buildShareCanvas(day, guesses, won, mode, locale, q, data);
+      const text   = buildShareText(day, guesses, won, mode, locale, q, flavor);
+      showShareSheet(canvas, text);
+    });
+  }
 
-  const cdEl = document.getElementById('cd');
-  function tick() { cdEl.textContent = `Next puzzle in ${countdown()}`; }
-  tick();
-  setInterval(tick, 1000);
+  if (isPractice) {
+    document.getElementById('next-btn').addEventListener('click', () => {
+      if (practiceSession) {
+        practiceSession.index++;
+        mountPractice(data, locale);
+      }
+    });
+  } else {
+    const cdEl = document.getElementById('cd');
+    function tick() { cdEl.textContent = `${uiS(ui, 'next_puzzle', locale)} ${countdown()}`; }
+    tick();
+    setInterval(tick, 1000);
+  }
 }
-
-function setStreak(n) { document.getElementById('streak-val').textContent = n; }
 
 /* ── Boot ────────────────────────────────────────────────────────────────── */
 
@@ -638,37 +1100,79 @@ function setStreak(n) { document.getElementById('streak-val').textContent = n; }
     fetch('data/ui_strings.json').then(r => r.json()),
     fetch('data/flavor.json').then(r => r.json()).catch(() => ({})),
   ]);
-  const data = { ents, tmpl, ui };
+  const data = { ents, tmpl, ui, flavor };
 
-  const state = loadState();
-  let locale  = getLocale();
-  const day   = getDayNumber();
-  const q     = pickQuestion(questions, day);
+  const state  = loadState();
+  let locale   = getLocale();
+  const day    = getDayNumber();
+  const q      = pickQuestion(questions, day);
 
-  // Reset streak if a win day was skipped
-  if (!state.days?.[day]?.won && state.lastWonDay !== undefined && state.lastWonDay < day - 1) {
-    state.streak = 0;
+  // Grant one freeze token per calendar week (max 2 banked)
+  const weekNum = Math.floor(day / 7);
+  if (state.lastFreezeGrantedWeek !== weekNum) {
+    state.streakFreezes        = Math.min((state.streakFreezes ?? 0) + 1, 2);
+    state.lastFreezeGrantedWeek = weekNum;
     saveState(state);
   }
 
-  // Mode toggle button: show only if flavor available and game not started
-  const hasFlavor = !!flavor[q.id];
-  const started   = !!(state.days?.[day]);
-  const modeBtn   = document.getElementById('mode-btn');
-  const savedMode = state.days?.[day]?.mode ?? getMode();
+  // Reset streak on missed day (with freeze support)
+  if (!state.days?.[day]?.won && state.lastWonDay !== undefined && state.lastWonDay < day - 1) {
+    const missedExactlyOne = state.lastWonDay === day - 2;
+    if (missedExactlyOne && (state.streakFreezes ?? 0) > 0) {
+      state.streakFreezes--;
+      state.frozeStreak = true;
+    } else {
+      state.streak      = 0;
+      state.frozeStreak = false;
+    }
+    saveState(state);
+  }
+
+  // Mode toggle: show only if daily question has distractors
+  const hasFlavor  = !!flavor[q.id];
+  const started    = !!(state.days?.[day]);
+  const modeBtn    = document.getElementById('mode-btn');
+  const savedMode  = state.days?.[day]?.mode ?? getMode();
 
   if (hasFlavor) {
     modeBtn.removeAttribute('hidden');
     modeBtn.textContent = savedMode === 'mc' ? 'MC' : 'Text';
     if (started) modeBtn.classList.add('locked');
     modeBtn.addEventListener('click', () => {
-      if (started) return;
+      if (activeView === 'daily' && started) return;
       const next = getMode() === 'mc' ? 'text' : 'mc';
       setMode(next);
       modeBtn.textContent = next === 'mc' ? 'MC' : 'Text';
-      mount(data, day, q, locale, state, flavor);
+      if (activeView === 'endless') mountPractice(data, locale);
+      else mount(data, day, q, locale, state, false);
     });
   }
+
+  // View tabs
+  const tabDaily   = document.getElementById('tab-daily');
+  const tabEndless = document.getElementById('tab-endless');
+  tabDaily.textContent   = uiS(ui, 'tab_daily',   locale);
+  tabEndless.textContent = uiS(ui, 'tab_endless',  locale);
+  document.getElementById('view-tabs').removeAttribute('hidden');
+
+  tabDaily.addEventListener('click', () => {
+    if (activeView === 'daily') return;
+    activeView = 'daily';
+    tabDaily.classList.add('active');
+    tabEndless.classList.remove('active');
+    if (hasFlavor) modeBtn.removeAttribute('hidden');
+    mount(data, day, q, locale, state, false);
+  });
+
+  tabEndless.addEventListener('click', () => {
+    if (activeView === 'endless') return;
+    activeView = 'endless';
+    tabEndless.classList.add('active');
+    tabDaily.classList.remove('active');
+    modeBtn.setAttribute('hidden', '');
+    if (!practiceSession) startPractice(questions, data, locale);
+    else mountPractice(data, locale);
+  });
 
   // Locale picker
   const picker = document.getElementById('locale-pick');
@@ -676,26 +1180,29 @@ function setStreak(n) { document.getElementById('streak-val').textContent = n; }
   picker.addEventListener('change', e => {
     locale = e.target.value;
     setLocale(locale);
+    tabDaily.textContent   = uiS(ui, 'tab_daily',   locale);
+    tabEndless.textContent = uiS(ui, 'tab_endless',  locale);
+    if (activeView === 'endless') {
+      mountPractice(data, locale);
+      return;
+    }
     document.getElementById('question-text').textContent = renderQ(ents, tmpl, q, locale);
     const inp = document.getElementById('answer-input');
     if (inp) inp.placeholder = uiS(ui, 'enter_answer', locale).trim();
-    // Re-render MC buttons with new locale labels if MC and not done
+    // Re-label MC buttons if game not yet done
     if (!state.days?.[day] || (!state.days[day].won && state.days[day].guesses.length < MAX_MC)) {
       const grid = document.getElementById('mc-grid');
       if (grid) {
-        const saved   = state.days?.[day] ?? { guesses: [], won: false };
         const options = getMCOptions(ents, q, locale, flavor, day);
-        const wrongSet = new Set(saved.guesses.filter(g => !saved.won || g !== q.answer));
         grid.querySelectorAll('.mc-btn').forEach((btn, i) => {
-          const opt = options[i];
-          if (opt) btn.textContent = opt.label;
+          if (options[i]) btn.textContent = options[i].label;
         });
       }
     }
   });
 
-  setStreak(state.streak ?? 0);
-  mount(data, day, q, locale, state, flavor);
+  setStreak(state.streak ?? 0, state.frozeStreak);
+  mount(data, day, q, locale, state, false);
 })();
 </script>
 </body>
