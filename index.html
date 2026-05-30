@@ -339,6 +339,21 @@
     }
     .practice-next-btn:hover { background: rgba(56,189,248,.1); }
 
+    .endless-hint-wrap { display: flex; flex-direction: column; gap: 6px; }
+    .endless-hint-label {
+      font-size: .68rem; color: var(--accent);
+      text-transform: uppercase; letter-spacing: .07em; font-weight: 700;
+    }
+    .endless-hint-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .endless-hint-btn {
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--accent); border-radius: var(--r);
+      padding: 11px 8px; font-size: .88rem; font-weight: 500;
+      cursor: pointer; line-height: 1.35; text-align: center;
+      transition: background .12s, opacity .12s;
+    }
+    .endless-hint-btn:hover:not(:disabled) { background: rgba(56,189,248,.12); }
+
     .view-tabs {
       width: 100%; max-width: 480px;
       display: flex; padding: 0 18px;
@@ -742,7 +757,7 @@ function startPractice(allQuestions, data, locale) {
   const pool = allQuestions.filter(q => q.template === 'capital_of_country');
   const indices = pool.map((_, i) => i);
   const shuffled = shuffleOptions(indices, Date.now() >>> 0).map(i => pool[i]);
-  practiceSession = { questions: shuffled, index: 0, correct: 0, attempted: 0 };
+  practiceSession = { questions: shuffled, index: 0, correct: 0, attempted: 0, hintOptions: null };
   mountPractice(data, locale);
 }
 
@@ -767,6 +782,51 @@ function refreshEndlessTag(ui, locale) {
     : base;
 }
 
+function showEndlessHint(data, q, locale, state, wrongCount) {
+  if (!practiceSession) return;
+  const distractors = data.flavor[q.id]?.distractors ?? [];
+  if (!distractors.length) return;
+
+  if (!practiceSession.hintOptions) {
+    // First wrong: build 4 options (answer + up to 3 distractors)
+    const pool = [q.answer, ...distractors.slice(0, 3)];
+    const seed = [...q.id].reduce((a, c) => a + c.charCodeAt(0), 0);
+    practiceSession.hintOptions = shuffleOptions(pool, seed);
+  } else if (practiceSession.hintOptions.length > 2) {
+    // Second wrong: narrow to answer + 1 remaining distractor
+    const wrong = practiceSession.hintOptions.filter(id => id !== q.answer);
+    practiceSession.hintOptions = shuffleOptions([q.answer, wrong[0]], 137);
+  }
+  // At 2 options, stay at 2 until game ends
+
+  renderEndlessHint(data, q, locale, state);
+}
+
+function renderEndlessHint(data, q, locale, state) {
+  const { ents } = data;
+  const area = document.getElementById('endless-hint-area');
+  if (!area || !practiceSession?.hintOptions?.length) return;
+
+  area.innerHTML = `
+    <div class="endless-hint-wrap">
+      <p class="endless-hint-label">Pick one</p>
+      <div class="endless-hint-grid">
+        ${practiceSession.hintOptions.map(id =>
+          `<button class="endless-hint-btn" data-id="${esc(id)}">${esc(entityLabel(ents, id, locale))}</button>`
+        ).join('')}
+      </div>
+    </div>`;
+
+  area.querySelectorAll('.endless-hint-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const input = document.getElementById('answer-input');
+      if (!input || input.disabled) return;
+      input.value = entityLabel(ents, btn.dataset.id, locale);
+      submitText(data, 'practice', q, locale, state, true);
+    });
+  });
+}
+
 /* ── Mount ───────────────────────────────────────────────────────────────── */
 
 function mount(data, day, q, locale, state, isPractice) {
@@ -774,7 +834,7 @@ function mount(data, day, q, locale, state, isPractice) {
   const savedDay = isPractice ? null : state.days?.[day];
   const guesses  = savedDay?.guesses ?? [];
   const won      = savedDay?.won     ?? false;
-  const mode     = savedDay?.mode    ?? (flavor[q.id] ? getMode() : 'text');
+  const mode     = isPractice ? 'text' : (savedDay?.mode ?? (flavor[q.id] ? getMode() : 'text'));
   const max      = mode === 'mc' ? MAX_MC : MAX_TEXT;
   const done     = won || guesses.length >= max;
 
@@ -802,6 +862,7 @@ function mount(data, day, q, locale, state, isPractice) {
          </div>`
     }
     <p id="attempts-label">${done ? '' : attemptsLabel(mode, guesses.length, max)}</p>
+    ${mode === 'text' && !done && isPractice ? '<div id="endless-hint-area"></div>' : ''}
     ${mode === 'text' && !done ? '<div id="hint-area"></div>' : ''}
     <div class="guesses" id="guesses"></div>
     <div class="card" id="result-card" ${done ? '' : 'hidden'}></div>
@@ -1011,6 +1072,8 @@ function submitText(data, day, q, locale, state, isPractice) {
     input.addEventListener('animationend', () => input.classList.remove('shake'), { once: true });
     // Show hint after 2nd wrong guess
     if (newGuesses.length >= 2) showHint(data, q, locale);
+    // Show / narrow MC lifeline in endless mode
+    if (isPractice) showEndlessHint(data, q, locale, state, newGuesses.length);
   }
 
   document.getElementById('attempts-label').textContent =
@@ -1019,9 +1082,10 @@ function submitText(data, day, q, locale, state, isPractice) {
   if (nowDone) {
     input.disabled = true;
     document.getElementById('submit-btn').disabled = true;
-    // Hide hint area on game end
     const hintArea = document.getElementById('hint-area');
     if (hintArea) hintArea.remove();
+    const endlessHintArea = document.getElementById('endless-hint-area');
+    if (endlessHintArea) endlessHintArea.remove();
     document.getElementById('result-card').removeAttribute('hidden');
     renderResult(data, day, q, locale, newGuesses, correct, 'text', isPractice);
   }
@@ -1079,6 +1143,7 @@ function renderResult(data, day, q, locale, guesses, won, mode, isPractice) {
     document.getElementById('next-btn').addEventListener('click', () => {
       if (practiceSession) {
         practiceSession.index++;
+        practiceSession.hintOptions = null;
         mountPractice(data, locale);
       }
     });
